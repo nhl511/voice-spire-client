@@ -33,7 +33,6 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="/" element={<Login />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/bank" element={<BankAccount />} />
         <Route path="/register" element={<RegisterSeller />} />
         <Route path="/register2" element={<RegisterBuyer />} />
@@ -55,7 +54,7 @@ const App = () => {
         />
 
         <Route element={<RequireAuth allowedRoles={["buyer", "seller"]} />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
         </Route>
         <Route element={<RequireAuth allowedRoles={["buyer"]} />}>
           <Route path="/voices" element={<Voices />} />

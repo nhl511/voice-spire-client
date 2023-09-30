@@ -57,7 +57,7 @@ const Login = () => {
       // } else if (roleStr === "seller") {
       //   navigate("/posts", { replace: true });
       // }
-      navigate("/", { replace: true });
+      navigate("/home", { replace: true });
     } catch (err) {
       if (!err?.response) {
         setErrMsg("No Server Response");

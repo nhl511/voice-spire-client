@@ -11,9 +11,7 @@ const Home = () => {
       <Link to="/upload">
         <span>Go to upload Page</span>
       </Link>
-      <Link to="/approval">
-        <span>Go to approval Page</span>
-      </Link>
+
       <Link to="/posts">
         <span>Go to posts Page</span>
       </Link>

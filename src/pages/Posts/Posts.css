@@ -1,0 +1,111 @@
+.posts {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.posts-container {
+  width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.posts .posts-container .filter {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.posts .posts-container .filter .filter-row {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.posts .posts-container .filter .filter-row .searchbox input {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+.posts .posts-container .filter .filter-row .min-max {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  align-items: center;
+}
+
+.posts .posts-container .filter .filter-row .min-max input {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.posts .posts-container .filter .filter-row .long {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  align-items: center;
+}
+
+.posts .posts-container .filter .filter-row .long input {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.posts .posts-container .filter .filter-row .region {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  align-items: center;
+}
+.posts .posts-container .filter .filter-row .region select {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+.posts .posts-container .filter .filter-row .gender {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  align-items: center;
+}
+.posts .posts-container .filter .filter-row .gender select {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.posts .posts-container .filter .filter-row .nature {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  align-items: center;
+}
+.posts .posts-container .filter .filter-row .nature select {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.posts .posts-container .filter .filter-row .location {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  align-items: center;
+}
+.posts .posts-container .filter .filter-row .location select {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.posts .posts-container .filter .filter-row button {
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  background: #ffd600;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.posts .posts-container .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

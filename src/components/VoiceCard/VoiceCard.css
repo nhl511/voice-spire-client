@@ -1,0 +1,90 @@
+.voicecard {
+  display: flex;
+  gap: 20px;
+  border: 1px solid black;
+  width: 1400px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fdf8c8;
+  justify-content: space-between;
+}
+
+.voicecard .avatar {
+  flex: 1;
+}
+
+.voicecard .avatar img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+.voicecard .main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.voicecard .main .info .name {
+  font-weight: bold;
+}
+
+.voicecard .main .info .voicegender {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.voicecard .type {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex: 5;
+  flex-wrap: wrap;
+}
+
+.voicecard .type span {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.voicecard .stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 2;
+}
+
+.voicecard .stats .rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.voicecard .stats .rating .star {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.voicecard .stats .rating .star img {
+  width: 15px;
+  height: 15px;
+}
+
+.voicecard .button {
+  display: flex;
+  align-items: center;
+  flex: 2;
+}
+
+.voicecard .button button {
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: white;
+}

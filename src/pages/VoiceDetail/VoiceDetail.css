@@ -1,0 +1,111 @@
+.voicedetail {
+  display: flex;
+  justify-content: center;
+}
+
+.voicedetail .voicedetail-container {
+  padding: 50px 0;
+  width: 1400px;
+  display: flex;
+  justify-content: center;
+}
+
+.voicedetail .voicedetail-container .voicedetail-card {
+  background: #fffce5;
+  width: 1000px;
+  padding: 20px;
+}
+
+.voicedetail-avatar {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+}
+.voicedetail-avatar img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.voicedetail-info {
+  text-align: center;
+  color: #737373;
+  font-weight: 600;
+}
+.voicedetail-audio {
+  display: flex;
+  justify-content: center;
+  margin: 15px 10px;
+}
+.voicedetail-audio audio {
+  width: 700px;
+}
+.voicedetail-audio audio::-webkit-media-controls-panel {
+  background: #fffce5;
+}
+.voicedetail-detail {
+  font-size: 18px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  color: #494949;
+  margin-left: 80px;
+}
+.voicedetail-display {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.voicedetail-detail .voicedetail-detail-info {
+  margin-top: 15px;
+}
+.voicedetail-detail .voicedetail-detail-info select {
+  width: 100px;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+.voicedetail-detail-info .voicedetail-show {
+  display: grid;
+  grid-template-columns: repeat(5, 15%);
+  margin: 10px 0px;
+  gap: 10px;
+}
+.voicedetail-detail-info .voicedetail-show .checkbox-wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.voicedetail-detail-info .voicedetail-show .checkbox-wrapper .checkbox {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.voicedetail-label {
+  font-size: 16px;
+}
+.voicedetail-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.voicedetail-button .back {
+  border: none;
+  background: #f5851d;
+  border-radius: 15px;
+  padding: 10px 50px;
+  color: #010000;
+  font-weight: 600;
+  margin: 20px 0px;
+}
+.voicedetail-button .confirm {
+  border: none;
+  background: #ffd600;
+  border-radius: 15px;
+  padding: 10px 50px;
+  color: #010000;
+  font-weight: 600;
+  margin: 20px 0px;
+  cursor: pointer;
+}

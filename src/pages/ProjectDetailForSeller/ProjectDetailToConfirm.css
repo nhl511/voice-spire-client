@@ -1,0 +1,156 @@
+.pdtc-title{
+    text-align: center;
+}
+.pdtc-container{
+    display: flex;
+    justify-content: center;
+}
+.pdtc-card{
+    background: #FFFCE5;
+    width: 1000px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+.pdtc-info{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.pdtc-info-left div{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 70px;
+}
+.pdtc-info-right{
+    width: 650px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.pdtc-text-description{
+    overflow: hidden;
+}
+.pdtc-text-description span{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    font-weight: 600;
+}
+.pdtc-detail{
+    margin-top: 180px;
+}
+.pdtc-text-detail{
+    overflow: hidden;
+    margin-top: 30px;
+}
+.pdtc-text-detail span{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+.pdtc-gender{
+    margin-top: 40px;
+}
+.pdtc-text-gender{
+    margin-top: 10px;
+}
+.pdtc-region{
+    margin-top: 20px;
+}
+.pdtc-text-region{
+    margin-top: 25px;
+}
+.pdtc-tone{
+    margin-top: 20px;
+}
+.pdtc-text-tone{
+    margin-top: 22px;
+}
+.pdtc-expressive{
+    margin-top: 20px;
+}
+.pdtc-text-expressive{
+    margin-top: 22px;
+}
+.pdtc-speed{
+    margin-top: 20px;
+}
+.pdtc-text-speed{
+    margin-top: 22px;
+}
+.pdtc-pronounce{
+    margin-top: 20px;
+}
+.pdtc-text-pronounce{
+    margin-top: 22px;
+}
+.pdtc-stress{
+    margin-top: 20px;
+}
+.pdtc-text-stress{
+    margin-top: 22px;
+}
+.pdtc-voice{
+    margin-top: 20px;
+}
+.pdtc-text-voice{
+    margin-top: 20px;
+}
+.pdtc-nature{
+    margin-top: 20px;
+}
+.pdtc-text-nature{
+    margin-top: 24px;
+}
+.pdtc-duration{
+    margin-top: 20px;
+}
+.pdtc-text-duration{
+    margin-top: 24px;
+}
+.pdtc-edit{
+    margin-top: 20px;
+}
+.pdtc-text-edit{
+    margin-top: 22px;
+}
+.pdtc-deadline{
+    margin-top: 20px;
+}
+.pdtc-text-deadline{
+    margin-top: 22px;
+}
+.pdtc-price{
+    margin-top: 20px;
+}
+.pdtc-text-price{
+    margin-top: 23px;
+}
+.pdtc-button{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.pdtc-button .pdtc-deny{
+    background-color: #F5851D;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 12px 50px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+.pdtc-button .pdtc-accept{
+    background-color: #FFD600;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 12px 50px;
+    cursor: pointer;
+
+}

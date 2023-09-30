@@ -1,0 +1,120 @@
+.pdfbc-display{
+    display: flex;
+    justify-content: center ;
+    flex-wrap: wrap;
+}
+.pdfbc-card {
+    display: grid;
+    grid-template-columns: 10% 65% 25%;
+    border: 1px solid black;
+    width: 1400px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fdf8c8;
+  }
+  
+  .pdfbc-avatar {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .pdfbc-avatar img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .pdfbc-card .pdfbc-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .pdfbc-card .pdfbc-main .pdfbc-info{
+    margin-left: 10px;
+  }
+  
+  .pdfbc-card .pdfbc-main .pdfbc-info .pdfbc-fullName {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .pdfbc-card .pdfbc-main .pdfbc-info .pdfbc-gender {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .pdfbc-audio audio{
+    width: 100%;
+  }
+  .pdfbc-demo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pdfbc-demo-download button{
+    background: #43D100;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 5px 20px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  .pdfbc-demo-accept button{
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 15px 40px;
+    background: #ffffff;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 15px;
+  }
+  .pdfbc-edit{
+    display: flex;
+    justify-content:center;
+  }
+  .pdfbc-content{
+    background: #E7E7E7;
+    border-radius: 4px;
+    width: 1350px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+   .pdfbc-requestEdit{
+    color: #E15252 ;
+    font-weight: 600;
+  }
+ .pdfbc-contentEdit{
+    font-weight: 600;
+  }
+  .pdfbc-content input{
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-left: 20px;
+    width: 1050px;
+  }
+  .pdfbc-content input::placeholder{
+    color: #ABABAB;
+  }
+  .pdfbc-content button{
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 15px 30px;
+    margin-left: 30px;
+    background-color: #ffffff;
+    font-weight: 600;
+  }
+
+
+  

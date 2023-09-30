@@ -1,0 +1,8 @@
+.receiving-status {
+  border: 2px solid #e67e22;
+  width: max-content;
+  padding: 5px 20px;
+  color: #e67e22;
+  border-radius: 20px;
+  font-weight: bold;
+}

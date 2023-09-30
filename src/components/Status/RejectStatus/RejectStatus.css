@@ -1,0 +1,8 @@
+.reject-status {
+  border: 2px solid #c0392b;
+  width: max-content;
+  padding: 5px 20px;
+  color: #c0392b;
+  border-radius: 20px;
+  font-weight: bold;
+}

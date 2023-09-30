@@ -1,0 +1,112 @@
+.paad-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.paad-container{
+    display: flex;
+    justify-content: center;
+}
+.paad-card{
+    background: #FDF8C8;
+    width: 1000px;
+    margin-bottom: 30px;
+}
+.paad-display{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+.paad-card-left{
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 50px;
+}
+.paad-card-right{
+    width: 650px;
+}
+.paad-description{
+    margin-top: 30px;
+}
+.paad-text-description{
+    overflow: hidden;
+    margin-top: 30px;
+}
+.paad-text-description span{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    font-weight: 600;
+}
+.paad-detail{
+    margin-top: 180px;
+}
+.paad-text-detail{
+    overflow: hidden;
+    margin-top: 35px;
+}
+.paad-text-detail span{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+.paad-demo{
+    margin-top: 55px;
+}
+.paad-text-demo{
+    margin-top: 20px;
+}
+.paad-text-demo button{
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background: #43D100;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.paad-main{
+    margin-top: 30px;
+}
+.paad-text-main{
+    margin-top: 30px;
+}
+.paad-text-main button{
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background: #43D100;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.paad-duration{
+    margin-top: 20px;
+}
+.paad-text-duration{
+    font-weight: 600;
+    margin-top: 25px;
+}
+.paad-button{
+    text-align: center;
+    margin: 50px 0px 30px 0px;
+}
+.paad-button button{
+    background: #5FE05C;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-weight: 600;
+    padding: 8px 50px;
+    cursor: pointer;
+}

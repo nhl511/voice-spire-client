@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: #ffd600;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar .navbar-container {
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .navbar-container span {
+  font-weight: bold;
+  font-size: 20px;
+}
+.navbar .navbar-container .logo img {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+}

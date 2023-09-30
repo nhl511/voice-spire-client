@@ -1,0 +1,129 @@
+.voiceprofile {
+  display: flex;
+  justify-content: center;
+}
+.voiceprofile .voiceprofile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 1400px;
+}
+.voiceprofile .voiceprofile-container .voiceprofile-card {
+  background: #fdf8c8;
+  padding: 50px;
+  width: 750px;
+  margin: 20px 100px 100px 100px;
+}
+
+.voiceprofile .voiceprofile-container .voiceprofile-card .col-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.voiceprofile .voiceprofile-container .voiceprofile-card .col-item .sub-title {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px;
+}
+.voiceprofile
+  .voiceprofile-container
+  .voiceprofile-card
+  .col-item
+  .btn-download {
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: #43d100;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.voiceprofile .voiceprofile-container .voiceprofile-card .col-item .btn-upload {
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: #43d100;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.voiceprofile .voiceprofile-container .voiceprofile-card .col-item .btn-finish {
+  border: none;
+  padding: 10px 50px;
+  font-size: 16px;
+  background: #ffd600;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 25px;
+}
+.voiceprofile .voiceprofile-container .voiceprofile-card .col-item .note {
+  font-size: 12px;
+}
+
+.voiceprofile .voiceprofile-container .voiceprofile-card .col-item-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+.voiceprofile
+  .voiceprofile-container
+  .voiceprofile-card
+  .col-item-left
+  .row-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.voiceprofile
+  .voiceprofile-container
+  .voiceprofile-card
+  .col-item-left
+  .row-item
+  .left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.voiceprofile
+  .voiceprofile-container
+  .voiceprofile-card
+  .col-item-left
+  .row-item
+  .left
+  input {
+  width: 100px;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.voiceprofile
+  .voiceprofile-container
+  .voiceprofile-card
+  .col-item-left
+  .row-item
+  .right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.voiceprofile
+  .voiceprofile-container
+  .voiceprofile-card
+  .col-item-left
+  .row-item
+  .right
+  input {
+  width: 150px;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}

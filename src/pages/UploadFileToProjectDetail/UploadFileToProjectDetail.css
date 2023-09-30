@@ -1,0 +1,114 @@
+.uftpd-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.uftpd-container{
+    display: flex;
+    justify-content: center;
+}
+.uftpd-card{
+    background: #FDF8C8;
+    width: 1000px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.uftpd-display{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+.uftpd-card-left{
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 50px;
+}
+.uftpd-card-right{
+    width: 650px;
+}
+.uftpd-description{
+    margin-top: 30px;
+}
+.uftpd-text-description{
+    overflow: hidden;
+    margin-top: 30px;
+}
+.uftpd-text-description span{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    font-weight: 600;
+}
+.uftpd-detail{
+    margin-top: 180px;
+}
+.uftpd-text-detail{
+    overflow: hidden;
+    margin-top: 35px;
+}
+.uftpd-text-detail span{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+.uftpd-demo{
+    margin-top: 55px;
+}
+.uftpd-text-demo{
+    margin-top: 20px;
+}
+.uftpd-text-demo button{
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background: #43D100;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.uftpd-price{
+    margin-top: 30px;
+}
+.uftpd-text-price{
+    font-weight: 600;
+    margin-top: 35px;
+}
+.uftpd-duration{
+    margin-top: 25px;
+}
+.uftpd-text-duration{
+    font-weight: 600;
+    margin-top: 26px;
+}
+.uftpd-upload-file{
+    text-align: center;
+    margin-top: 20px;
+}
+.uftpd-upload-file label{
+    background: #43D100;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 15px 50px;
+}
+.uftpd-button{
+    text-align: center;
+    margin: 50px 0px 30px 0px;
+}
+.uftpd-button button{
+    background: #FFD600;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 8px 50px;
+    cursor: pointer;
+}

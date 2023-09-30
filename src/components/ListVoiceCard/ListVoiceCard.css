@@ -1,0 +1,41 @@
+.listvoice-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffce5;
+  width: max-content;
+  padding: 20px 40px;
+}
+.listvoice-card .listvoice-avatar img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.listvoice-card .listvoice-info {
+  margin: 5px 20px;
+}
+.listvoice-card .listvoice-info .listvoice-personal {
+  text-align: center;
+  color: #737373;
+  font-weight: 600;
+}
+.listvoice-card .listvoice-sound {
+  background: transparent;
+}
+.listvoice-card .listvoice-sound audio {
+  width: 700px;
+  margin: 5px 0px;
+}
+.listvoice-card .listvoice-sound audio::-webkit-media-controls-panel {
+  background: #fffce5;
+}
+
+.listvoice-card .listvoice-time {
+  text-align: center;
+}
+.listvoice-card .listvoice-icon {
+  background: #fdf8c8;
+  border-radius: 50%;
+  padding: 10px 10px;
+}

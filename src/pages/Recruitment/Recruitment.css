@@ -1,0 +1,125 @@
+.recruitment-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.recruitment-container{
+    display: flex;
+    justify-content: center;
+}
+.recruitment-card{
+    background: #FDF8C8;
+    width: 1000px;
+    margin-bottom: 30px;
+}
+.recruitment-display{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+.recruitment-card-left{
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 50px;
+}
+.recruitment-card-right{
+    width: 650px;
+}
+.recruitment-description{
+    margin-top: 30px;
+}
+.recruitment-text-description{
+    overflow: hidden;
+    margin-top: 30px;
+}
+.recruitment-text-description span{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    font-weight: 600;
+}
+.recruitment-detail{
+    margin-top: 180px;
+}
+.recruitment-text-detail{
+    overflow: hidden;
+    margin-top: 35px;
+}
+.recruitment-text-detail span{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+.recruitment-demo{
+    margin-top: 55px;
+}
+.recruitment-text-demo{
+    margin-top: 20px;
+}
+.recruitment-text-demo label{
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background: #43D100;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.recruitment-price{
+    margin-top: 30px;
+}
+.recruitment-text-price{
+    font-weight: 600;
+    margin-top: 35px;
+}
+.recruitment-text-main label{
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    background: #43D100;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.recruitment-duration{
+    margin-top: 25px;
+}
+.recruitment-text-duration{
+    font-weight: 600;
+    margin-top: 26px;
+}
+.recruitment-upload-file{
+    text-align: center;
+    margin-top: 20px;
+}
+.recruitment-upload-file label{
+    background: #43D100;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 15px 40px;
+}
+.recruitment-button{
+    text-align: center;
+    margin: 50px 0px 30px 0px;
+}
+.recruitment-button button{
+    background: #FFD600;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 8px 50px;
+    cursor: pointer;
+}

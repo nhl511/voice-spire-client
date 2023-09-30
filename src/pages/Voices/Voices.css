@@ -1,0 +1,139 @@
+.voices {
+  display: flex;
+  justify-content: center;
+}
+
+.voices .voices-container {
+  padding: 50px 0;
+  width: 1400px;
+  min-height: 100vh;
+}
+
+.voices .voices-container .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.voices .voices-container .search {
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+.voices .voices-container .search button {
+  width: max-content;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  background: #ffd600;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.voices .voices-container .filter {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.voices .voices-container .filter .filter-row {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.voices .voices-container .filter .filter-row .searchbox input {
+  font-size: 15px;
+  padding: 10px 20px;
+}
+.voices .voices-container .filter .filter-row .min-max {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  align-items: center;
+}
+
+.voices .voices-container .filter .filter-row .min-max input {
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
+.voices .voices-container .filter .filter-row .type {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  align-items: center;
+}
+
+.voices .voices-container .filter .filter-row .type select {
+  font-size: 15px;
+  padding: 10px 20px;
+}
+.voices .voices-container .filter .filter-row .tone {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  align-items: center;
+}
+
+.voices .voices-container .filter .filter-row .tone select {
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
+.voices .voices-container .filter .filter-row .region {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  align-items: center;
+}
+.voices .voices-container .filter .filter-row .region select {
+  font-size: 15px;
+  padding: 10px 20px;
+}
+.voices .voices-container .filter .filter-row .gender {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  align-items: center;
+}
+.voices .voices-container .filter .filter-row .gender select {
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
+.voices .voices-container .filter .filter-row .nature {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  align-items: center;
+}
+.voices .voices-container .filter .filter-row .nature select {
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
+.voices .voices-container .filter .filter-row .rating {
+  display: flex;
+  gap: 10px;
+  font-size: 15px;
+  align-items: center;
+}
+.voices .voices-container .filter .filter-row .rating select {
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
+.voices .voices-container .filter .filter-row button {
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  background: #ffd600;
+  border-radius: 20px;
+  cursor: pointer;
+}

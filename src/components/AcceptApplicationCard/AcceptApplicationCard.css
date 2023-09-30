@@ -1,0 +1,116 @@
+.aac-display{
+    display: flex;
+    justify-content: center ;
+    margin-bottom: 10px;
+}
+.aac-card {
+    display: flex;
+    gap: 20px;
+    border: 1px solid black;
+    width: 1400px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fdf8c8;
+    justify-content: space-between;
+  }
+  
+  .aac-avatar {
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  
+  .aac-avatar img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .aac-card .aac-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .aac-card .aac-main .aac-info .aac-fullName {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .aac-card .aac-main .aac-info .aac-gender {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .aac-createDate{
+    font-size: 14px;
+    color: #737373;
+  }
+  .aac-card .aac-type {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex: 5;
+    flex-wrap: wrap;
+  }
+  
+  .aac-card .aac-type span {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  .aac-card .aac-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 2;
+  }
+  
+  .aac-card .aac-stats .aac-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .aac-card .aac-stats .aac-rating .aac-star {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  
+  .aac-card .aac-stats .aac-rating .aac-star img {
+    width: 15px;
+    height: 15px;
+  }
+  .aac-demo{
+    margin-top: 10px;
+  }
+  .aac-demo button{
+    background: #43D100;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 5px 20px;
+    cursor: pointer;
+  }
+  
+  .aac-card .aac-button {
+    display: flex;
+    align-items: center;
+    flex: 2;
+  }
+  
+  .aac-card .aac-button button {
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    background: white;
+    padding: 20px 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;;
+  }
+  

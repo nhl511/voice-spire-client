@@ -1,0 +1,45 @@
+.bank-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.bank {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 124px;
+}
+.bank .bank-container .bank-card {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 500px;
+  background-color: #ffe24d;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.bank .bank-container .bank-card .left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  color: #878787;
+  font-size: 18px;
+}
+.bank .bank-container .bank-card .col-item input {
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 70%;
+}
+.bank .bank-container .bank-card .button {
+  margin: 30px 30px 30px 180px;
+  width: 150px;
+}
+.bank .bank-container .bank-card .button button {
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-weight: 600;
+  background: #ffd600;
+}

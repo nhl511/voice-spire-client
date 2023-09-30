@@ -1,0 +1,8 @@
+.waiting-status {
+  border: 2px solid #f39c12;
+  width: max-content;
+  padding: 5px 20px;
+  color: #f39c12;
+  border-radius: 20px;
+  font-weight: bold;
+}

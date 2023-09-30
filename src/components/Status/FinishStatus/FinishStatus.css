@@ -1,0 +1,8 @@
+.finish-status {
+  border: 2px solid #2ecc71;
+  width: max-content;
+  padding: 5px 20px;
+  color: #2ecc71;
+  border-radius: 20px;
+  font-weight: bold;
+}

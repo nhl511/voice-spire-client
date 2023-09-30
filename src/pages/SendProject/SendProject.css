@@ -1,0 +1,156 @@
+.sendProject-center{
+    display: flex;
+    justify-content: center;
+}
+.sendProject-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+.sendProject-card{
+    width: 1000px;
+    background: #FDF8C8;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+.sendProject-card-display{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.sendProject-card-left img{
+    width: 221px;
+    height: 221px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 20px 30px 30px 40px;
+}
+.sendProject-fullname{
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 50px;
+}
+.sendProject-rate{
+    margin-top: 10px;
+}
+.sendProject-rate span{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sendProject-icon{
+    display: flex;
+}
+.sendProject-icon svg{
+    margin-top: 3px;
+    padding: 2px;
+}
+.sendProject-icon svg:hover{
+    color: rgb(219, 219, 95);
+}
+.sendProject-icon span{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 9px;
+    margin-left: 10px;
+}
+.sendProject-booking{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+.sendProject-price{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+.sendProject-file{
+    display: flex;
+}
+.sendProject-card-left-row-2{
+    font-weight: 600;
+    font-size: 22px;
+    margin-left: 50px;
+}
+.sendProject-text-header input{
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    font-size: 18px;
+    width: 550px;
+    padding: 15px 10px;
+}
+.sendProject-upload{
+    margin-top: 30px;
+}
+.sendProject-description{
+    margin-top: 15px;
+}
+.sendProject-detail{
+    margin-top: 100px;
+}
+.sendProject-time{
+    margin-top: 50px;
+}
+.sendProject-text-upload{
+    margin-top: 15px;
+}
+.sendProject-deadline{
+    margin-top: 20px;
+}
+.sendProject-text-deadline{
+    margin-top: 8px;
+}
+.sendProject-text-deadline input{
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 7px 20px;
+}
+.sendProject-text-upload label{
+    border: none;
+    border-radius: 15px;
+    background: #54e511;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+.sendProject-text-description textarea{
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-top: 25px;
+    padding: 10px;
+}
+.sendProject-text-detail textarea{
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px;
+}
+.sendProject-duration input{
+    width: 120px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px 20px;
+}
+.sendProject-button-send{
+    text-align: center;
+    margin: 20px 0px;
+}
+.sendProject-button-send button{
+    background: #FFD600;
+    border: none;
+    border-radius: 20px;
+    color: #000000;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 15px 100px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}

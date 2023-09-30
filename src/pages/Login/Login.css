@@ -1,0 +1,128 @@
+.login {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+.login .login-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login .login-container .login-card {
+  display: flex;
+  width: 1000px;
+  margin: 50px 50px 50px 100px;
+}
+
+.login .login-container .login-card .left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffe24d;
+  padding: 50px;
+  flex: 1;
+}
+.login .login-container .login-card .left .center-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login .login-container .login-card .left .center-item h3 {
+  text-transform: uppercase;
+  margin-top: 0;
+}
+.login .login-container .login-card .left .center-item p {
+  margin-top: 0;
+  font-size: 18px;
+  text-align: center;
+}
+.login .login-container .login-card .left .col-item {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: center;
+}
+.login .login-container .login-card .left .col-item span {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.login .login-container .login-card .left .col-item input {
+  padding: 20px 20px;
+  border-radius: 15px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+.login .login-container .login-card .left .row-item {
+  display: flex;
+  justify-content: center;
+}
+.login .login-container .login-card .left .row-item i {
+  font-size: 14px;
+}
+.login .login-container .login-card .left .row-item span {
+  margin-left: 170px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.login .login-container .login-card .left .button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.login .login-container .login-card .left .button button {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+.login .login-container .login-card .left .google {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+.login .login-container .login-card .left .google button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.login .login-container .login-card .left .google-logo-img {
+  width: 30px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.login .login-container .login-card .left .row-item strong {
+  cursor: pointer;
+}
+
+.login .login-container .login-card .right {
+  background: #fdf8c8;
+  padding: 10px 50px 50px;
+  flex: 1;
+}
+
+.login .login-container .login-card .right .center-item h1 {
+  text-align: center;
+}
+.login .login-container .login-card .right .col-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login .login-container .login-card .right .col-item span {
+  font-weight: 500;
+  margin-top: 50px;
+}
+
+.errmsg {
+  color: red;
+  font-size: 15px;
+}

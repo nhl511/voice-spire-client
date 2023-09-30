@@ -53,22 +53,20 @@ const App = () => {
           element={<ProjectApprovalAtDetail />}
         />
 
-        <Route element={<PersistLogin />}>
-          <Route element={<RequireAuth allowedRoles={["buyer", "seller"]} />}>
-            <Route path="/" element={<Home />} />
-          </Route>
-          <Route element={<RequireAuth allowedRoles={["buyer"]} />}>
-            <Route path="/voices" element={<Voices />} />
-            <Route path="/upload" element={<ProjectUpload />} />
-            <Route path="/sp" element={<SendProject />} />
-          </Route>
-          <Route element={<RequireAuth allowedRoles={["seller"]} />}>
-            <Route path="/posts" element={<Posts />} />
-            <Route path="/profile" element={<VoiceProfile />} />
-            <Route path="/pt1" element={<ProjectDescriptionToApply />} />
-            <Route path="/pt2" element={<ProjectDescriptionConfirm />} />
-            <Route path="/recruitment" element={<Recruitment />} />
-          </Route>
+        <Route element={<RequireAuth allowedRoles={["buyer", "seller"]} />}>
+          <Route path="/" element={<Home />} />
+        </Route>
+        <Route element={<RequireAuth allowedRoles={["buyer"]} />}>
+          <Route path="/voices" element={<Voices />} />
+          <Route path="/upload" element={<ProjectUpload />} />
+          <Route path="/sp" element={<SendProject />} />
+        </Route>
+        <Route element={<RequireAuth allowedRoles={["seller"]} />}>
+          <Route path="/posts" element={<Posts />} />
+          <Route path="/profile" element={<VoiceProfile />} />
+          <Route path="/pt1" element={<ProjectDescriptionToApply />} />
+          <Route path="/pt2" element={<ProjectDescriptionConfirm />} />
+          <Route path="/recruitment" element={<Recruitment />} />
         </Route>
       </Route>
     </Routes>

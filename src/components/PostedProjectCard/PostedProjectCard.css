@@ -71,6 +71,7 @@
 .lpa-dropdown-display {
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 .lpa-dropdown-small-card {
   border-radius: 6px;

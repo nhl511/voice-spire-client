@@ -80,7 +80,7 @@ export default function ProjectApprovalAtDetail() {
                 </div>
               </div>
               <div className="paad-button">
-                <button>Duyệt</button>
+                {post.projectStatus === "WaitApprove" && <button>Duyệt</button>}
               </div>
             </div>
           </div>

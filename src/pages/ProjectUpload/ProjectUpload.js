@@ -1,29 +1,162 @@
 import React, { useState } from "react";
 import "./ProjectUpload.css";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import useAuth from "../../hooks/useAuth";
+import axios from "../../api/axios";
 const ProjectUpload = () => {
+  const uploadFileDocURL = "/api/Buyers/UploadDocFile";
+  const uploadThumbnailURL = "/api/Buyers/UploadImageFile";
+  const uploadProjectURL =
+    "/api/Buyers/UploadVoiceProject/{BuyerId},{title},{description},{price},{duration},{numberOfEdit},{deadline}";
+  const { auth } = useAuth();
+
   const [title, setTitle] = useState();
-  const [desc, setDesc] = useState();
-  const [req, setReq] = useState();
+  const [description, setDescription] = useState();
   const [price, setPrice] = useState();
+  const [duration, setDuration] = useState();
+  const [numberOfEdit, setNumberOfEdit] = useState();
+  const [deadline, setDeadline] = useState();
+  const [request, setRequest] = useState();
   const [type, setType] = useState();
+  const [textLength, setTextLength] = useState();
   const [gender, setGender] = useState();
   const [tone, setTone] = useState();
-  const [time, setTime] = useState();
   const [region, setRegion] = useState();
   const [local, setLocal] = useState();
+  const [inspiration, setInspiration] = useState();
+  const [stress, setStress] = useState();
   const [pronounce, setPronounce] = useState();
-  const [ins, setIns] = useState();
   const [speed, setSpeed] = useState();
-  const [press, setPress] = useState();
-  const [numOfEdit, setNumOfEdit] = useState();
-  const [deadline, setDeadline] = useState();
   const [demoFile, setDemoFile] = useState();
-  const [textFile, setTextFile] = useState();
+  const [mainFile, setMainFile] = useState();
   const [thumbnail, setThumbnail] = useState();
 
-  const handleSubmit = () => {};
+  const [nameFileDemo, setNameFileDemo] = useState();
+  const [nameFileMain, setNameFileMain] = useState();
+  const [nameFileThumbnail, setNameFileThumbnail] = useState();
+
+  const handleUploadFileDemo = async (e) => {
+    const headers = {
+      accept: "*/*",
+      "Content-Type": "multipart/form-data",
+    };
+    const fileDemo = {
+      file: e.target.files[0],
+    };
+
+    try {
+      await axios
+        .post(uploadFileDocURL, fileDemo, { headers })
+        .then((response) => {
+          if (response.status === 200) {
+            console.log("demo = 200");
+            setDemoFile(response.data);
+            setNameFileDemo(e.target.files[0]?.name);
+          }
+        })
+        .catch((error) => console.log(error));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleUploadFileMain = async (e) => {
+    const headers = {
+      accept: "*/*",
+      "Content-Type": "multipart/form-data",
+    };
+    const fileMain = {
+      file: e.target.files[0],
+    };
+
+    try {
+      await axios
+        .post(uploadFileDocURL, fileMain, { headers })
+        .then((response) => {
+          if (response.status === 200) {
+            console.log("main = 200");
+            setMainFile(response.data);
+            setNameFileMain(e.target.files[0]?.name);
+          }
+        })
+        .catch((error) => console.log(error));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const handleUploadThumbnail = async (e) => {
+    const headers = {
+      accept: "*/*",
+      "Content-Type": "multipart/form-data",
+    };
+    const fileThumbnail = {
+      file: e.target.files[0],
+    };
+
+    try {
+      await axios
+        .post(uploadThumbnailURL, fileThumbnail, { headers })
+        .then((response) => {
+          if (response.status === 200) {
+            console.log("thumbnail = 200");
+            setThumbnail(response.data);
+            setNameFileThumbnail(e.target.files[0]?.name);
+          }
+        })
+        .catch((error) => console.log(error));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const headers = {
+      accept: "text/plain",
+      "Content-Type": "application/json-patch+json",
+    };
+
+    const infoProject = {
+      BuyerId: auth.userId,
+      title: title,
+      description: description,
+      price: price,
+      duration: duration,
+      numberOfEdit: numberOfEdit,
+      deadline: deadline,
+      request: request,
+      voiceProperty: type,
+      textLength: textLength,
+      voiceGender: gender,
+      voiceTone: tone,
+      voiceRegion: region,
+      voiceLocal: local,
+      voiceInspirational: inspiration,
+      voiceStress: stress,
+      voicePronuonce: pronounce,
+      voiceSpeed: speed,
+      linkDocDemo: demoFile,
+      linkDocMain: mainFile,
+      linkThumbnail: thumbnail,
+    };
+
+    try {
+      await axios
+        .post(
+          `/api/Buyers/UploadVoiceProject/${auth.userId},${title},${description},${price},${duration},${numberOfEdit},${deadline}`,
+          infoProject,
+          { headers }
+        )
+        .then((response) => {
+          if (response.status === 200) {
+            console.log("upload project = 200");
+          }
+        })
+        .catch((error) => console.log(error));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="projectUpload-container">
       <div className="projectUpload-title">
@@ -34,32 +167,65 @@ const ProjectUpload = () => {
           <div>
             <form onSubmit={handleSubmit}>
               <div className="projectUpload-card-first">
-                <input placeholder="Tiêu đề" />
-                <input placeholder="Mô tả" />
-                <input placeholder="Yêu cầu" />
+                <input
+                  placeholder="Tiêu đề"
+                  required
+                  onChange={(e) => setTitle(e.target.value)}
+                />
+                <input
+                  placeholder="Mô tả"
+                  required
+                  onChange={(e) => setDescription(e.target.value)}
+                />
+                <input
+                  placeholder="Yêu cầu"
+                  onChange={(e) => setRequest(e.target.value)}
+                />
               </div>
               <div className="projectUpload-card-second">
                 <div className="projectUpload-card-grid">
                   <div className="projectUpload-col">
                     <span>Bản demo duyệt giọng nói:</span>
-                    <input type="file" id="btn-upload-voice" hidden />
-                    <label for="btn-upload-voice">Upload</label>
+                    <input
+                      type="file"
+                      id="btn-upload-voice"
+                      hidden
+                      accept=".doc, .docx, .pdf, .txt"
+                      required
+                      onChange={handleUploadFileDemo}
+                    />
+                    <label htmlFor="btn-upload-voice">
+                      {nameFileDemo ? nameFileDemo : "Upload"}
+                    </label>
                   </div>
                   <div className="projectUpload-col">
                     <span>Văn bản cần đọc:</span>
-                    <input type="file" id="btn-upload-doc" hidden />
-                    <label for="btn-upload-doc">Upload</label>
+                    <input
+                      type="file"
+                      id="btn-upload-doc"
+                      hidden
+                      accept=".doc, .docx, .pdf, .txt"
+                      required
+                      onChange={handleUploadFileMain}
+                    />
+                    <label htmlFor="btn-upload-doc">
+                      {nameFileMain ? nameFileMain : "Upload"}
+                    </label>
                   </div>
                 </div>
                 <div className="projectUpload-card-display">
                   <div className="projectUpload-first-row-col-1">
                     <span>Giá:</span>
-                    <input />
+                    <input
+                      type="number"
+                      required
+                      onChange={(e) => setPrice(e.target.value)}
+                    />
                     <span>vnđ/phút</span>
                   </div>
                   <div className="projectUpload-first-row-col-2">
                     <span>Loại văn bản:</span>
-                    <select>
+                    <select onChange={(e) => setType(e.target.value)}>
                       <option value="">Vui lòng chọn</option>
                       <option value="Quảng cáo">Quảng cáo</option>
                       <option value="Kể Chuyện">Kể chuyện</option>
@@ -72,12 +238,20 @@ const ProjectUpload = () => {
                   </div>
                   <div className="projectUpload-first-row-col-3">
                     <span>Thumbnail:</span>
-                    <input type="file" id="thumbnail" hidden />
-                    <label for="thumbnail">Upload</label>
+                    <input
+                      type="file"
+                      id="thumbnail"
+                      hidden
+                      accept=".png, .jpg, .jpeg"
+                      onChange={handleUploadThumbnail}
+                    />
+                    <label htmlFor="thumbnail">
+                      {nameFileThumbnail ? nameFileThumbnail : "Upload"}
+                    </label>
                   </div>
                   <div className="projectUpload-second-row-col-1">
                     <span>Giới tính:</span>
-                    <select>
+                    <select onChange={(e) => setGender(e.target.value)}>
                       <option value="">Vui lòng chọn</option>
                       <option value="Nam">Nam</option>
                       <option value="Nữ">Nữ</option>
@@ -86,7 +260,7 @@ const ProjectUpload = () => {
                   </div>
                   <div className="projectUpload-second-row-col-2">
                     <span>Tone giọng:</span>
-                    <select>
+                    <select onChange={(e) => setTone(e.target.value)}>
                       <option value="0">Vui lòng chọn</option>
                       <option value="1">Rất thấp</option>
                       <option value="2">Thấp</option>
@@ -97,12 +271,15 @@ const ProjectUpload = () => {
                   </div>
                   <div className="projectUpload-second-row-col-3">
                     <span>Thời lượng yêu cầu:</span>
-                    <input />
+                    <input
+                      type="number"
+                      onChange={(e) => setDuration(e.target.value)}
+                    />
                     <span>Phút</span>
                   </div>
                   <div className="projectUpload-third-row-col-1">
                     <span>Vùng miền:</span>
-                    <select>
+                    <select onChange={(e) => setRegion(e.target.value)}>
                       <option value="">Vui lòng chọn</option>
                       <option value="Miền Nam">Miền Nam</option>
                       <option value="Miền Bắc">Miền Bắc</option>
@@ -111,16 +288,16 @@ const ProjectUpload = () => {
                   </div>
                   <div className="projectUpload-third-row-col-2">
                     <span>Địa phương:</span>
-                    <select>
+                    <select onChange={(e) => setLocal(e.target.value)}>
                       <option value="">Vui lòng chọn</option>
-                      <option>Hà Nội</option>
-                      <option>Hồ Chí Minh</option>
-                      <option>Khác</option>
+                      <option value="Hà Nội">Hà Nội</option>
+                      <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                      <option value="Khác">Khác</option>
                     </select>
                   </div>
                   <div className="projectUpload-third-row-col-3">
                     <span>Phát âm:</span>
-                    <select>
+                    <select onChange={(e) => setPronounce(e.target.value)}>
                       <option value="0">Vui lòng chọn</option>
                       <option value="1">Kém</option>
                       <option value="2">Trung bình</option>
@@ -131,7 +308,7 @@ const ProjectUpload = () => {
                   </div>
                   <div className="projectUpload-fourth-row-col-1">
                     <span>Truyền cảm:</span>
-                    <select>
+                    <select onChange={(e) => setInspiration(e.target.value)}>
                       <option value="0">Vui lòng chọn</option>
                       <option value="1">Kém</option>
                       <option value="2">Trung bình</option>
@@ -142,7 +319,7 @@ const ProjectUpload = () => {
                   </div>
                   <div className="projectUpload-fourth-row-col-2">
                     <span>Tốc độ đọc:</span>
-                    <select>
+                    <select onChange={(e) => setSpeed(e.target.value)}>
                       <option value="0">Vui lòng chọn</option>
                       <option value="1">Chậm</option>
                       <option value="2">Vừa</option>
@@ -151,7 +328,7 @@ const ProjectUpload = () => {
                   </div>
                   <div className="projectUpload-fourth-row-col-3">
                     <span>Trọng âm:</span>
-                    <select>
+                    <select onChange={(e) => setStress(e.target.value)}>
                       <option value="0">Vui lòng chọn</option>
                       <option value="1">Kém</option>
                       <option value="2">Trung bình</option>
@@ -162,17 +339,23 @@ const ProjectUpload = () => {
                   </div>
                   <div className="projectUpload-fifth-row-col-1">
                     <span>Số lần chỉnh sửa:</span>
-                    <input />
+                    <input
+                      type="number"
+                      onChange={(e) => setNumberOfEdit(e.target.value)}
+                    />
                   </div>
                   <div className="projectUpload-fifth-row-col-2">
+                    <span>Độ dài văn bản:</span>
+                    <input
+                      type="number"
+                      onChange={(e) => setTextLength(e.target.value)}
+                    />
+                  </div>
+                  <div className="projectUpload-fifth-row-col-3">
                     <span>Hạn hoàn tất:</span>
-                    <DatePicker
-                      dateFormat="dd-MM-yyyy"
-                      yearDropdownItemNumber={50}
-                      showYearDropdown
-                      scrollableYearDropdown
-                      selected={deadline}
-                      onChange={(date) => setDeadline(date)}
+                    <input
+                      type="date"
+                      onChange={(e) => setDeadline(e.target.value)}
                     />
                   </div>
                 </div>

@@ -48,8 +48,8 @@ export default function ProjectApprovalAtDetail() {
                 </div>
                 <div className="paad-text-demo">
                   <Link
-                    to="/mp3/test.docx"
-                    download="Test-Docx-Demo"
+                    to={post.linkDocDemo}
+                    download="Docx-Main"
                     target="blank"
                   >
                     <button>Download</button>
@@ -62,8 +62,8 @@ export default function ProjectApprovalAtDetail() {
                 </div>
                 <div className="paad-text-main">
                   <Link
-                    to="/mp3/test.docx"
-                    download="Test-Docx-Main"
+                    to={post.linkDocMain}
+                    download="Docx-Main"
                     target="blank"
                   >
                     <button>Download</button>

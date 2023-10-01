@@ -6,6 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 const LOGIN_URL = "/api/VoiceSellers/Login";
 
 const Login = () => {
+  const [loading, setLoading] = useState(false);
   const emailRef = useRef();
   const errRef = useRef();
 
@@ -29,6 +30,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
+      setLoading(true);
       const response = await axios.post(
         LOGIN_URL,
         JSON.stringify({ email, password }),
@@ -120,7 +122,17 @@ const Login = () => {
                 <span>Quên mật khẩu?</span>
               </div>
               <div className="button">
-                <button>Đăng nhập</button>
+                <button className={loading && "disabled"}>
+                  {loading ? (
+                    <div className="loading-login">
+                      <div className="loading-login-container">
+                        <div class="loader-login"></div>
+                      </div>
+                    </div>
+                  ) : (
+                    <span>Đăng nhập</span>
+                  )}
+                </button>
               </div>
             </form>
             <div className="google">

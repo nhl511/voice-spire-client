@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./PostedProjectsManagement.css";
-import { getPostedProjects, getProjectForManagement } from "../../api/axios";
+import {
+  getPostedProjects,
+  getProjectForManagement,
+  getProjects,
+} from "../../api/axios";
 import PostedProjectCard from "../../components/PostedProjectCard/PostedProjectCard";
 import { Link } from "react-router-dom";
 
@@ -37,7 +41,7 @@ const ProjectApproval = () => {
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
-    getProjectForManagement(
+    getProjects(
       currentPage,
       10,
       "old",

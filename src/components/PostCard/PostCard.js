@@ -6,10 +6,7 @@ const PostCard = ({ post }) => {
   return (
     <div className="postcard">
       <div className="thumbnail">
-        <img
-          src="https://nld.mediacdn.vn/291774122806476800/2021/9/12/hao-hao-1631458927029451636971.jpeg"
-          alt=""
-        />
+        <img src={post.linkThumbnail} alt="" />
       </div>
       <div className="content">
         <div className="title">

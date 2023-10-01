@@ -74,14 +74,21 @@
 }
 
 .login .login-container .login-card .left .button button {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   padding: 15px 30px;
   border-radius: 50px;
   border: none;
   background: white;
   cursor: pointer;
+  width: 200px;
+  height: 50px;
 }
+
+.login .login-container .login-card .left .button .disabled {
+  cursor: default;
+}
+
 .login .login-container .login-card .left .google {
   display: flex;
   justify-content: center;
@@ -125,4 +132,33 @@
 .errmsg {
   color: red;
   font-size: 15px;
+}
+
+.loading-login {
+  display: flex;
+  justify-content: center;
+}
+.loading-login .loading-login-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-login .loading-login-container .loader-login {
+  border: 7px solid #f3f3f3; /* Light grey */
+  border-top: 7px solid #ffd600; /* Blue */
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  animation: spin 0.55s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

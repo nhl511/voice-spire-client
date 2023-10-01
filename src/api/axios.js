@@ -27,17 +27,17 @@ export const getVoiceList = async (
   return valuesArray;
 };
 
-export const getPostedProjects = async (currentPage, pageSize, sortType) => {
-  const response = await axiosOne.get(
-    `/api/VoiceProjects/GetListProjectToManagement/${currentPage},${pageSize},${sortType}`
-  );
-  console.log(response.data.results);
+// export const getPostedProjects = async (currentPage, pageSize, sortType) => {
+//   const response = await axiosOne.get(
+//     `/api/VoiceProjects/GetListProjectToManagement/${currentPage},${pageSize},${sortType}`
+//   );
+//   console.log(response.data.results);
 
-  const valuesArray = Object.values(response.data.results);
-  return valuesArray;
-};
+//   const valuesArray = Object.values(response.data.results);
+//   return valuesArray;
+// };
 
-export const getProjectForManagement = async (
+export const getProjects = async (
   currentPage,
   PageSize,
   sortType,

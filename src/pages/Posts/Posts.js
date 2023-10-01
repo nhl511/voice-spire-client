@@ -1,14 +1,26 @@
 import React, { useEffect, useState } from "react";
 import "./Posts.css";
 import PostCard from "../../components/PostCard/PostCard";
-import { getPostedProjects } from "../../api/axios";
+import { getPostedProjects, getProjects } from "../../api/axios";
 const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getPostedProjects(currentPage, 10, "new")
+    getProjects(
+      currentPage,
+      10,
+      "old",
+      "Post",
+      false,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false
+    )
       .then((json) => setPosts(json))
       .then((json) => setLoading(false));
   }, [currentPage]);

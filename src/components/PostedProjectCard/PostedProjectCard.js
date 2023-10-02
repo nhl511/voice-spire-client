@@ -52,6 +52,8 @@ const PostedProjectCard = ({ post }) => {
             {post.projectStatus === "Apply" && <RecruitmentStatus />}
             {post.projectStatus === "Processing" && <ReceivingStatus />}
             {post.projectStatus === "Done" && <FinishStatus />}
+            {post.projectStatus === "waitToAccept" && <InvitationStatus />}
+            {post.projectStatus === "Denied" && <DenyStatus />}
           </div>
         </div>
       </div>

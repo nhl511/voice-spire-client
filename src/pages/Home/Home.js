@@ -35,6 +35,9 @@ const Home = () => {
       <Link to="/postedprojectsmanagement">
         <span>Go to posted project management page</span>
       </Link>
+      <Link to="/sentprojectsmanagement">
+        <span>Go to sent project management page</span>
+      </Link>
       <Link to="/lv">
         <span>Go to voice management page</span>
       </Link>

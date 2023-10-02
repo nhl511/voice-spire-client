@@ -27,6 +27,7 @@ import ProjectDetailForSeller from "./pages/ProjectDetailForSeller/ProjectDetail
 import UploadFileToProjectDetail from "./pages/UploadFileToProjectDetail/UploadFileToProjectDetail";
 import ProjectDetailForBuyer from "./pages/ProjectDetailForBuyer/ProjectDetailForBuyer";
 import ProjectApprovalAtDetail from "./pages/ProjectApprovalAtDetail/ProjectApprovalAtDetail";
+import SentProjectsManagement from "./pages/SentProjectsManagement/SentProjectsManagement";
 
 const App = () => {
   return (
@@ -47,6 +48,10 @@ const App = () => {
         <Route
           path="/postedprojectsmanagement"
           element={<PostedProjectsManagement />}
+        />
+        <Route
+          path="/sentprojectsmanagement"
+          element={<SentProjectsManagement />}
         />
         <Route
           path="/projectmanagementdetail/:id"

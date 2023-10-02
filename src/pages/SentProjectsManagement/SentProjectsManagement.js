@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import "./PostedProjectsManagement.css";
+import "./SentProjectsManagement";
 import { getProjects } from "../../api/axios";
 import PostedProjectCard from "../../components/PostedProjectCard/PostedProjectCard";
 
-const ProjectApproval = () => {
+const SentProjectsManagement = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
-  const [projectType, setProjectType] = useState("Post");
+  const [projectType, setProjectType] = useState("send");
   const [WaitApprove, setWaitApprove] = useState(true);
   const [NotApproved, setNotApproved] = useState(true);
   const [Apply, setApply] = useState(true);
@@ -39,7 +39,7 @@ const ProjectApproval = () => {
     e.preventDefault();
     getProjects(
       currentPage,
-      100,
+      10,
       "old",
       projectType,
       WaitApprove,
@@ -72,7 +72,8 @@ const ProjectApproval = () => {
                   onChange={(e) => {
                     setWaitApprove(true);
                     setNotApproved(false);
-                    setApply(false);
+                    setWaitToAccept(false);
+                    setDenied(false);
                     setProcessing(false);
                     setDone(false);
                   }}
@@ -87,7 +88,8 @@ const ProjectApproval = () => {
                   onChange={(e) => {
                     setWaitApprove(false);
                     setNotApproved(true);
-                    setApply(false);
+                    setWaitToAccept(false);
+                    setDenied(false);
                     setProcessing(false);
                     setDone(false);
                   }}
@@ -97,17 +99,34 @@ const ProjectApproval = () => {
               <div className="status">
                 <input
                   type="radio"
-                  value={Apply}
+                  value={WaitToAccept}
                   name="status"
                   onChange={(e) => {
                     setWaitApprove(false);
                     setNotApproved(false);
-                    setApply(true);
+                    setWaitToAccept(true);
+                    setDenied(false);
                     setProcessing(false);
                     setDone(false);
                   }}
                 />
-                <span>Đang ứng tuyển</span>
+                <span>Đã gửi lời mời</span>
+              </div>
+              <div className="status">
+                <input
+                  type="radio"
+                  value={Denied}
+                  name="status"
+                  onChange={(e) => {
+                    setWaitApprove(false);
+                    setNotApproved(false);
+                    setWaitToAccept(false);
+                    setDenied(true);
+                    setProcessing(false);
+                    setDone(false);
+                  }}
+                />
+                <span>Không nhận lời mời</span>
               </div>
               <div className="status">
                 <input
@@ -117,7 +136,8 @@ const ProjectApproval = () => {
                   onChange={(e) => {
                     setWaitApprove(false);
                     setNotApproved(false);
-                    setApply(false);
+                    setWaitToAccept(false);
+                    setDenied(false);
                     setProcessing(true);
                     setDone(false);
                   }}
@@ -132,7 +152,8 @@ const ProjectApproval = () => {
                   onChange={(e) => {
                     setWaitApprove(false);
                     setNotApproved(false);
-                    setApply(false);
+                    setWaitToAccept(false);
+                    setDenied(false);
                     setProcessing(false);
                     setDone(true);
                   }}
@@ -159,4 +180,4 @@ const ProjectApproval = () => {
   );
 };
 
-export default ProjectApproval;
+export default SentProjectsManagement;

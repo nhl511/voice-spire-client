@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./ProjectApprovalAtDetail.css";
-import { Link, useParams } from "react-router-dom";
-import { getProjectApprovalDetail } from "../../api/axios";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import {
+  approveProject,
+  getProjectApprovalDetail,
+  notApproveProject,
+} from "../../api/axios";
 
 export default function ProjectApprovalAtDetail() {
   const { id } = useParams();
   const [post, setPost] = useState();
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
   useEffect(() => {
     getProjectApprovalDetail(id)
       .then((json) => setPost(json))
@@ -49,7 +54,7 @@ export default function ProjectApprovalAtDetail() {
                 <div className="paad-text-demo">
                   <Link
                     to={post.linkDocDemo}
-                    download="Docx-Main"
+                    download="Docx-Demo"
                     target="blank"
                   >
                     <button>Download</button>
@@ -80,7 +85,28 @@ export default function ProjectApprovalAtDetail() {
                 </div>
               </div>
               <div className="paad-button">
-                {post.projectStatus === "WaitApprove" && <button>Duyệt</button>}
+                {post.projectStatus === "WaitApprove" && (
+                  <>
+                    <button
+                      className="approve-button"
+                      onClick={() => {
+                        approveProject(post.voiceProjectId);
+                        navigate("/postedprojectsmanagement");
+                      }}
+                    >
+                      Duyệt
+                    </button>
+                    <button
+                      className="deny-button"
+                      onClick={() => {
+                        notApproveProject(post.voiceProjectId);
+                        navigate("/postedprojectsmanagement");
+                      }}
+                    >
+                      Không duyệt
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           </div>

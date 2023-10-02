@@ -8,12 +8,13 @@ import DenyStatus from "../Status/DenyStatus/DenyStatus";
 import FinishStatus from "../Status/FinishStatus/FinishStatus";
 import RecruitmentStatus from "../Status/RecruitmentStatus/RecruitmentStatus";
 import ReceivingStatus from "../Status/ReceivingStatus/ReceivingStatus";
-import { getPaymentInfo } from "../../api/axios";
-import { Link } from "react-router-dom";
+import { approveProject, getPaymentInfo } from "../../api/axios";
+import { Link, useNavigate } from "react-router-dom";
 
 const PostedProjectCard = ({ post }) => {
   const [paymentInfo, setPaymentInfo] = useState();
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     getPaymentInfo(post.voiceProjectId)
@@ -32,8 +33,8 @@ const PostedProjectCard = ({ post }) => {
 
   return (
     <div className="lpa-margin">
-      <div className="lpa-container" onClick={displayDropdown}>
-        <div className="lpa-card">
+      <div className="lpa-container">
+        <div className="lpa-card" onClick={displayDropdown}>
           <img src={post.linkThumbnail} alt="thumbnail" />
           <div className="lpa-name">
             <span>{post.title}</span>
@@ -60,38 +61,57 @@ const PostedProjectCard = ({ post }) => {
       {dropDown && (
         <div className="lpa-dropdown">
           <div className="lpa-dropdown-card">
-            <div className="lpa-dropdown-display">
-              <div className="lpa-dropdown-small-card">
-                <div>
-                  <p className="lpa-dropdown-title">Thông tin thanh toán</p>
-                  <div className="lpa-dropdown-bank">
-                    <strong>Ngân hàng:</strong>
-                    <span>{paymentInfo.bankNameBuyer}</span>
-                  </div>
-                  <div className="lpa-dropdown-bank">
-                    <strong>Số tài khoản:</strong>
-                    <span>{paymentInfo.bankNumberBuyer}</span>
-                  </div>
-                  <div className="lpa-dropdown-bank-fullName">
-                    <strong>Tên tài khoản:</strong>
-                    <span>{paymentInfo.bankAccountNameBuyer}</span>
-                  </div>
+            {loading ? (
+              <div className="loading-dropdown">
+                <div className="loading-dropdown-container">
+                  <div class="loader-dropdown"></div>
                 </div>
               </div>
-            </div>
-            <div className="button-wrapper">
-              <div className="lpa-dropdown-detail-button">
-                <Link
-                  to={`/projectmanagementdetail/${post.voiceProjectId}`}
-                  className="link"
-                >
-                  <button>Xem chi tiết dự án</button>
-                </Link>
-              </div>
-              <div className="lpa-dropdown-confirm-button">
-                {post.projectStatus === "WaitApprove" && <button>Duyệt</button>}
-              </div>
-            </div>
+            ) : (
+              <>
+                <div className="lpa-dropdown-display">
+                  <div className="lpa-dropdown-small-card">
+                    <div>
+                      <p className="lpa-dropdown-title">Thông tin thanh toán</p>
+                      <div className="lpa-dropdown-bank">
+                        <strong>Ngân hàng:</strong>
+                        <span>{paymentInfo.bankNameBuyer}</span>
+                      </div>
+                      <div className="lpa-dropdown-bank">
+                        <strong>Số tài khoản:</strong>
+                        <span>{paymentInfo.bankNumberBuyer}</span>
+                      </div>
+                      <div className="lpa-dropdown-bank-fullName">
+                        <strong>Tên tài khoản:</strong>
+                        <span>{paymentInfo.bankAccountNameBuyer}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="button-wrapper">
+                  <div className="lpa-dropdown-detail-button">
+                    <Link
+                      to={`/projectmanagementdetail/${post.voiceProjectId}`}
+                      className="link"
+                    >
+                      <button>Xem chi tiết dự án</button>
+                    </Link>
+                  </div>
+                  <div className="lpa-dropdown-confirm-button">
+                    {post.projectStatus === "WaitApprove" && (
+                      <button
+                        onClick={() => {
+                          approveProject(post.voiceProjectId);
+                          navigate("/postedprojectsmanagement");
+                        }}
+                      >
+                        Duyệt
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}

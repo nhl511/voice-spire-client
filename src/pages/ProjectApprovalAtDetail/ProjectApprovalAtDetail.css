@@ -100,15 +100,43 @@
   margin-top: 25px;
 }
 .paad-button {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin: 50px 0px 30px 0px;
+  gap: 20px;
 }
-.paad-button button {
-  background: #5fe05c;
-  border: none;
+.paad-button .approve-button {
+  border: 3px solid #5fe05c;
+  background: none;
   outline: none;
   border-radius: 15px;
   font-weight: 600;
   padding: 8px 50px;
   cursor: pointer;
+  color: #5fe05c;
+}
+
+.paad-button .approve-button:hover {
+  background: #5fe05c;
+  color: white;
+  transition-property: background, color;
+  transition-duration: 0.5s;
+}
+
+.paad-button .deny-button {
+  border: 3px solid #e74c3c;
+  background: none;
+  outline: none;
+  border-radius: 15px;
+  font-weight: 600;
+  padding: 8px 50px;
+  cursor: pointer;
+  color: #e74c3c;
+}
+.paad-button .deny-button:hover {
+  background: #e74c3c;
+  color: white;
+  transition-property: background, color;
+  transition-duration: 0.5s;
 }

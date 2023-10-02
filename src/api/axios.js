@@ -117,3 +117,17 @@ export const getProjectApprovalDetail = async (projectId) => {
   );
   return response.data;
 };
+
+export const approveProject = async (projectId) => {
+  const response = await axiosOne.put(
+    `/api/VoiceProjects/ApproveProject/${projectId}`
+  );
+  return response.data;
+};
+
+export const notApproveProject = async (projectId) => {
+  const response = await axiosOne.put(
+    `/api/VoiceProjects/NotApprovedProject/${projectId}`
+  );
+  return response.data;
+};

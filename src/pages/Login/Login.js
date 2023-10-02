@@ -28,9 +28,9 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
-      setLoading(true);
       const response = await axios.post(
         LOGIN_URL,
         JSON.stringify({ email, password }),
@@ -38,6 +38,7 @@ const Login = () => {
           headers: { "Content-Type": "application/json" },
         }
       );
+
       console.log(JSON.stringify(response?.data));
 
       const token = response?.data?.token;
@@ -60,6 +61,7 @@ const Login = () => {
       //   navigate("/posts", { replace: true });
       // }
       navigate("/home", { replace: true });
+      setLoading(false);
     } catch (err) {
       if (!err?.response) {
         setErrMsg("No Server Response");
@@ -71,6 +73,7 @@ const Login = () => {
         setErrMsg("Login Failed");
       }
       errRef.current.focus();
+      setLoading(false);
     }
   };
 

@@ -79,9 +79,15 @@ const Posts = () => {
           </div>
         </div>
         <div className="cards">
-          {posts.map((post) => (
-            <PostCard post={post} />
-          ))}
+          {loading ? (
+            <div className="loading">
+              <div className="loading-container">
+                <div class="loader"></div>
+              </div>
+            </div>
+          ) : (
+            posts.map((post) => <PostCard post={post} />)
+          )}
         </div>
       </div>
     </div>

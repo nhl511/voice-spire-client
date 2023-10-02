@@ -127,18 +127,18 @@ const ProjectUpload = () => {
       voiceProperty: type,
       textLength: textLength,
       voiceGender: gender,
-      voiceTone: tone,
+      voiceTone: Number(tone),
       voiceRegion: region,
       voiceLocal: local,
-      voiceInspirational: inspiration,
-      voiceStress: stress,
-      voicePronuonce: pronounce,
-      voiceSpeed: speed,
+      voiceInspirational: Number(inspiration),
+      voiceStress: Number(stress),
+      voicePronuonce: Number(pronounce),
+      voiceSpeed: Number(speed),
       linkDocDemo: demoFile,
       linkDocMain: mainFile,
       linkThumbnail: thumbnail,
     };
-
+    console.log(infoProject);
     try {
       await axios
         .post(

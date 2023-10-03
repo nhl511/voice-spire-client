@@ -10,8 +10,8 @@ const Posts = () => {
   useEffect(() => {
     getProjects(
       currentPage,
-      10,
-      "old",
+      100,
+      "new",
       "Post",
       false,
       false,

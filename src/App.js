@@ -69,7 +69,7 @@ const App = () => {
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>
           <Route path="/posts" element={<Posts />} />
           <Route path="/profile" element={<VoiceProfile />} />
-          <Route path="/pt1" element={<ProjectDescriptionToApply />} />
+          <Route path="/pt1/:id" element={<ProjectDescriptionToApply />} />
           <Route path="/pt2" element={<ProjectDescriptionConfirm />} />
           <Route path="/recruitment" element={<Recruitment />} />
         </Route>

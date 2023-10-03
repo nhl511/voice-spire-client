@@ -19,9 +19,7 @@ const Home = () => {
       <Link to="/profile">
         <span>Go to profile Page</span>
       </Link>
-      <Link to="/pt1">
-        <span>Go to project description to apply page</span>
-      </Link>
+
       <Link to="/pt2">
         <span>Go to project description to confirm page</span>
       </Link>

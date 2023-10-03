@@ -1,6 +1,7 @@
 import React from "react";
 import "./PostCard.css";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 const PostCard = ({ post }) => {
   return (
@@ -54,7 +55,9 @@ const PostCard = ({ post }) => {
           ) : null}
         </div>
         <div className="button">
-          <button>Ứng tuyển ngay</button>
+          <Link to={`/pt1/${post.voiceProjectId}`}>
+            <button>Ứng tuyển ngay</button>
+          </Link>
         </div>
       </div>
     </div>

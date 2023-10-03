@@ -19,7 +19,6 @@ import ProjectUpload from "./pages/ProjectUpload/ProjectUpload";
 import PostedProjectsManagement from "./pages/PostedProjectsManagement/PostedProjectsManagement";
 import SendProject from "./pages/SendProject/SendProject";
 import ProjectDescriptionToApply from "./pages/ProjectDescriptionForSeller/ProjectDescriptionToApply";
-// import ProjectApproval from "./pages/ProjectApproval/ProjectApproval";
 import Recruitment from "./pages/Recruitment/Recruitment";
 import ProjectDescriptionConfirm from "./pages/ProjectDescriptionForSeller/ProjectDescriptionConfirm";
 import AcceptApplication from "./pages/AcceptApplication/AcceptApplication";
@@ -42,9 +41,9 @@ const App = () => {
         <Route path="/voicedetail/:id" element={<VoiceDetail />} />
 
         <Route path="/aa" element={<AcceptApplication />} />
-        <Route path="/ptfs" element={<ProjectDetailForSeller />} />
+        <Route path="/pdfs" element={<ProjectDetailForSeller />} />
         <Route path="/uftpd" element={<UploadFileToProjectDetail />} />
-        <Route path="/ptfb" element={<ProjectDetailForBuyer />} />
+        <Route path="/pdfb" element={<ProjectDetailForBuyer />} />
         <Route
           path="/postedprojectsmanagement"
           element={<PostedProjectsManagement />}
@@ -73,6 +72,7 @@ const App = () => {
           <Route path="/pt2" element={<ProjectDescriptionConfirm />} />
           <Route path="/recruitment" element={<Recruitment />} />
         </Route>
+
       </Route>
     </Routes>
   );

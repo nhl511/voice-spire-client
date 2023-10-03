@@ -12,7 +12,7 @@
     width: 1000px;
     margin-bottom: 30px;
 }
-.recruitment-display{
+.recruitment-info{
     display: grid;
     grid-template-columns: 25% 75%;
 }
@@ -22,43 +22,41 @@
     margin-left: 50px;
 }
 .recruitment-card-right{
-    width: 650px;
+    width: 700px;
 }
 .recruitment-description{
+    font-size: 18px;
+    font-weight: 600;
     margin-top: 30px;
+    margin-left: 50px;
 }
 .recruitment-text-description{
-    overflow: hidden;
+    width: 700px;
+    font-weight: 600;
     margin-top: 30px;
 }
-.recruitment-text-description span{
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 8;
-    font-weight: 600;
-}
 .recruitment-detail{
-    margin-top: 180px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-top: 30px;
 }
 .recruitment-text-detail{
-    overflow: hidden;
-    margin-top: 35px;
-}
-.recruitment-text-detail span{
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    width: 700px;
     font-style: italic;
     font-family: sans-serif;
     font-weight: 400;
+    margin-top: 30px;
 }
 .recruitment-demo{
-    margin-top: 55px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-top: 30px;
 }
 .recruitment-text-demo{
-    margin-top: 20px;
+    width: 700px;
+    margin-top: 30px;
 }
 .recruitment-text-demo label{
     color: #ffffff;
@@ -73,9 +71,13 @@
     cursor: pointer;
 }
 .recruitment-price{
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 50px;
     margin-top: 30px;
 }
 .recruitment-text-price{
+    width: 700px;
     font-weight: 600;
     margin-top: 35px;
 }
@@ -92,11 +94,15 @@
     cursor: pointer;
 }
 .recruitment-duration{
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 50px;
     margin-top: 25px;
 }
 .recruitment-text-duration{
+    width: 700px;
     font-weight: 600;
-    margin-top: 26px;
+    margin-top: 27px;
 }
 .recruitment-upload-file{
     text-align: center;

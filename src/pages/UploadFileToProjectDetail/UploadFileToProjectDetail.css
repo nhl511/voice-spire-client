@@ -13,50 +13,40 @@
     border-radius: 8px;
     margin-bottom: 30px;
 }
-.uftpd-display{
+.uftpd-info{
     display: grid;
     grid-template-columns: 25% 75%;
 }
-.uftpd-card-left{
+.uftpd-description{
     font-weight: 600;
     font-size: 18px;
     margin-left: 50px;
-}
-.uftpd-card-right{
-    width: 650px;
-}
-.uftpd-description{
     margin-top: 30px;
 }
 .uftpd-text-description{
-    overflow: hidden;
+    font-weight: 600;
+    width: 680px;
     margin-top: 30px;
 }
-.uftpd-text-description span{
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 8;
-    font-weight: 600;
-}
 .uftpd-detail{
-    margin-top: 180px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-top: 30px;
 }
 .uftpd-text-detail{
-    overflow: hidden;
-    margin-top: 35px;
-}
-.uftpd-text-detail span{
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
     font-style: italic;
     font-family: sans-serif;
     font-weight: 400;
+    width: 680px;
+    margin-top: 35px;
 }
+
 .uftpd-demo{
-    margin-top: 55px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-top: 20px;
 }
 .uftpd-text-demo{
     margin-top: 20px;
@@ -70,10 +60,12 @@
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 3px 20px;
-    margin-left: 5px;
     cursor: pointer;
 }
 .uftpd-price{
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 50px;
     margin-top: 30px;
 }
 .uftpd-text-price{
@@ -81,6 +73,9 @@
     margin-top: 35px;
 }
 .uftpd-duration{
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 50px;
     margin-top: 25px;
 }
 .uftpd-text-duration{
@@ -99,16 +94,16 @@
     color: #ffffff;
     padding: 15px 50px;
 }
-.uftpd-button{
+.uftpd-send{
     text-align: center;
-    margin: 50px 0px 30px 0px;
+    margin: 30px 0px 30px 0px;
 }
-.uftpd-button button{
+.uftpd-send button{
     background: #FFD600;
     border: none;
     outline: none;
     border-radius: 8px;
     font-weight: 600;
-    padding: 8px 50px;
+    padding: 8px 80px;
     cursor: pointer;
 }

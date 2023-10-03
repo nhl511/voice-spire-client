@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ProjectUpload.css";
 import useAuth from "../../hooks/useAuth";
-import axios from "../../api/axios";
+import axios, { uploadVoiceProject } from "../../api/axios";
 const ProjectUpload = () => {
   const uploadFileDocURL = "/api/Buyers/UploadDocFile";
   const uploadThumbnailURL = "/api/Buyers/UploadImageFile";
@@ -110,51 +110,29 @@ const ProjectUpload = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const headers = {
-      accept: "text/plain",
-      "Content-Type": "application/json-patch+json",
-    };
-
-    const infoProject = {
-      BuyerId: auth.userId,
-      title: title,
-      description: description,
-      price: price,
-      duration: duration,
-      numberOfEdit: numberOfEdit,
-      deadline: deadline,
-      request: request,
-      voiceProperty: type,
-      textLength: textLength,
-      voiceGender: gender,
-      voiceTone: Number(tone),
-      voiceRegion: region,
-      voiceLocal: local,
-      voiceInspirational: Number(inspiration),
-      voiceStress: Number(stress),
-      voicePronuonce: Number(pronounce),
-      voiceSpeed: Number(speed),
-      linkDocDemo: demoFile,
-      linkDocMain: mainFile,
-      linkThumbnail: thumbnail,
-    };
-    console.log(infoProject);
-    try {
-      await axios
-        .post(
-          `/api/Buyers/UploadVoiceProject/${auth.userId},${title},${description},${price},${duration},${numberOfEdit},${deadline}`,
-          infoProject,
-          { headers }
-        )
-        .then((response) => {
-          if (response.status === 200) {
-            console.log("upload project = 200");
-          }
-        })
-        .catch((error) => console.log(error));
-    } catch (error) {
-      console.log(error);
-    }
+    uploadVoiceProject(
+      auth.userId,
+      title,
+      description,
+      price,
+      duration,
+      numberOfEdit,
+      deadline,
+      request,
+      type,
+      textLength,
+      gender,
+      Number(tone),
+      region,
+      local,
+      Number(inspiration),
+      Number(stress),
+      Number(pronounce),
+      Number(speed),
+      demoFile,
+      mainFile,
+      thumbnail
+    );
   };
 
   return (

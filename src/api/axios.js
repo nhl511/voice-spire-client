@@ -131,3 +131,51 @@ export const notApproveProject = async (projectId) => {
   );
   return response.data;
 };
+
+export const sendVoiceProject = async (
+  BuyerId,
+  voiceSellerId,
+  title,
+  description,
+  duration,
+  deadline,
+  linkDocDemo,
+  linkDocMain,
+  linkThumbnail
+) => {
+  const response = await axiosOne.post(
+    `/api/Buyers/SendVoiceProject/${BuyerId},${voiceSellerId},${title},${description},${duration},${deadline}`,
+    { linkDocDemo, linkDocMain, linkThumbnail }
+  );
+  return response.data;
+};
+
+export const uploadVoiceProject = async (
+  BuyerId,
+  title,
+  description,
+  price,
+  duration,
+  numberOfEdit,
+  deadline,
+  inputRequest,
+  inputVoiceProperty,
+  inputTextLength,
+  inputVoiceGender,
+  inputVoiceTone,
+  inputVoiceRegion,
+  inputVoiceLocal,
+  inputVoiceInspirational,
+  inputVoiceStress,
+  inputVoicePronuonce,
+  inputVoiceSpeed,
+  linkDocDemo,
+  linkDocMain,
+  linkThumbnail
+) => {
+  const response = await axiosOne.post(
+    `/api/Buyers/UploadVoiceProject/${BuyerId},${title},${description},${price},${duration},${numberOfEdit},${deadline}?request=${inputRequest}&voiceProperty=${inputVoiceProperty}&textLength=${inputTextLength}&voiceGender=${inputVoiceGender}&voiceTone=${inputVoiceTone}&voiceRegion=${inputVoiceRegion}&voiceLocal=${inputVoiceLocal}&voiceInspirational=${inputVoiceInspirational}&voiceStress=${inputVoiceStress}&voicePronuonce=${inputVoicePronuonce}&voiceSpeed=${inputVoiceSpeed}`,
+    { linkDocDemo, linkDocMain, linkThumbnail }
+  );
+  return response.data;
+};

@@ -26,7 +26,7 @@ const PostCard = ({ post }) => {
               src="https://cdn-icons-png.flaticon.com/512/156/156764.png"
               alt=""
             />
-            <b> {post.price} VNĐ</b>
+            <b> {post.price} VNĐ/phút</b>
           </span>
         </div>
         <div className="require">

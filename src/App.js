@@ -69,10 +69,10 @@ const App = () => {
           <Route path="/posts" element={<Posts />} />
           <Route path="/profile" element={<VoiceProfile />} />
           <Route path="/pt1/:id" element={<ProjectDescriptionToApply />} />
-          <Route path="/pt2" element={<ProjectDescriptionConfirm />} />
-          <Route path="/recruitment" element={<Recruitment />} />
-        </Route>
+          <Route path="/recruitment/:id" element={<Recruitment />} />
 
+          <Route path="/pt2" element={<ProjectDescriptionConfirm />} />
+        </Route>
       </Route>
     </Routes>
   );

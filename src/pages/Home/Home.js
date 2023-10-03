@@ -12,9 +12,6 @@ const Home = () => {
       <Link to="/upload">
         <span>Go to upload Page</span>
       </Link>
-      <Link to="/sp">
-        <span>Go to send project Page</span>
-      </Link>
       <h3>Role Seller</h3>
       <Link to="/posts">
         <span>Go to posts Page</span>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./VoiceCard.css";
 import ReactAudioPlayer from "react-audio-player";
+import { Link } from "react-router-dom";
 const VoiceCard = ({ voice }) => {
   const myString = voice.voiceTypes[0].voiceTypeDetail;
   const myString2 = voice.voiceProperties[0].voicePropertyName;
@@ -42,19 +43,21 @@ const VoiceCard = ({ voice }) => {
               alt=""
             />
           </div>
-          <div className="num">
+          {/* <div className="num">
             <span>(57)</span>
-          </div>
+          </div> */}
         </div>
-        <div className="booking">
+        {/* <div className="booking">
           <span>Lượt booking: 102</span>
-        </div>
+        </div> */}
         <div className="price">
           <span>{`Giá: ${voice.price}đ/ 100 từ`}</span>
         </div>
       </div>
       <div className="button">
-        <button>Gửi dự án ngay</button>
+        <Link to={`/sp/${voice.voiceSellerId}`}>
+          <button>Gửi dự án ngay</button>
+        </Link>
       </div>
     </div>
   );

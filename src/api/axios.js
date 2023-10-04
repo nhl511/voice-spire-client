@@ -179,3 +179,16 @@ export const uploadVoiceProject = async (
   );
   return response.data;
 };
+
+export const applyToProject = async (
+  voiceProjectId,
+  voiceSellerId,
+  linkDemo
+) => {
+  const response = await axiosOne.post("/api/VoiceSellers/ApllyToProject", {
+    voiceProjectId,
+    voiceSellerId,
+    linkDemo,
+  });
+  return response.data;
+};

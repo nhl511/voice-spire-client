@@ -40,7 +40,6 @@ const App = () => {
         <Route path="/lv" element={<ListVoice />} />
         <Route path="/voicedetail/:id" element={<VoiceDetail />} />
 
-        <Route path="/aa" element={<AcceptApplication />} />
         <Route path="/pdfs" element={<ProjectDetailForSeller />} />
         <Route path="/uftpd" element={<UploadFileToProjectDetail />} />
         <Route path="/pdfb" element={<ProjectDetailForBuyer />} />
@@ -64,6 +63,7 @@ const App = () => {
           <Route path="/voices" element={<Voices />} />
           <Route path="/upload" element={<ProjectUpload />} />
           <Route path="/sp/:id" element={<SendProject />} />
+          <Route path="/candidatelist" element={<AcceptApplication />} />
         </Route>
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>
           <Route path="/posts" element={<Posts />} />

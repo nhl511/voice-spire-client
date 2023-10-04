@@ -26,6 +26,7 @@
 }
 
 .posts .posts-container .filter .filter-row .searchbox input {
+  border-radius: 8px;
   font-size: 18px;
   padding: 10px 20px;
 }
@@ -37,6 +38,7 @@
 }
 
 .posts .posts-container .filter .filter-row .min-max input {
+  border-radius: 8px;
   font-size: 18px;
   padding: 10px 20px;
 }
@@ -49,6 +51,7 @@
 }
 
 .posts .posts-container .filter .filter-row .long input {
+  border-radius: 8px;
   font-size: 18px;
   padding: 10px 20px;
 }
@@ -60,6 +63,7 @@
   align-items: center;
 }
 .posts .posts-container .filter .filter-row .region select {
+  border-radius: 8px;
   font-size: 18px;
   padding: 10px 20px;
 }
@@ -70,6 +74,7 @@
   align-items: center;
 }
 .posts .posts-container .filter .filter-row .gender select {
+  border-radius: 8px;
   font-size: 18px;
   padding: 10px 20px;
 }
@@ -81,6 +86,7 @@
   align-items: center;
 }
 .posts .posts-container .filter .filter-row .nature select {
+  border-radius: 8px;
   font-size: 18px;
   padding: 10px 20px;
 }
@@ -92,6 +98,7 @@
   align-items: center;
 }
 .posts .posts-container .filter .filter-row .location select {
+  border-radius: 8px;
   font-size: 18px;
   padding: 10px 20px;
 }

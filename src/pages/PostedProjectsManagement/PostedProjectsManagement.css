@@ -23,11 +23,13 @@
 .projectapproval .projectApproval-container .projectApproval-search input {
   padding: 3px 20px;
   border-radius: 15px;
+  outline: none;
+  border: none;
   font-size: 16px;
 }
 .projectapproval .projectApproval-container .projectApproval-search select {
   padding: 0px 10px;
-  font-size: 18px;
+  font-size: 17px;
   border: none;
   font-weight: 600;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -38,4 +40,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.ppm-search{
+  background: #FFD600;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 5px 30px;
 }

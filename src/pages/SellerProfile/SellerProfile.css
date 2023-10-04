@@ -1,0 +1,125 @@
+.sellerProfile-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+.sellerProfile-card{
+    background: #FFFCE5;
+    width: 1000px;
+    border-radius: 8px;
+}
+.sellerProfile-image{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.sellerProfile-image img{
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.sellerProfile-fullName{
+    text-align: center;
+    color: #737373;
+    margin-bottom: 30px;
+}
+.sellerProfile-fullName span{
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+svg{
+    color: #737373;
+    cursor: pointer;
+}
+
+.sellerProfile-displayGrid{
+    display: grid;
+    grid-template-columns: 25% 60% 25%;
+    margin-top: 20px;
+}
+.sellerProfile-birthDay{
+    color: #494949;
+    font-weight: 600;
+    font-size: 17px;
+    margin-left: 80px;
+}
+.sellerProfile-text-birthDay{
+    padding-top: 5px;
+    font-family: sans-serif;
+}
+.sellerProfile-phone{
+    color: #494949;
+    font-weight: 600;
+    font-size: 17px;
+    margin-left: 80px;
+}
+.sellerProfile-text-phone{
+    padding-top: 5px;
+    font-family: sans-serif;
+}
+.sellerProfile-gender{
+    color: #494949;
+    font-weight: 600;
+    font-size: 17px;
+    margin-left: 80px;
+}
+.sellerProfile-text-gender{
+    padding-top: 5px;
+    font-family: sans-serif;
+}
+.sellerProfile-bankNumber{
+    color: #494949;
+    font-weight: 600;
+    font-size: 17px;
+    margin-left: 80px;
+}
+.sellerProfile-text-bankNumber{
+    padding-top: 5px;
+    font-family: sans-serif;
+}
+.sellerProfile-bankName{
+    color: #494949;
+    font-weight: 600;
+    font-size: 17px;
+    margin-left: 80px;
+}
+.sellerProfile-text-bankName{
+    padding-top: 5px;
+    font-family: sans-serif;
+}
+.sellerProfile-accountName{
+    color: #494949;
+    font-weight: 600;
+    font-size: 17px;
+    margin-left: 80px;
+}
+.sellerProfile-text-accountName{
+    padding-top: 5px;
+    font-family: sans-serif;
+}
+.sellerProfile-address{
+    color: #494949;
+    font-weight: 600;
+    font-size: 17px;
+    margin-left: 80px;
+}
+.sellerProfile-text-address{
+    padding-top: 5px;
+    font-family: sans-serif;
+}
+.sellerProfile-update{
+    text-align: center;
+}
+.sellerProfile-update button{
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: #FFD600;
+    font-weight: 600;
+    padding: 10px 80px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}

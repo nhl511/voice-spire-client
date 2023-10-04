@@ -44,7 +44,6 @@ const App = () => {
         <Route path="/lv" element={<ListVoice />} />
         <Route path="/voicedetail/:id" element={<VoiceDetail />} />
 
-
         <Route
           path="/postedprojectsmanagement"
           element={<PostedProjectsManagement />}
@@ -65,7 +64,7 @@ const App = () => {
           <Route path="/voices" element={<Voices />} />
           <Route path="/upload" element={<ProjectUpload />} />
           <Route path="/sp/:id" element={<SendProject />} />
-          <Route path="/aa" element={<AcceptApplication />} />
+          <Route path="/candidatelist" element={<AcceptApplication />} />
           <Route path="/pdfb" element={<ProjectDetailForBuyer />} />
           <Route path="/tpfb" element={<TrackingProjectForBuyer />} />
 

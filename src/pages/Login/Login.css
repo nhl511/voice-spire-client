@@ -7,11 +7,15 @@
 .login .login-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 1400px;
 }
 
 .login .login-container .login-card {
   display: flex;
   width: 1000px;
+  height: 700px;
   margin: 50px 50px 50px 100px;
 }
 

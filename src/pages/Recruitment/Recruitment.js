@@ -1,17 +1,62 @@
 import React, { useEffect, useState } from "react";
 import "./Recruitment.css";
-import { Link, useParams } from "react-router-dom";
-import { getProjectApprovalDetail } from "../../api/axios";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import axios, {
+  applyToProject,
+  getProjectApprovalDetail,
+} from "../../api/axios";
+import useAuth from "../../hooks/useAuth";
 
 export default function Recruitment() {
   const [loading, setLoading] = useState(true);
   const [post, setPost] = useState();
+  const [uploadFile, setUploadFile] = useState();
+  const [mp3File, setMp3File] = useState();
   const { id } = useParams();
+  const { auth } = useAuth();
+  const navigate = useNavigate();
+
+  const uploadVoiceURL = "/api/VoiceSellers/UploadVoice";
+
   useEffect(() => {
     getProjectApprovalDetail(id)
       .then((json) => setPost(json))
       .then((json) => setLoading(false));
   }, [id]);
+
+  const handleUploadVoice = async (event) => {
+    const headers = {
+      accept: "*/*",
+      "Content-Type": "multipart/form-data",
+    };
+
+    const file = {
+      file: event.target.files[0],
+    };
+
+    try {
+      await axios
+        .post(uploadVoiceURL, file, { headers })
+        .then((response) => {
+          if (response.status === 200) {
+            setMp3File(response.data);
+            setUploadFile(event.target.files[0]);
+            setUploadFile(event.target.files[0]);
+          }
+        })
+        .catch((error) => console.log(error));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    applyToProject(post.voiceProjectId, auth.userId, mp3File);
+    navigate("/posts");
+  };
+
   return (
     <div className="recruitment">
       {loading ? (
@@ -44,7 +89,6 @@ export default function Recruitment() {
                   <span>Văn bản demo</span>
                 </div>
                 <div className="recruitment-text-demo">
-                  {" "}
                   <Link
                     className="link"
                     to={post.linkDocDemo}
@@ -69,21 +113,24 @@ export default function Recruitment() {
                   <span>{post.duration} phút</span>
                 </div>
               </div>
-              <div className="recruitment-upload-file">
-                <input
-                  type="file"
-                  name="file"
-                  id="recruitment-btn"
-                  hidden
-                  accept="audio/mpeg"
-                />
-                <label htmlFor="recruitment-btn">
-                  Tải lên file ghi âm demo
-                </label>
-              </div>
-              <div className="recruitment-button">
-                <button>Ứng tuyển ngay</button>
-              </div>
+              <form onSubmit={handleSubmit}>
+                <div className="recruitment-upload-file">
+                  <input
+                    type="file"
+                    name="file"
+                    id="recruitment-btn"
+                    onChange={handleUploadVoice}
+                    hidden
+                    accept="audio/mpeg"
+                  />
+                  <label htmlFor="recruitment-btn">
+                    Tải lên file ghi âm: {uploadFile?.name}
+                  </label>
+                </div>
+                <div className="recruitment-button">
+                  <button>Ứng tuyển ngay</button>
+                </div>
+              </form>
             </div>
           </div>
         </>

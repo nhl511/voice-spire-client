@@ -29,6 +29,7 @@ import ProjectApprovalAtDetail from "./pages/ProjectApprovalAtDetail/ProjectAppr
 import SentProjectsManagement from "./pages/SentProjectsManagement/SentProjectsManagement";
 import SellerProfile from "./pages/SellerProfile/SellerProfile";
 import TrackingProjectForSeller from "./pages/TrackingProjectForSeller/TrackingProjectForSeller";
+import TrackingProjectForBuyer from "./pages/TrackingProjectForBuyer/TrackingProjectForBuyer";
 
 const App = () => {
   return (
@@ -66,6 +67,8 @@ const App = () => {
           <Route path="/sp/:id" element={<SendProject />} />
           <Route path="/aa" element={<AcceptApplication />} />
           <Route path="/pdfb" element={<ProjectDetailForBuyer />} />
+          <Route path="/tpfb" element={<TrackingProjectForBuyer />} />
+
         </Route>
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>
           <Route path="/posts" element={<Posts />} />

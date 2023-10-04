@@ -1,0 +1,194 @@
+.tpfb {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(#FEE66A, #ffffff);
+  }
+  
+  .tpfb-container {
+    padding: 50px 0;
+    width: 1400px;
+    min-height: 100vh;
+  }
+  .tpfb-search {
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 60px;
+  }
+  .tpfb-search button {
+    width: max-content;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    background: #ffd600;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+ .tpfb-filter {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .tpfb-filter-row {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+ .tpfb-searchBox input {
+    width: 250px;
+    border-radius: 15px;
+    background: transparent;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+   .tpfb-min-max {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    align-items: center;
+  }
+   .tpfb-min-max span{
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+   .tpfb-min-max input {
+    width: 100px;
+    border-radius: 15px;
+    background: transparent;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+  
+.tpfb-type {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    align-items: center;
+  }
+  .tpfb-type span{
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .tpfb-type select {
+    border-radius: 15px;
+    background: transparent;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+  .tpfb-tone {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    align-items: center;
+  }
+   .tpfb-tone span{
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+   .tpfb-tone select {
+    border-radius: 15px;
+    background: transparent;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+  
+   .tpfb-region {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    align-items: center;
+  }
+  .tpfb-region span{
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .tpfb-region select {
+    border-radius: 15px;
+    background: transparent;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+ .tpfb-gender {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    align-items: center;
+  }
+  .tpfb-gender span{
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .tpfb-gender select {
+    border-radius: 15px;
+    background: transparent;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+  
+   .tpfb-nature {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    align-items: center;
+  }
+  .tpfb-nature span{
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+  }
+ .tpfb-nature select {
+    border-radius: 15px;
+    background: transparent;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+  
+  .tpfb-rating {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    align-items: center;
+  }
+ .tpfb-rating span{
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+  }
+ .tpfb-rating select {
+    border-radius: 15px;
+    background: transparent;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+  
+  .tpfb-filter-row button {
+    border: none;
+    padding: 10px 80px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #ffd600;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .tpfb-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  

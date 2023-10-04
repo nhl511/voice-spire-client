@@ -1,6 +1,7 @@
 .voiceprofile {
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(#AA9006, #ffffff);
 }
 .voiceprofile .voiceprofile-container {
   display: flex;
@@ -9,11 +10,17 @@
   flex-direction: column;
   width: 1400px;
 }
+.voiceprofile .voiceprofile-container .title{
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+}
 .voiceprofile .voiceprofile-container .voiceprofile-card {
   background: #fdf8c8;
+  border-radius: 8px;
   padding: 50px;
   width: 750px;
-  margin: 20px 100px 100px 100px;
+  margin: 20px 100px 200px 100px;
 }
 
 .voiceprofile .voiceprofile-container .voiceprofile-card .col-item {

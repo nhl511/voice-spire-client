@@ -1,53 +1,60 @@
-.listvoice {
+.listVoice {
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(#FEE66A, #ffffff);
 }
-.listvoice .listvoice-container {
+.listVoice .listVoice-container {
   padding: 50px 0;
   width: 1400px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-.listvoice .listvoice-container .listvoice-help {
+.listVoice .listVoice-container .listVoice-help {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 100px;
 }
-.listvoice .listvoice-container .listvoice-help .listvoice-search {
+.listVoice .listVoice-container .listVoice-help .listVoice-search {
   display: flex;
 }
-.listvoice .listvoice-container .listvoice-help .listvoice-search input {
+.listVoice .listVoice-container .listVoice-help .listVoice-search input {
   padding: 10px 20px;
   font-size: 15px;
   width: 250px;
   outline: none;
-}
-.listvoice .listvoice-container .listvoice-help .listvoice-search button {
   border: none;
+  border-radius: 30px;
+}
+.listVoice .listVoice-container .listVoice-help .listVoice-search button {
+  border: none;
+  border-radius: 8px;
   font-size: 15px;
-  padding: 11px 20px;
+  padding: 5px 20px;
   background: #ffd600;
   cursor: pointer;
   transition: opacity 0.4s;
+  margin-left: 10px;
 }
-.listvoice .listvoice-container .listvoice-help .listvoice-search button:hover {
+.listVoice .listVoice-container .listVoice-help .listVoice-search button:hover {
   opacity: 0.6;
 }
 
-.listvoice .listvoice-container .listvoice-help .listvoice-sort {
+.listVoice .listVoice-container .listVoice-help .listVoice-sort {
   display: flex;
   gap: 10px;
   align-items: center;
+  font-size: 18px;
+  margin-left: 30px;
 }
 
-.listvoice .listvoice-container .listvoice-help .listvoice-sort select {
+.listVoice .listVoice-container .listVoice-help .listVoice-sort select {
   font-size: 18px;
   border: none;
   font-weight: 600;
+  background-color: transparent;
 }
 
-.listvoice .listvoice-container .cards {
+.listVoice .listVoice-container .cards {
   display: flex;
   flex-direction: column;
   align-items: center;

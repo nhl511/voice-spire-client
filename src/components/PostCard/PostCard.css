@@ -57,21 +57,24 @@
 
 .postcard .content .require span {
   border: 1px solid black;
+  border-radius: 8px;
   padding: 5px 10px;
 }
 
 .postcard .content .button {
   display: flex;
   align-items: center;
-  flex: 2;
+  flex: 3;
 }
 
 .postcard .content .button button {
   border: none;
-  background: #f1c40f;
+  background-image: linear-gradient(#00C2FF, #99F3EE);
   font-size: 16px;
-  padding: 10px 20px;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding: 15px 30px;
   cursor: pointer;
-  color: white;
-  border-radius: 20px;
+  border-radius: 4px;
+  margin-left: 20px;
 }

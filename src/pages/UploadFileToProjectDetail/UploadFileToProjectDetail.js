@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function UploadFileToProjectDetail() {
     return (
-        <div>
+        <div className='uftpd'>
             <h2 className='uftpd-title'>Quảng cáo sản phẩm kem dưỡng ẩm Hảo Hảo</h2>
             <div className='uftpd-container'>
                 <div className='uftpd-card'>

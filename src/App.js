@@ -27,22 +27,22 @@ import UploadFileToProjectDetail from "./pages/UploadFileToProjectDetail/UploadF
 import ProjectDetailForBuyer from "./pages/ProjectDetailForBuyer/ProjectDetailForBuyer";
 import ProjectApprovalAtDetail from "./pages/ProjectApprovalAtDetail/ProjectApprovalAtDetail";
 import SentProjectsManagement from "./pages/SentProjectsManagement/SentProjectsManagement";
+import SellerProfile from "./pages/SellerProfile/SellerProfile";
+import TrackingProjectForSeller from "./pages/TrackingProjectForSeller/TrackingProjectForSeller";
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
+        <Route path="/unauthorized" element={<Unauthorized />} />
+
         <Route path="/" element={<Login />} />
         <Route path="/bank" element={<BankAccount />} />
         <Route path="/register" element={<RegisterSeller />} />
         <Route path="/register2" element={<RegisterBuyer />} />
-        <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/lv" element={<ListVoice />} />
         <Route path="/voicedetail/:id" element={<VoiceDetail />} />
 
-        <Route path="/pdfs" element={<ProjectDetailForSeller />} />
-        <Route path="/uftpd" element={<UploadFileToProjectDetail />} />
-        <Route path="/pdfb" element={<ProjectDetailForBuyer />} />
         <Route
           path="/postedprojectsmanagement"
           element={<PostedProjectsManagement />}
@@ -64,14 +64,18 @@ const App = () => {
           <Route path="/upload" element={<ProjectUpload />} />
           <Route path="/sp/:id" element={<SendProject />} />
           <Route path="/candidatelist" element={<AcceptApplication />} />
+          <Route path="/pdfb" element={<ProjectDetailForBuyer />} />
         </Route>
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>
           <Route path="/posts" element={<Posts />} />
           <Route path="/profile" element={<VoiceProfile />} />
           <Route path="/pt1/:id" element={<ProjectDescriptionToApply />} />
-          <Route path="/recruitment/:id" element={<Recruitment />} />
-
           <Route path="/pt2" element={<ProjectDescriptionConfirm />} />
+          <Route path="/recruitment/:id" element={<Recruitment />} />
+          <Route path="/uftpd" element={<UploadFileToProjectDetail />} />
+          <Route path="/pdfs" element={<ProjectDetailForSeller />} />
+          <Route path="/profileSeller" element={<SellerProfile />} />
+          <Route path="/tpfs" element={<TrackingProjectForSeller />} />
         </Route>
       </Route>
     </Routes>

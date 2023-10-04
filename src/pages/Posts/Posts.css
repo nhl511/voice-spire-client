@@ -1,3 +1,6 @@
+.posts-background{
+  background-image: linear-gradient(#FEE66A, #ffffff);
+}
 .posts {
   display: flex;
   justify-content: center;
@@ -26,8 +29,11 @@
 }
 
 .posts .posts-container .filter .filter-row .searchbox input {
+  border-radius: 8px;
   font-size: 18px;
-  padding: 10px 20px;
+  padding: 5px 20px;
+  width: 300px;
+  background: transparent;
 }
 .posts .posts-container .filter .filter-row .min-max {
   display: flex;
@@ -35,10 +41,18 @@
   font-size: 18px;
   align-items: center;
 }
+.posts .posts-container .filter .filter-row .min-max span{
+  color: #333333;
+  font-weight: 600;
+  font-size: 18px;
+}
 
 .posts .posts-container .filter .filter-row .min-max input {
+  border-radius: 8px;
   font-size: 18px;
-  padding: 10px 20px;
+  padding: 5px 20px;
+  background: transparent;
+  width: 100px;
 }
 
 .posts .posts-container .filter .filter-row .long {
@@ -47,10 +61,17 @@
   font-size: 18px;
   align-items: center;
 }
-
-.posts .posts-container .filter .filter-row .long input {
+.posts .posts-container .filter .filter-row .long span{
+  color: #333333;
+  font-weight: 600;
   font-size: 18px;
-  padding: 10px 20px;
+}
+.posts .posts-container .filter .filter-row .long input {
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 5px 20px;
+  background: transparent;
+  width: 100px;
 }
 
 .posts .posts-container .filter .filter-row .region {
@@ -59,9 +80,16 @@
   font-size: 18px;
   align-items: center;
 }
-.posts .posts-container .filter .filter-row .region select {
+.posts .posts-container .filter .filter-row .region span{
+  color: #333333;
+  font-weight: 600;
   font-size: 18px;
-  padding: 10px 20px;
+}
+.posts .posts-container .filter .filter-row .region select {
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 5px 10px;
+  background: transparent;
 }
 .posts .posts-container .filter .filter-row .gender {
   display: flex;
@@ -69,9 +97,16 @@
   font-size: 18px;
   align-items: center;
 }
-.posts .posts-container .filter .filter-row .gender select {
+.posts .posts-container .filter .filter-row .gender span{
+  color: #333333;
+  font-weight: 600;
   font-size: 18px;
-  padding: 10px 20px;
+}
+.posts .posts-container .filter .filter-row .gender select {
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 5px 10px;
+  background: transparent;
 }
 
 .posts .posts-container .filter .filter-row .nature {
@@ -80,9 +115,16 @@
   font-size: 18px;
   align-items: center;
 }
-.posts .posts-container .filter .filter-row .nature select {
+.posts .posts-container .filter .filter-row .nature span{
+  color: #333333;
+  font-weight: 600;
   font-size: 18px;
-  padding: 10px 20px;
+}
+.posts .posts-container .filter .filter-row .nature select {
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 5px 10px;
+  background: transparent;
 }
 
 .posts .posts-container .filter .filter-row .location {
@@ -91,9 +133,16 @@
   font-size: 18px;
   align-items: center;
 }
-.posts .posts-container .filter .filter-row .location select {
+.posts .posts-container .filter .filter-row .location span{
+  color: #333333;
+  font-weight: 600;
   font-size: 18px;
-  padding: 10px 20px;
+}
+.posts .posts-container .filter .filter-row .location select {
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 5px 10px;
+  background: transparent;
 }
 
 .posts .posts-container .filter .filter-row button {
@@ -103,6 +152,8 @@
   background: #ffd600;
   border-radius: 20px;
   cursor: pointer;
+  width: 200px;
+  font-weight: 600;
 }
 
 .posts .posts-container .cards {

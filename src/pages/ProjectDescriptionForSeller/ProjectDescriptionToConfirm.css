@@ -4,12 +4,13 @@
 .pdtc-container{
     display: flex;
     justify-content: center;
+    background-image: linear-gradient(#FEE66A, #f6f2f2);
 }
 .pdtc-card{
     background: #FFFCE5;
     width: 1000px;
     margin-top: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 300px;
 }
 .pdtc-info{
     display: grid;

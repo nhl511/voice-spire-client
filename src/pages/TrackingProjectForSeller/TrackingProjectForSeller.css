@@ -1,0 +1,74 @@
+.tpfs-background{
+  background-image: linear-gradient(#FEE66A, #ffffff);
+}
+.tpfs{
+  display: flex;
+  justify-content: center;
+}
+.tpfs-container {
+  padding-top: 50px;
+  }
+  .tpfs-filter{
+    margin-right: 150px;
+  }
+   .tpfs-searchBox{
+    width: 300px;
+    border-radius: 8px;
+    padding: 5px 20px;
+    background: transparent;
+  } 
+  .tpfs-price{
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+  }
+  .tpfs-price-min{
+    width: 100px;
+    border-radius: 8px;
+    padding: 5px 5px;
+    margin-left: 10px;
+    background: transparent;
+
+  }
+  .tpfs-dot{
+    color: #333333;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .tpfs-price-max{
+    width: 100px;
+    border-radius: 8px;
+    padding: 5px 5px;
+    background: transparent;
+
+  }
+  .tpfs-length{
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 70px;
+  }
+  .tpfs-length-input{
+    width: 100px;
+    border-radius: 8px;
+    padding: 5px 5px;
+    margin-left: 10px;
+    background: transparent;
+
+  }
+  .tpfs-search{
+    border: none;
+    padding: 10px 80px;
+    font-size: 14px;
+    font-weight: 600;
+    background: #ffd600;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .tpfs-card{
+    min-height: 370px;
+    margin-top: 30px;
+  }

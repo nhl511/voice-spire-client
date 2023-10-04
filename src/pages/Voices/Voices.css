@@ -1,6 +1,7 @@
 .voices {
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(#FEE66A, #ffffff);
 }
 
 .voices .voices-container {
@@ -28,6 +29,7 @@
   border: none;
   padding: 10px 20px;
   font-size: 20px;
+  font-weight: 600;
   background: #ffd600;
   border-radius: 20px;
   cursor: pointer;
@@ -48,6 +50,9 @@
 }
 
 .voices .voices-container .filter .filter-row .searchbox input {
+  width: 250px;
+  border-radius: 15px;
+  background: transparent;
   font-size: 15px;
   padding: 10px 20px;
 }
@@ -57,8 +62,16 @@
   font-size: 15px;
   align-items: center;
 }
+.voices .voices-container .filter .filter-row .min-max span{
+  color: #333333;
+  font-weight: 600;
+  font-size: 18px;
+}
 
 .voices .voices-container .filter .filter-row .min-max input {
+  width: 100px;
+  border-radius: 15px;
+  background: transparent;
   font-size: 15px;
   padding: 10px 20px;
 }
@@ -69,8 +82,14 @@
   font-size: 15px;
   align-items: center;
 }
-
+.voices .voices-container .filter .filter-row .type span{
+  color: #333333;
+  font-weight: 600;
+  font-size: 18px;
+}
 .voices .voices-container .filter .filter-row .type select {
+  border-radius: 15px;
+  background: transparent;
   font-size: 15px;
   padding: 10px 20px;
 }
@@ -80,8 +99,15 @@
   font-size: 15px;
   align-items: center;
 }
+.voices .voices-container .filter .filter-row .tone span{
+  color: #333333;
+  font-weight: 600;
+  font-size: 18px;
+}
 
 .voices .voices-container .filter .filter-row .tone select {
+  border-radius: 15px;
+  background: transparent;
   font-size: 15px;
   padding: 10px 20px;
 }
@@ -92,7 +118,14 @@
   font-size: 15px;
   align-items: center;
 }
+.voices .voices-container .filter .filter-row .region span{
+  color: #333333;
+  font-weight: 600;
+  font-size: 18px;
+}
 .voices .voices-container .filter .filter-row .region select {
+  border-radius: 15px;
+  background: transparent;
   font-size: 15px;
   padding: 10px 20px;
 }
@@ -102,7 +135,14 @@
   font-size: 15px;
   align-items: center;
 }
+.voices .voices-container .filter .filter-row .gender span{
+  color: #333333;
+  font-weight: 600;
+  font-size: 18px;
+}
 .voices .voices-container .filter .filter-row .gender select {
+  border-radius: 15px;
+  background: transparent;
   font-size: 15px;
   padding: 10px 20px;
 }
@@ -113,7 +153,14 @@
   font-size: 15px;
   align-items: center;
 }
+.voices .voices-container .filter .filter-row .nature span{
+  color: #333333;
+  font-weight: 600;
+  font-size: 18px;
+}
 .voices .voices-container .filter .filter-row .nature select {
+  border-radius: 15px;
+  background: transparent;
   font-size: 15px;
   padding: 10px 20px;
 }
@@ -124,15 +171,23 @@
   font-size: 15px;
   align-items: center;
 }
+.voices .voices-container .filter .filter-row .rating span{
+  color: #333333;
+  font-weight: 600;
+  font-size: 18px;
+}
 .voices .voices-container .filter .filter-row .rating select {
+  border-radius: 15px;
+  background: transparent;
   font-size: 15px;
   padding: 10px 20px;
 }
 
 .voices .voices-container .filter .filter-row button {
   border: none;
-  padding: 10px 20px;
-  font-size: 14px;
+  padding: 10px 80px;
+  font-size: 18px;
+  font-weight: 600;
   background: #ffd600;
   border-radius: 20px;
   cursor: pointer;

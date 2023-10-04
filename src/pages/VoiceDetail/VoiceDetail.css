@@ -1,6 +1,7 @@
 .voicedetail {
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(#FEE66A, #ffffff);
 }
 
 .voicedetail .voicedetail-container {
@@ -12,8 +13,10 @@
 
 .voicedetail .voicedetail-container .voicedetail-card {
   background: #fffce5;
+  border-radius: 8px;
   width: 1000px;
   padding: 20px;
+  margin-bottom: 200px;
 }
 
 .voicedetail-avatar {
@@ -60,7 +63,7 @@
   margin-top: 15px;
 }
 .voicedetail-detail .voicedetail-detail-info select {
-  width: 100px;
+  width: 120px;
   border: none;
   background: transparent;
   font-weight: 600;

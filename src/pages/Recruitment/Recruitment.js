@@ -58,7 +58,7 @@ export default function Recruitment() {
   };
 
   return (
-    <div>
+    <div className="recruitment">
       {loading ? (
         <div className="loading">
           <div className="loading-container">

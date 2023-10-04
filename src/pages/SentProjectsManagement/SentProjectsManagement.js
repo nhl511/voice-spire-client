@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./SentProjectsManagement";
+import "./SentProjectsManagement.css";
 import { getProjects } from "../../api/axios";
 import PostedProjectCard from "../../components/PostedProjectCard/PostedProjectCard";
 
@@ -54,9 +54,9 @@ const SentProjectsManagement = () => {
       .then((json) => setLoading(false));
   };
   return (
-    <div className="projectapproval">
-      <div className="projectApproval-container">
-        <div className="projectApproval-search">
+    <div className="spm">
+      <div className="spm-container">
+        <div className="spm-search">
           <form onSubmit={handleSubmit}>
             <input type="search" placeholder="Tìm kiếm" />
             <select>

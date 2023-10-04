@@ -177,7 +177,7 @@ export default function SendProject() {
                   <div className="sendProject-duration">
                     <input
                       type="number"
-                      placeholder="Nhập thời lượng yêu cầu (phút)"
+                      placeholder="Nhập thời lượng (phút)"
                       value={duration}
                       onChange={(e) => setDuration(e.target.value)}
                     />

@@ -28,12 +28,13 @@
 }
 
 .voicecard .main .info .name {
+  font-size: 18px;
   font-weight: bold;
 }
 
 .voicecard .main .info .voicegender {
-  font-size: 15px;
-  font-weight: lighter;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .voicecard .type {
@@ -82,9 +83,9 @@
 
 .voicecard .button button {
   border: none;
-  padding: 10px 20px;
+  padding: 15px 40px;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 30px;
   cursor: pointer;
   background: white;
 }

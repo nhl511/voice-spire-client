@@ -25,7 +25,7 @@ const ListVoice = () => {
       .then((json) => setLoading(false));
   };
   return (
-    <div className="listvoice">
+    <div className="listVoice">
       {loading ? (
         <div className="loading">
           <div className="loading-container">
@@ -33,9 +33,20 @@ const ListVoice = () => {
           </div>
         </div>
       ) : (
-        <div className="listvoice-container">
-          <div className="listvoice-help">
-            <div className="listvoice-sort">
+        <div className="listVoice-container">
+          <div className="listVoice-help">
+            <div className="listVoice-search">
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="search"
+                  placeholder="Nhập ở đây"
+                  value={inputSearch}
+                  onChange={(e) => setInputSearch(e.target.value)}
+                />
+                <button>Tìm kiếm</button>
+              </form>
+            </div>
+            <div className="listVoice-sort">
               <span>Sắp xếp theo</span>
               <select
                 value={sort}
@@ -47,17 +58,6 @@ const ListVoice = () => {
                 <option value="old">Cũ nhất</option>
                 <option value="new">Mới nhất</option>
               </select>
-            </div>
-            <div className="listvoice-search">
-              <form onSubmit={handleSubmit}>
-                <input
-                  type="search"
-                  placeholder="Nhập ở đây"
-                  value={inputSearch}
-                  onChange={(e) => setInputSearch(e.target.value)}
-                />
-                <button>Tìm kiếm</button>
-              </form>
             </div>
           </div>
 

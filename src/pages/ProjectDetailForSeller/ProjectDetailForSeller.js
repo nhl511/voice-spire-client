@@ -14,7 +14,7 @@ export default function ProjectDetailForSeller() {
     }, [currentPage]);
 
     return (
-        <div>
+        <div className='pdfs'>
             <div>
                 <h2 className='pdfs-titleProject'>Quảng cáo sản phẩm kem dưỡng ẩm Hảo Hảo</h2>
                 <div className='pdfs-container'>

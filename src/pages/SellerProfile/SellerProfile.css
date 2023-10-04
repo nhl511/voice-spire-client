@@ -1,13 +1,14 @@
 .sellerProfile-container{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 150px;
+    background-image: linear-gradient(#FEE66A, #ffffff);
 }
 .sellerProfile-card{
     background: #FFFCE5;
     width: 1000px;
     border-radius: 8px;
+    margin-top: 30px;
+    margin-bottom: 300px;
 }
 .sellerProfile-image{
     display: flex;

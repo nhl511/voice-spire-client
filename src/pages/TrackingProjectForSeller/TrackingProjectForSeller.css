@@ -1,4 +1,6 @@
-
+.tpfs-background{
+  background-image: linear-gradient(#FEE66A, #ffffff);
+}
 .tpfs{
   display: flex;
   justify-content: center;
@@ -13,6 +15,7 @@
     width: 300px;
     border-radius: 8px;
     padding: 5px 20px;
+    background: transparent;
   } 
   .tpfs-price{
     color: #333333;
@@ -25,6 +28,8 @@
     border-radius: 8px;
     padding: 5px 5px;
     margin-left: 10px;
+    background: transparent;
+
   }
   .tpfs-dot{
     color: #333333;
@@ -36,6 +41,8 @@
     width: 100px;
     border-radius: 8px;
     padding: 5px 5px;
+    background: transparent;
+
   }
   .tpfs-length{
     color: #333333;
@@ -48,6 +55,8 @@
     border-radius: 8px;
     padding: 5px 5px;
     margin-left: 10px;
+    background: transparent;
+
   }
   .tpfs-search{
     border: none;

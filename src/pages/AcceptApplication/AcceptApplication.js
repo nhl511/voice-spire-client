@@ -13,7 +13,7 @@ export default function AcceptApplication() {
             .then((json) => setVoices(json))
     }, [currentPage]);
     return (
-        <div>
+        <div className='aa'>
             <div>
                 <h2 className='aa-titleProject'>Quảng cáo sản phẩm kem dưỡng ẩm Hảo Hảo</h2>
                 <div className='aa-container'>

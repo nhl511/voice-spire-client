@@ -91,6 +91,24 @@ const Voices = () => {
                       placeholder="Đến"
                     />
                   </div>
+                  <div className="type">
+                    <span>Loại</span>
+                    <select
+                      value={inputType}
+                      onChange={(e) => setInputType(e.target.value)}
+                    >
+                      <option value="">Vui lòng chọn</option>
+                      <option value="Mạnh mẽ">Mạnh mẽ</option>
+                      <option value="Trẻ trung">Trẻ trung</option>
+                      <option value="Trung niên">Trung niên</option>
+                      <option value="Giọng ấm">Giọng ấm</option>
+                      <option value="Tươi mới">Tươi mới</option>
+                      <option value="Hài hước">Hài hước</option>
+                      <option value="Tự tin">Tự tin</option>
+                      <option value="Dịu dàng">Dịu dàng</option>
+                      <option value="Trẻ em">Trẻ em</option>
+                    </select>
+                  </div>
                   <div className="tone">
                     <span>Tone giọng</span>
                     <select
@@ -131,24 +149,7 @@ const Voices = () => {
                       <option value="Khác">Khác</option>
                     </select>
                   </div>
-                  <div className="type">
-                    <span>Loại</span>
-                    <select
-                      value={inputType}
-                      onChange={(e) => setInputType(e.target.value)}
-                    >
-                      <option value="">Vui lòng chọn</option>
-                      <option value="Mạnh mẽ">Mạnh mẽ</option>
-                      <option value="Trẻ trung">Trẻ trung</option>
-                      <option value="Trung niên">Trung niên</option>
-                      <option value="Giọng ấm">Giọng ấm</option>
-                      <option value="Tươi mới">Tươi mới</option>
-                      <option value="Hài hước">Hài hước</option>
-                      <option value="Tự tin">Tự tin</option>
-                      <option value="Dịu dàng">Dịu dàng</option>
-                      <option value="Trẻ em">Trẻ em</option>
-                    </select>
-                  </div>
+
                   <div className="nature">
                     <span>Tính chất</span>
                     <select

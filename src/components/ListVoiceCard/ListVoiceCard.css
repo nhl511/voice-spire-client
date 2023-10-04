@@ -1,40 +1,41 @@
-.listvoice-card {
+.listVoice-card {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
   background: #fffce5;
   width: max-content;
   padding: 20px 40px;
+  height: 120px;
 }
-.listvoice-card .listvoice-avatar img {
+.listVoice-card .listVoice-avatar img {
   width: 90px;
   height: 90px;
   object-fit: cover;
   border-radius: 50%;
 }
-.listvoice-card .listvoice-info {
+.listVoice-card .listVoice-info {
   margin: 5px 20px;
 }
-.listvoice-card .listvoice-info .listvoice-personal {
+.listVoice-card .listVoice-info .listVoice-personal {
   text-align: center;
   color: #737373;
   font-weight: 600;
 }
-.listvoice-card .listvoice-sound {
+.listVoice-card .listVoice-sound {
   background: transparent;
 }
-.listvoice-card .listvoice-sound audio {
+.listVoice-card .listVoice-sound audio {
   width: 700px;
-  margin: 5px 0px;
 }
-.listvoice-card .listvoice-sound audio::-webkit-media-controls-panel {
+.listVoice-card .listVoice-sound audio::-webkit-media-controls-panel {
   background: #fffce5;
 }
 
-.listvoice-card .listvoice-time {
+.listVoice-card .listVoice-time {
   text-align: center;
 }
-.listvoice-card .listvoice-icon {
+.listVoice-card .listVoice-icon {
   background: #fdf8c8;
   border-radius: 50%;
   padding: 10px 10px;

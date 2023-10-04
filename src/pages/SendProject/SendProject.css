@@ -1,6 +1,8 @@
 .sendProject-center {
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(#AA9006, #ffffff);
+
 }
 .sendProject-title {
   text-align: center;
@@ -18,8 +20,8 @@
   grid-template-columns: 30% 70%;
 }
 .sendProject-card-left img {
-  width: 221px;
-  height: 221px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
   padding: 20px 30px 30px 40px;
@@ -105,6 +107,7 @@
   outline: none;
   border-radius: 15px;
   padding: 7px 20px;
+  width: 190px;
 }
 .sendProject-text-upload label {
   border: none;
@@ -134,7 +137,7 @@
   padding: 10px;
 }
 .sendProject-duration input {
-  width: 120px;
+  width: 200px;
   border: none;
   outline: none;
   border-radius: 20px;

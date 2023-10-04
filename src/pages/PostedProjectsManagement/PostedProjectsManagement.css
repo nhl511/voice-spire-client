@@ -1,6 +1,7 @@
 .projectapproval {
   display: flex;
   justify-content: center;
+  background-image: linear-gradient(#FFDD2E, #ffffff);
 }
 .projectapproval .projectApproval-container {
   width: 1400px;
@@ -31,6 +32,7 @@
   padding: 0px 10px;
   font-size: 17px;
   border: none;
+  background: transparent;
   font-weight: 600;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 5px;

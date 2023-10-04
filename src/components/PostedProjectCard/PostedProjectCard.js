@@ -32,22 +32,22 @@ const PostedProjectCard = ({ post }) => {
   };
 
   return (
-    <div className="lpa-margin">
-      <div className="lpa-container">
-        <div className="lpa-card" onClick={displayDropdown}>
+    <div className="ppc-margin">
+      <div className="ppc-container">
+        <div className="ppc-card" onClick={displayDropdown}>
           <img src={post.linkThumbnail} alt="thumbnail" />
-          <div className="lpa-name">
+          <div className="ppc-name">
             <span>{post.title}</span>
-            <div className="lpa-bank">
+            <div className="ppc-bank">
               <span>
                 BankCode: <span>{post.bankCode}</span>
               </span>
             </div>
           </div>
-          {/* <div className="lpa-status">
+          {/* <div className="ppc-status">
             <span>Chưa thanh toán</span>
           </div> */}
-          <div className="lpa-icon">
+          <div className="ppc-icon">
             {post.projectStatus === "WaitApprove" && <WaitingStatus />}
             {post.projectStatus === "NotApproved" && <RejectStatus />}
             {post.projectStatus === "Apply" && <RecruitmentStatus />}
@@ -59,8 +59,8 @@ const PostedProjectCard = ({ post }) => {
         </div>
       </div>
       {dropDown && (
-        <div className="lpa-dropdown">
-          <div className="lpa-dropdown-card">
+        <div className="ppc-dropdown">
+          <div className="ppc-dropdown-card">
             {loading ? (
               <div className="loading-dropdown">
                 <div className="loading-dropdown-container">
@@ -69,19 +69,19 @@ const PostedProjectCard = ({ post }) => {
               </div>
             ) : (
               <>
-                <div className="lpa-dropdown-display">
-                  <div className="lpa-dropdown-small-card">
+                <div className="ppc-dropdown-display">
+                  <div className="ppc-dropdown-small-card">
                     <div>
-                      <p className="lpa-dropdown-title">Thông tin thanh toán</p>
-                      <div className="lpa-dropdown-bank">
+                      <p className="ppc-dropdown-title">Thông tin thanh toán</p>
+                      <div className="ppc-dropdown-bank">
                         <strong>Ngân hàng:</strong>
                         <span>{paymentInfo.bankNameBuyer}</span>
                       </div>
-                      <div className="lpa-dropdown-bank">
+                      <div className="ppc-dropdown-bank">
                         <strong>Số tài khoản:</strong>
                         <span>{paymentInfo.bankNumberBuyer}</span>
                       </div>
-                      <div className="lpa-dropdown-bank-fullName">
+                      <div className="ppc-dropdown-bank-fullName">
                         <strong>Tên tài khoản:</strong>
                         <span>{paymentInfo.bankAccountNameBuyer}</span>
                       </div>
@@ -89,7 +89,7 @@ const PostedProjectCard = ({ post }) => {
                   </div>
                 </div>
                 <div className="button-wrapper">
-                  <div className="lpa-dropdown-detail-button">
+                  <div className="ppc-dropdown-detail-button">
                     <Link
                       to={`/projectmanagementdetail/${post.voiceProjectId}`}
                       className="link"
@@ -97,7 +97,7 @@ const PostedProjectCard = ({ post }) => {
                       <button>Xem chi tiết dự án</button>
                     </Link>
                   </div>
-                  <div className="lpa-dropdown-confirm-button">
+                  <div className="ppc-dropdown-confirm-button">
                     {post.projectStatus === "WaitApprove" && (
                       <button
                         onClick={() => {
@@ -116,42 +116,42 @@ const PostedProjectCard = ({ post }) => {
         </div>
       )}
       {dropDown2 && (
-        <div className="lpa-dropdown">
-          <div className="lpa-dropdown-card">
-            <div className="lpa-dropdown-display">
-              <div className="lpa-dropdown-small-card">
+        <div className="ppc-dropdown">
+          <div className="ppc-dropdown-card">
+            <div className="ppc-dropdown-display">
+              <div className="ppc-dropdown-small-card">
                 <div>
-                  <p className="lpa-dropdown-title">
+                  <p className="ppc-dropdown-title">
                     Thông tin thanh toán tổ chức
                   </p>
-                  <div className="lpa-dropdown-bank">
+                  <div className="ppc-dropdown-bank">
                     <strong>Ngân hàng:</strong>
                     <span>{paymentInfo.bankNameBuyer}</span>
                   </div>
-                  <div className="lpa-dropdown-bank">
+                  <div className="ppc-dropdown-bank">
                     <strong>Số tài khoản:</strong>
                     <span>{paymentInfo.bankNumberBuyer}</span>
                   </div>
-                  <div className="lpa-dropdown-bank-fullName">
+                  <div className="ppc-dropdown-bank-fullName">
                     <strong>Tên tài khoản:</strong>
                     <span>{paymentInfo.bankAccountNameBuyer}</span>
                   </div>
                 </div>
               </div>
-              <div className="lpa-dropdown-small-card">
+              <div className="ppc-dropdown-small-card">
                 <div>
-                  <p className="lpa-dropdown-title">
+                  <p className="ppc-dropdown-title">
                     Thông tin thanh toán bên bán
                   </p>
-                  <div className="lpa-dropdown-bank">
+                  <div className="ppc-dropdown-bank">
                     <strong>Ngân hàng:</strong>
                     <span>{paymentInfo.bankNameSeller}</span>
                   </div>
-                  <div className="lpa-dropdown-bank">
+                  <div className="ppc-dropdown-bank">
                     <strong>Số tài khoản:</strong>
                     <span>{paymentInfo.bankNumberSeller}</span>
                   </div>
-                  <div className="lpa-dropdown-bank-fullName">
+                  <div className="ppc-dropdown-bank-fullName">
                     <strong>Tên tài khoản:</strong>
                     <span>{paymentInfo.bankAccountNameSeller}</span>
                   </div>
@@ -159,7 +159,7 @@ const PostedProjectCard = ({ post }) => {
               </div>
             </div>
             <div className="button-wrapper">
-              <div className="lpa-dropdown-detail-button">
+              <div className="ppc-dropdown-detail-button">
                 <Link
                   to={`/projectmanagementdetail/${post.voiceProjectId}`}
                   className="link"
@@ -167,7 +167,7 @@ const PostedProjectCard = ({ post }) => {
                   <button>Xem chi tiết dự án</button>
                 </Link>
               </div>
-              <div className="lpa-dropdown-confirm-button">
+              <div className="ppc-dropdown-confirm-button">
                 <button>Xem hoạt động dự án</button>
               </div>
             </div>

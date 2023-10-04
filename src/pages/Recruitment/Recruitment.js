@@ -13,7 +13,7 @@ export default function Recruitment() {
       .then((json) => setLoading(false));
   }, [id]);
   return (
-    <div>
+    <div className="recruitment">
       {loading ? (
         <div className="loading">
           <div className="loading-container">

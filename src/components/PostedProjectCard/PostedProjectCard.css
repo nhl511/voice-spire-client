@@ -1,8 +1,8 @@
-.lpa-container {
+.ppc-container {
   display: flex;
   justify-content: center;
 }
-.lpa-card {
+.ppc-card {
   width: 1000px;
   display: flex;
   background: #fffce5;
@@ -10,14 +10,14 @@
   border-radius: 8px;
   cursor: pointer;
 }
-.lpa-card img {
+.ppc-card img {
   width: 290px;
   height: 121px;
   clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
   object-fit: cover;
   border-radius: 7px 0px 0px 7px;
 }
-.lpa-name {
+.ppc-name {
   color: #737373;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
@@ -25,29 +25,29 @@
   margin-top: 40px;
   flex: 3;
 }
-.lpa-bank {
+.ppc-bank {
   color: black;
   font-weight: 600;
   font-size: 16px;
   margin-top: 5px;
 }
-.lpa-status {
+.ppc-status {
   display: flex;
   align-items: center;
   flex: 1;
 }
-.lpa-status span {
+.ppc-status span {
   background: #dc2f24;
   color: white;
   padding: 5px 10px;
   border-radius: 10px;
 }
-.lpa-icon {
+.ppc-icon {
   display: flex;
   align-items: center;
   flex: 2;
 }
-.lpa-icon button {
+.ppc-icon button {
   border-radius: 50%;
   padding: 10px 10px;
   background: #5fe05c;
@@ -56,11 +56,11 @@
   /* background: #DC2F24; */
 }
 
-.lpa-dropdown {
+.ppc-dropdown {
   display: flex;
   justify-content: center;
 }
-.lpa-dropdown .lpa-dropdown-card {
+.ppc-dropdown .ppc-dropdown-card {
   width: 1000px;
   background: #e3d794;
   display: flex;
@@ -68,72 +68,74 @@
   gap: 20px;
   padding: 10px 0;
 }
-.lpa-dropdown-display {
+.ppc-dropdown-display {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-.lpa-dropdown-small-card {
+.ppc-dropdown-small-card {
   border-radius: 6px;
   width: 400px;
   background: #ffffff;
 }
-.lpa-dropdown-title {
+.ppc-dropdown-title {
   text-align: center;
   font-weight: 700;
   font-size: 20px;
   padding: 10px 0px 0px 0px;
 }
-.lpa-dropdown-bank {
+.ppc-dropdown-bank {
   display: grid;
   grid-template-columns: 35% 65%;
 }
-.lpa-dropdown-bank strong {
+.ppc-dropdown-bank strong {
   padding: 3px;
   margin-left: 20px;
 }
-.lpa-dropdown-bank span {
+.ppc-dropdown-bank span {
   font-weight: 600;
   padding: 3px;
 }
-.lpa-dropdown-bank-fullName {
+.ppc-dropdown-bank-fullName {
   display: grid;
   grid-template-columns: 35% 65%;
   padding-bottom: 20px;
 }
-.lpa-dropdown-bank-fullName strong {
+.ppc-dropdown-bank-fullName strong {
   padding: 3px;
   margin-left: 20px;
 }
-.lpa-dropdown-bank-fullName span {
+.ppc-dropdown-bank-fullName span {
   color: #000000;
   font-weight: 600;
   padding: 3px;
 }
-.lpa-dropdown .lpa-dropdown-card .button-wrapper {
+.ppc-dropdown .ppc-dropdown-card .button-wrapper {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-.lpa-dropdown
-  .lpa-dropdown-card
+.ppc-dropdown
+  .ppc-dropdown-card
   .button-wrapper
-  .lpa-dropdown-detail-button
+  .ppc-dropdown-detail-button
   button {
   border: none;
+  border-radius: 30px;
   padding: 10px 20px;
   font-size: 15px;
   cursor: pointer;
   background: #ffd600;
 }
 
-.lpa-dropdown
-  .lpa-dropdown-card
+.ppc-dropdown
+  .ppc-dropdown-card
   .button-wrapper
-  .lpa-dropdown-confirm-button
+  .ppc-dropdown-confirm-button
   button {
   border: none;
+  border-radius: 30px;
   padding: 10px 20px;
   font-size: 15px;
   cursor: pointer;

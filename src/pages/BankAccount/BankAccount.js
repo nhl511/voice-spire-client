@@ -3,7 +3,7 @@ import "./BankAccount.css";
 
 const BankAccount = () => {
   return (
-    <div>
+    <div className="bankAccount">
       <div className="bank-title">
         <h3>Cập nhật tài khoản thanh toán</h3>
       </div>

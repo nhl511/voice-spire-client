@@ -4,7 +4,7 @@ import TrackingProjectForSellerCard from '../../components/TrackingProjectForSel
 
 export default function TrackingProjectForSeller() {
     return (
-        <div>
+        <div className='tpfs-background'>
             <div className='tpfs'>
                 <div className='tpfs-container'>
                     <div className="tpfs-filter">

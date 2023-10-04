@@ -1,8 +1,14 @@
+.aa{
+    background-image: linear-gradient(#FEE66A, #ffffff);
+}
 .aa-titleProject{
     text-align: center;
     text-transform: uppercase;
     font-size: 25px;
+    margin: 0;
+    padding: 20px;
 }
+
 .aa-container{
     display: flex;
     justify-content: center;

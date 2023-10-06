@@ -18,6 +18,7 @@
 }
 .projectUpload-card .projectUpload-card-width {
   background: #fdf8c8;
+  border-radius: 8px;
   width: 900px;
   padding: 20px;
 }

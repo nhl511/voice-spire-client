@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProjectDescriptionToConfirm.css";
 
-export default function ProjectDescriptionConfirm() {
+export default function ProjectDescriptionToConfirm() {
   return (
     <div className="pdtc-container">
       <div className="pdtc-card">

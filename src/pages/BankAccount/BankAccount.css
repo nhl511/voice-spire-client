@@ -22,7 +22,7 @@
   width: 500px;
   background-color: #ffe24d;
   border: 1px solid black;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 .bank .bank-container .bank-card .left {
   display: flex;

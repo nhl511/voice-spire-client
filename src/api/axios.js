@@ -27,15 +27,19 @@ export const getVoiceList = async (
   return valuesArray;
 };
 
-// export const getPostedProjects = async (currentPage, pageSize, sortType) => {
-//   const response = await axiosOne.get(
-//     `/api/VoiceProjects/GetListProjectToManagement/${currentPage},${pageSize},${sortType}`
-//   );
-//   console.log(response.data.results);
+export const getAllProjectsForTracking = async (
+  currentPage,
+  pageSize,
+  sortType
+) => {
+  const response = await axiosOne.get(
+    `/api/VoiceProjects/GetListProjectToManagement/${currentPage},${pageSize},${sortType}`
+  );
+  console.log(response.data.results);
 
-//   const valuesArray = Object.values(response.data.results);
-//   return valuesArray;
-// };
+  const valuesArray = Object.values(response.data.results);
+  return valuesArray;
+};
 
 export const getProjects = async (
   currentPage,
@@ -141,10 +145,11 @@ export const sendVoiceProject = async (
   deadline,
   linkDocDemo,
   linkDocMain,
-  linkThumbnail
+  linkThumbnail,
+  request
 ) => {
   const response = await axiosOne.post(
-    `/api/Buyers/SendVoiceProject/${BuyerId},${voiceSellerId},${title},${description},${duration},${deadline}`,
+    `/api/Buyers/SendVoiceProject/${BuyerId},${voiceSellerId},${title},${description},${duration},${deadline},?request=${request}`,
     { linkDocDemo, linkDocMain, linkThumbnail }
   );
   return response.data;
@@ -190,5 +195,13 @@ export const applyToProject = async (
     voiceSellerId,
     linkDemo,
   });
+  return response.data;
+};
+
+export const getCandidates = async (projectId) => {
+  const response = await axiosOne.get(
+    `/api/VoiceProjects/GetListDemoForProject/${projectId}`
+  );
+  console.log(response.data);
   return response.data;
 };

@@ -64,10 +64,9 @@ const App = () => {
           <Route path="/voices" element={<Voices />} />
           <Route path="/upload" element={<ProjectUpload />} />
           <Route path="/sp/:id" element={<SendProject />} />
-          <Route path="/candidatelist" element={<AcceptApplication />} />
+          <Route path="/candidatelist/:id" element={<AcceptApplication />} />
           <Route path="/pdfb" element={<ProjectDetailForBuyer />} />
           <Route path="/tpfb" element={<TrackingProjectForBuyer />} />
-
         </Route>
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>
           <Route path="/posts" element={<Posts />} />

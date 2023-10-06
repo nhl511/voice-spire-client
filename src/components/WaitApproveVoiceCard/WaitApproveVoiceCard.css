@@ -1,0 +1,48 @@
+.waitapprovevoicecard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #fffce5;
+  width: max-content;
+  padding: 20px 40px;
+}
+.waitapprovevoicecard .waitapprovevoicecard-avatar img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.waitapprovevoicecard .waitapprovevoicecard-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.waitapprovevoicecard
+  .waitapprovevoicecard-info
+  .waitapprovevoicecard-personal {
+  color: #737373;
+  font-weight: bold;
+  font-size: 25px;
+}
+.waitapprovevoicecard .waitapprovevoicecard-sound {
+  background: transparent;
+}
+.waitapprovevoicecard .waitapprovevoicecard-sound audio {
+  width: 700px;
+}
+.waitapprovevoicecard
+  .waitapprovevoicecard-sound
+  audio::-webkit-media-controls-panel {
+  background: #fffce5;
+}
+
+.waitapprovevoicecard .waitapprovevoicecard-time {
+  font-size: 15px;
+}
+.waitapprovevoicecard .waitapprovevoicecard-icon {
+  background: #fdf8c8;
+  border-radius: 50%;
+  padding: 10px 10px;
+}

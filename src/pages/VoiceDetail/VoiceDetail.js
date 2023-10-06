@@ -134,8 +134,6 @@ const VoiceDetail = () => {
                   {voice.voiceSeller.fullname}
                 </span>
                 <br />
-                <span>(100 người theo dõi)</span>
-                <br />
                 <span style={{ color: "black", fontWeight: 400 }}>
                   {moment(voice.createDate).format("DD/MM/yyyy")}
                 </span>

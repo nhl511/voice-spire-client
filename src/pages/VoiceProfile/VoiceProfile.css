@@ -1,7 +1,7 @@
 .voiceprofile {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(#AA9006, #ffffff);
+  background-image: linear-gradient(#aa9006, #ffffff);
 }
 .voiceprofile .voiceprofile-container {
   display: flex;
@@ -9,8 +9,9 @@
   align-items: center;
   flex-direction: column;
   width: 1400px;
+  min-height: 100vh;
 }
-.voiceprofile .voiceprofile-container .title{
+.voiceprofile .voiceprofile-container .title {
   text-align: center;
   font-size: 25px;
   text-transform: uppercase;

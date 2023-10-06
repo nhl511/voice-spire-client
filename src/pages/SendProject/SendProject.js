@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./SendProject.css";
 import GradeIcon from "@mui/icons-material/Grade";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios, { getVoice, sendVoiceProject } from "../../api/axios";
 import useAuth from "../../hooks/useAuth";
 
@@ -23,6 +23,7 @@ export default function SendProject() {
   const [nameFileThumbnail, setNameFileThumbnail] = useState("");
 
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const uploadFileDocURL = "/api/Buyers/UploadDocFile";
 
@@ -70,6 +71,7 @@ export default function SendProject() {
       nameFileMain,
       nameFileThumbnail
     );
+    navigate("/tpfb");
   };
 
   return (

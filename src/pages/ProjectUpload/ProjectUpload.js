@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ProjectUpload.css";
 import useAuth from "../../hooks/useAuth";
 import axios, { uploadVoiceProject } from "../../api/axios";
+import { useNavigate } from "react-router-dom";
 const ProjectUpload = () => {
   const uploadFileDocURL = "/api/Buyers/UploadDocFile";
   const uploadThumbnailURL = "/api/Buyers/UploadImageFile";
@@ -33,6 +34,7 @@ const ProjectUpload = () => {
   const [nameFileDemo, setNameFileDemo] = useState();
   const [nameFileMain, setNameFileMain] = useState();
   const [nameFileThumbnail, setNameFileThumbnail] = useState();
+  const navigate = useNavigate();
 
   const handleUploadFileDemo = async (e) => {
     const headers = {
@@ -133,6 +135,8 @@ const ProjectUpload = () => {
       mainFile,
       thumbnail
     );
+
+    navigate("/tpfb");
   };
 
   return (

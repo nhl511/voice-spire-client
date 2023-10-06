@@ -1,117 +1,119 @@
 .tpfbc {
-    display: flex;
-    gap: 20px;
-    border: 1px solid black;
-    height: 120px;
-    border-radius: 10px;
-    background: #fdf8c8;
-  }
-  
-  .tpfbc-thumbnail img {
-    height: 100%;
-    width: 250px;
-    object-fit: cover;
-    border-radius: 10px 0 0 10px;
-    clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
-  }
-  
- .tpfbc-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 1200px;
-  }
-  .tpfbc-title {
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 600;
-    flex: 3;
-  }
-  
- .tpfbc-info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-size: 15px;
-    flex: 2;
-  }
- .tpfbc-info span {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .tpfbc-text-date{
-    font-family: sans-serif;
-    font-weight: 600;
-    font-size: 17px;
-  }
-  .tpfbc-text-price{
-    font-family: sans-serif;
-    font-weight: 600;
-    font-size: 17px;
-  }
-  
+  display: flex;
+  gap: 20px;
+  border: 1px solid black;
+  height: 120px;
+  width: 1200px;
+  border-radius: 10px;
+  background: #fdf8c8;
+}
+.tpfbc-thumbnail {
+  width: 400px;
+}
+.tpfbc-thumbnail img {
+  height: 100%;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+  clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+}
+
+.tpfbc-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 1200px;
+}
+.tpfbc-title {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  flex: 3;
+}
+
+.tpfbc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+  flex: 2;
+}
+.tpfbc-info span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.tpfbc-text-date {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+}
+.tpfbc-text-price {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+}
+
 .tpfbc-info span img {
-    width: 16px;
-    height: 16px;
-    object-fit: cover;
-  }
- .tpfbc-status {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 2;
-    flex-wrap: wrap;
-  }
-  
-  .tpfbc-button {
-    display: flex;
-    align-items: center;
-    flex: 3;
-  }
-  .tpfbc-text-applying{
-    background: #00C2FF;
-    border-radius: 8px;
-    padding: 5px 10px;
-    color: white;
-  }
-  .tpfbc-text-notPayingYet{
-    background: #F14D4D;
-    border-radius: 8px;
-    padding: 5px 10px;
-    color: white;
-  }
-  .tpfbc-text-waitForResult{
-    background: #FFD600;
-    border-radius: 8px;
-    padding: 5px 10px;
-    color: white;
-  }
-  .tpfbc-text-paid{
-    background: #5CC874;
-    border-radius: 8px;
-    padding: 5px 10px;
-    color: white;
-  }
-  .tpfbc-text-result{
-    background: #43D100;
-    border-radius: 8px;
-    padding: 5px 10px;
-    color: white;
-  }
-  .tpfbc-button{
-    display: flex;
-    justify-content: center;
-  }
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+}
+.tpfbc-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 2;
+  flex-wrap: wrap;
+}
+
+.tpfbc-button {
+  display: flex;
+  align-items: center;
+  flex: 3;
+}
+.tpfbc-text-applying {
+  background: #00c2ff;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: white;
+}
+.tpfbc-text-notPayingYet {
+  background: #f14d4d;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: white;
+}
+.tpfbc-text-waitForResult {
+  background: #ffd600;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: white;
+}
+.tpfbc-text-paid {
+  background: #5cc874;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: white;
+}
+.tpfbc-text-result {
+  background: #43d100;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: white;
+}
+.tpfbc-button {
+  display: flex;
+  justify-content: center;
+}
 .tpfbc-button button {
-    border: none;
-    background: #F5851D;
-    font-size: 16px;
-    font-family: sans-serif;
-    font-weight: 600;
-    padding: 10px 50px;
-    cursor: pointer;
-    border-radius: 30px;
-  }
-  
+  border: none;
+  background: #f5851d;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding: 10px 50px;
+  cursor: pointer;
+  border-radius: 30px;
+}

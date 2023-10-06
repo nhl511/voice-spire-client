@@ -16,7 +16,6 @@ const ListVoiceCard = ({ voice }) => {
       <div className="listVoice-info">
         <div className="listVoice-personal">
           <span>{voice.voiceSeller.fullname}</span> <br />
-          <span>null</span>
         </div>
         <div className="listVoice-sound">
           <ReactAudioPlayer src={voice.mainVoiceLink} controls audio="1" />

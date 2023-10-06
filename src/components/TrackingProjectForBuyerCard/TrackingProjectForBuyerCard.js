@@ -1,47 +1,83 @@
-import React from 'react'
-import './TrackingProjectForBuyerCard.css';
-import { Link } from 'react-router-dom'
+import React from "react";
+import "./TrackingProjectForBuyerCard.css";
+import { Link } from "react-router-dom";
+import moment from "moment";
 
-export default function TrackingProjectForBuyerCard() {
-    return (
-        <div className="tpfbc">
-            <div className="tpfbc-thumbnail">
-                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
-                    alt="thumbnail" />
-            </div>
-            <div className="tpfbc-content">
-                <div className="tpfbc-title">
-                    <span>Quảng cáo kem dưỡng ẩm Hảo Hảo</span>
-                </div>
-                <div className="tpfbc-info">
-                    <span>
-                        <img
-                            src="https://cdn2.iconfinder.com/data/icons/pittogrammi/142/10-512.png"
-                            alt=""
-                        />
-                        <span className='tpfbc-text-date'>10/04/2023</span>
-                    </span>
-                    <span>
-                        <img
-                            src="https://cdn-icons-png.flaticon.com/512/156/156764.png"
-                            alt=""
-                        />
-                        <span className='tpfbc-text-price'> 100.000 vnđ/phút</span>
-                    </span>
-                </div>
-                <div className="tpfbc-status">
-                    <span className='tpfbc-text-applying'>Đang ứng tuyển</span>
-                    <span className='tpfbc-text-notPayingYet'>Chưa thanh toán</span>
-                    {/* <span className='tpfbc-text-waitForResult'>Chờ kết quả</span> */}
-                    {/* <span className='tpfbc-text-paid'>Đã thanh toán</span> */}
-                    {/* <span className='tpfbc-text-result'>Đã có kết quả</span> */}
-                </div>
-                <div className="tpfbc-button">
-                    <Link to="#">
-                        <button>Chi tiết</button>
-                    </Link>
-                </div>
-            </div>
+export default function TrackingProjectForBuyerCard({ post }) {
+  return (
+    <div className="tpfbc">
+      <div className="tpfbc-thumbnail">
+        {post.linkThumbnail && <img src={post.linkThumbnail} alt="thumbnail" />}
+      </div>
+      <div className="tpfbc-content">
+        <div className="tpfbc-title">
+          <span>{post.title}</span>
         </div>
-    )
+        <div className="tpfbc-info">
+          <span>
+            <img
+              src="https://cdn2.iconfinder.com/data/icons/pittogrammi/142/10-512.png"
+              alt=""
+            />
+            <span className="tpfbc-text-date">
+              {moment(post.deadline).format("DD/MM/yyyy")}
+            </span>
+          </span>
+          {post.price && (
+            <span>
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/156/156764.png"
+                alt=""
+              />
+              <span className="tpfbc-text-price">{post.price} vnđ/phút</span>
+            </span>
+          )}
+        </div>
+        <div className="tpfbc-status">
+          {post.projectStatus === "WaitApprove" && (
+            <span className="tpfbc-text-applying">Chờ duyệt</span>
+          )}
+          {post.projectStatus === "NotApproved" && (
+            <span className="tpfbc-text-applying">Không được duyệt</span>
+          )}
+          {post.projectStatus === "Apply" && (
+            <span className="tpfbc-text-applying">Đang ứng tuyển</span>
+          )}
+          {post.projectStatus === "Processing" && (
+            <span className="tpfbc-text-applying">Dự án đã nhận</span>
+          )}
+          {post.projectStatus === "Done " && (
+            <span className="tpfbc-text-applying">Hoàn thành</span>
+          )}
+          {post.projectStatus === "WaitToAccept  " && (
+            <span className="tpfbc-text-applying">Đã gửi lời mời</span>
+          )}
+          {post.projectStatus === "Denied   " && (
+            <span className="tpfbc-text-applying">Không nhận lời mời</span>
+          )}
+          <span className="tpfbc-text-notPayingYet">Chưa thanh toán</span>
+          {/* <span className='tpfbc-text-waitForResult'>Chờ kết quả</span> */}
+          {/* <span className='tpfbc-text-paid'>Đã thanh toán</span> */}
+          {/* <span className='tpfbc-text-result'>Đã có kết quả</span> */}
+        </div>
+        <div className="tpfbc-button">
+          {post.projectStatus === "Apply" && (
+            <Link to={`/candidatelist/${post.voiceProjectId}`}>
+              <button>Chi tiết</button>
+            </Link>
+          )}
+          {post.projectStatus === "Processing" && (
+            <Link to="">
+              <button>Chi tiết</button>
+            </Link>
+          )}
+          {post.projectStatus === "Done " && (
+            <Link to="">
+              <button>Chi tiết</button>
+            </Link>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 }

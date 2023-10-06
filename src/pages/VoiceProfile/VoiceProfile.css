@@ -43,7 +43,7 @@
   border: none;
   padding: 10px 20px;
   font-size: 20px;
-  background: #43d100;
+  background-image: linear-gradient(#43D100, #A0CBAC);
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -53,7 +53,7 @@
   border: none;
   padding: 10px 20px;
   font-size: 20px;
-  background: #43d100;
+  background-image: linear-gradient(#43D100, #A0CBAC);
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -62,8 +62,9 @@
 
 .voiceprofile .voiceprofile-container .voiceprofile-card .col-item .btn-finish {
   border: none;
-  padding: 10px 50px;
-  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding: 5px 50px;
   background: #ffd600;
   border-radius: 20px;
   cursor: pointer;

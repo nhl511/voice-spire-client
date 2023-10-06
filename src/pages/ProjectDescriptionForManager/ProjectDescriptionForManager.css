@@ -1,0 +1,216 @@
+.pdfm-title{
+    text-align: center;
+}
+.pdfm-container{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(#FEE66A, #f6f2f2);
+}
+.pdfm-card{
+    background: #FFFCE5;
+    width: 1000px;
+    margin-top: 30px;
+    margin-bottom: 300px;
+}
+.pdfm-info{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    margin-bottom: 20px;
+}
+.pdfm-description{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+}
+.pdfm-text-description{
+    width: 650px;
+}
+.pdfm-text-description span{
+    font-weight: 600;
+}
+.pdfm-detail{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-detail{
+    margin-top: 20px;
+}
+.pdfm-text-detail span{
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+.pdfm-gender{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-gender{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-region{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-region{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-tone{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-tone{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-expressive{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-expressive{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-speed{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-speed{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-pronounce{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-pronounce{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-stress{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-stress{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-voice{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-voice{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-nature{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-nature{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-duration{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-duration{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-edit{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-edit{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-deadline{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-deadline{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-price{
+    color: #494949;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.pdfm-text-price{
+    width: 650px;
+    font-weight: 600;
+    margin-top: 22px;
+}
+.pdfm-button{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.pdfm-button .pdfm-back{
+    background-color: #F5851D;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-weight: 600;
+    padding: 12px 50px;
+    cursor: pointer;
+}

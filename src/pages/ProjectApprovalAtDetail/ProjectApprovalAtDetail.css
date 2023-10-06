@@ -1,7 +1,12 @@
+.paad{
+  background-image: linear-gradient(#AA9006, #ffffff);
+}
 .paad-title {
   text-align: center;
   text-transform: uppercase;
   font-size: 25px;
+  margin: 0;
+  padding: 20px;
 }
 .paad-container {
   display: flex;
@@ -11,6 +16,7 @@
 }
 .paad-card {
   background: #fdf8c8;
+  border-radius: 8px;
   width: 1000px;
   margin-bottom: 30px;
 }

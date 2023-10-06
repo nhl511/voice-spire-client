@@ -19,7 +19,7 @@ export default function ProjectApprovalAtDetail() {
   }, [id]);
 
   return (
-    <div>
+    <div className="paad">
       {loading ? (
         <div className="loading">
           <div className="loading-container">

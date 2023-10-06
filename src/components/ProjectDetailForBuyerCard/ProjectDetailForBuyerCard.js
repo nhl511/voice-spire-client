@@ -4,12 +4,6 @@ import ReactAudioPlayer from 'react-audio-player';
 import { Link } from 'react-router-dom';
 
 export default function ProjectDetailForBuyerCard({ voice }) {
-    const myString = voice.voiceTypes[0].voiceTypeDetail;
-    const myString2 = voice.voiceProperties[0].voicePropertyName;
-
-    const myArray = myString.split(", ");
-    const myArray2 = myString2.split(", ");
-
     return (
         <div>
             <div className='pdfbc-display'>

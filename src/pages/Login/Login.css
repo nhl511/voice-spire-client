@@ -26,6 +26,7 @@
   background-color: #ffe24d;
   padding: 50px;
   flex: 1;
+  border-radius: 8px 0px 0px 8px;
 }
 .login .login-container .login-card .left .center-item {
   display: flex;
@@ -119,6 +120,7 @@
   background: #fdf8c8;
   padding: 10px 50px 50px;
   flex: 1;
+  border-radius: 0px 8px 8px 0px;
 }
 
 .login .login-container .login-card .right .center-item h1 {

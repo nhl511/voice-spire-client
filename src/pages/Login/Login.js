@@ -125,11 +125,11 @@ const Login = () => {
                 <span>Quên mật khẩu?</span>
               </div>
               <div className="button">
-                <button className={loading && "disabled"}>
+                <button className={loading ? "disabled" : ""}>
                   {loading ? (
                     <div className="loading-login">
                       <div className="loading-login-container">
-                        <div class="loader-login"></div>
+                        <div className="loader-login"></div>
                       </div>
                     </div>
                   ) : (

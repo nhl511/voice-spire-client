@@ -22,6 +22,7 @@
   background: #ffe24d;
   padding: 50px;
   flex: 1;
+  border-radius: 8px 0px 0px 8px;
 }
 .register .register-container .register-card .left .col-item {
   display: flex;
@@ -87,6 +88,8 @@
   background: #fdf8c8;
   padding: 50px;
   flex: 1;
+  border-radius: 0px 8px 8px 0px;
+
 }
 .register .register-container .register-card .right .center-item {
   display: flex;

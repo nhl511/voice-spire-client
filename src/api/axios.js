@@ -27,18 +27,13 @@ export const getVoiceList = async (
   return valuesArray;
 };
 
-export const getAllProjectsForTracking = async (
-  currentPage,
-  pageSize,
-  sortType
-) => {
+export const getAllProjectsForTracking = async (buyerId) => {
   const response = await axiosOne.get(
-    `/api/VoiceProjects/GetListProjectToManagement/${currentPage},${pageSize},${sortType}`
+    `/api/Buyers/GetProjectByBuyerId/${buyerId}`
   );
-  console.log(response.data.results);
+  console.log(response.data);
 
-  const valuesArray = Object.values(response.data.results);
-  return valuesArray;
+  return response.data;
 };
 
 export const getProjects = async (

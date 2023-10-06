@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
 import "./TrackingProjectForBuyer.css";
 import TrackingProjectForBuyerCard from "../../components/TrackingProjectForBuyerCard/TrackingProjectForBuyerCard";
-import { getAllProjectsForTracking, getProjects } from "../../api/axios";
+import { getAllProjectsForTracking } from "../../api/axios";
+import useAuth from "../../hooks/useAuth";
 
 export default function TrackingProjectForBuyer() {
   const [openFilter, setOpenFilter] = useState(false);
   const [posts, setPosts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
+  const { auth } = useAuth();
 
   useEffect(() => {
-    getAllProjectsForTracking(currentPage, 100, "new")
+    getAllProjectsForTracking(auth.userId)
       .then((json) => setPosts(json))
+
       .then((json) => setLoading(false));
-  }, [currentPage]);
+  }, [auth.userId]);
 
   return (
     <div className="tpfb">

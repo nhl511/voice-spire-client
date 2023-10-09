@@ -17,14 +17,20 @@ export default function AcceptApplication() {
   const { id } = useParams();
 
   useEffect(() => {
-    getProjectApprovalDetail(id).then((json) => setPost(json));
-    getCandidates(id)
-      .then((json) => setVoices(json))
-      .then((json) => setLoading(false))
+    getProjectApprovalDetail(id)
+      .then((json) => {
+        setPost(json);
+        return getCandidates(id);
+      })
+      .then((json) => {
+        setVoices(json);
+        setLoading(false);
+      })
       .catch((error) => {
         if (error.response && error.response.status === 400) {
           setError(true);
         }
+        // Always set loading to false in case of an error
         setLoading(false);
       });
   }, [currentPage]);
@@ -89,7 +95,7 @@ export default function AcceptApplication() {
                       <span>Giá:</span>
                     </div>
                     <div className="aa-text-price">
-                      <span>{post.toalOutputPrice} vnd</span>
+                      <span>{post.price} VNĐ/phút</span>
                     </div>
 
                     <div className="aa-duration">
@@ -98,12 +104,18 @@ export default function AcceptApplication() {
                     <div className="aa-text-duration">
                       <span>{post.duration} phút</span>
                     </div>
+                    <div className="aa-tprice">
+                      <span>Tổng giá:</span>
+                    </div>
+                    <div className="aa-text-tprice">
+                      <span>{post.toalOutputPrice} VNĐ</span>
+                    </div>
                   </div>
-                  <div className="aa-suggest">
+                  {/* <div className="aa-suggest">
                     <div className="aa-button">
                       <button>Xem gợi ý</button>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

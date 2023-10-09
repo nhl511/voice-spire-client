@@ -47,20 +47,23 @@ export default function ProjectApprovalAtDetail() {
                   <span>{post.request}</span>
                 </div>
               </div>
-              <div className="paad-displayGrid">
-                <div className="paad-demo">
-                  <span>Văn bản demo</span>
+              {post.projectType === "Post" && (
+                <div className="paad-displayGrid">
+                  <div className="paad-demo">
+                    <span>Văn bản demo</span>
+                  </div>
+                  <div className="paad-text-demo">
+                    <Link
+                      to={post.linkDocDemo}
+                      download="Docx-Demo"
+                      target="blank"
+                    >
+                      <button>Download</button>
+                    </Link>
+                  </div>
                 </div>
-                <div className="paad-text-demo">
-                  <Link
-                    to={post.linkDocDemo}
-                    download="Docx-Demo"
-                    target="blank"
-                  >
-                    <button>Download</button>
-                  </Link>
-                </div>
-              </div>
+              )}
+
               <div className="paad-displayGrid">
                 <div className="paad-main">
                   <span>Văn bản chính</span>
@@ -91,7 +94,9 @@ export default function ProjectApprovalAtDetail() {
                       className="approve-button"
                       onClick={() => {
                         approveProject(post.voiceProjectId);
-                        navigate("/postedprojectsmanagement");
+                        post.projectType === "Post"
+                          ? navigate("/postedprojectsmanagement")
+                          : navigate("/sentprojectsmanagement");
                       }}
                     >
                       Duyệt
@@ -100,7 +105,9 @@ export default function ProjectApprovalAtDetail() {
                       className="deny-button"
                       onClick={() => {
                         notApproveProject(post.voiceProjectId);
-                        navigate("/postedprojectsmanagement");
+                        post.projectType === "Post"
+                          ? navigate("/postedprojectsmanagement")
+                          : navigate("/sentprojectsmanagement");
                       }}
                     >
                       Không duyệt

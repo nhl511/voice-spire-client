@@ -10,7 +10,6 @@ export default function SendProject() {
 
   const [voice, setVoice] = useState();
   const [loading, setLoading] = useState(true);
-  const [mainFile, setMainFile] = useState();
   const [buyerId, setBuyerId] = useState();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -18,9 +17,13 @@ export default function SendProject() {
   const [duration, setDuration] = useState();
   const [deadline, setDeadline] = useState();
 
-  const [nameFileDemo, setNameFileDemo] = useState("");
+  const [demoFile, setDemoFile] = useState("");
+  const [mainFile, setMainFile] = useState();
+  const [thumbnail, setThumbnail] = useState("");
+
+  const [nameFileDemo, setNameFileDemo] = useState();
   const [nameFileMain, setNameFileMain] = useState();
-  const [nameFileThumbnail, setNameFileThumbnail] = useState("");
+  const [nameFileThumbnail, setNameFileThumbnail] = useState();
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -67,9 +70,10 @@ export default function SendProject() {
       description,
       duration,
       deadline,
-      nameFileDemo,
-      nameFileMain,
-      nameFileThumbnail
+      demoFile,
+      mainFile,
+      thumbnail,
+      request
     );
     navigate("/tpfb");
   };
@@ -92,7 +96,11 @@ export default function SendProject() {
               <div className="sendProject-card-display">
                 <div className="sendProject-card-left">
                   <img
-                    src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                    src={
+                      voice.voiceSeller.avatarLink
+                        ? voice.voiceSeller.avatarLink
+                        : "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                    }
                     alt="avatar"
                   />
                 </div>

@@ -3,19 +3,27 @@ import "./TrackingProjectForBuyer.css";
 import TrackingProjectForBuyerCard from "../../components/TrackingProjectForBuyerCard/TrackingProjectForBuyerCard";
 import { getAllProjectsForTracking } from "../../api/axios";
 import useAuth from "../../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 export default function TrackingProjectForBuyer() {
   const [openFilter, setOpenFilter] = useState(false);
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const { auth } = useAuth();
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     getAllProjectsForTracking(auth.userId)
       .then((json) => setPosts(json))
-
-      .then((json) => setLoading(false));
-  }, [auth.userId]);
+      .then((json) => setLoading(false))
+      .catch((error) => {
+        if (error.response && error.response.status === 404) {
+          setError(true);
+        }
+        setLoading(false);
+      });
+  });
+  console.log(posts);
 
   return (
     <div className="tpfb">
@@ -125,6 +133,8 @@ export default function TrackingProjectForBuyer() {
                 <div className="loader"></div>
               </div>
             </div>
+          ) : error ? (
+            <span>Bạn chưa tạo dự án nào</span>
           ) : (
             posts?.map((post) => <TrackingProjectForBuyerCard post={post} />)
           )}

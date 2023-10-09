@@ -42,6 +42,18 @@ export const getAllProjectsForTracking = async (buyerId) => {
   return response?.data;
 };
 
+export const getAllJobsForTracking = async (
+  currentPage,
+  PageSize,
+  sellerId
+) => {
+  const response = await axiosOne.get(
+    `/api/VoiceSellers/SearchVoiceJobBySellerId/${currentPage},${PageSize},${sellerId}`
+  );
+  const valuesArray = Object.values(response.data.results);
+  return valuesArray;
+};
+
 export const getProjects = async (
   currentPage,
   PageSize,
@@ -150,7 +162,7 @@ export const sendVoiceProject = async (
   request
 ) => {
   const response = await axiosOne.post(
-    `/api/Buyers/SendVoiceProject/${BuyerId},${voiceSellerId},${title},${description},${duration},${deadline},?request=${request}`,
+    `/api/Buyers/SendVoiceProject/${BuyerId},${voiceSellerId},${title},${description},${duration},${deadline}?request=${request}`,
     { linkDocDemo, linkDocMain, linkThumbnail }
   );
   return response.data;
@@ -204,5 +216,94 @@ export const getCandidates = async (projectId) => {
     `/api/VoiceProjects/GetListDemoForProject/${projectId}`
   );
   console.log(response.data);
+  return response.data;
+};
+
+export const getSellerProfile = async (id) => {
+  const response = await axiosOne.get(`/api/VoiceSellers/${id}`);
+  return response.data;
+};
+
+export const updateSellerProfile = async (
+  voiceSellerId,
+  fullname,
+  phone,
+  email,
+  password,
+  birthDay,
+  introduce,
+  address,
+  gender,
+  avatarLink,
+  rateAvg,
+  bankName,
+  bankNumber,
+  bankAccountName,
+  googleId,
+  status
+) => {
+  const response = await axiosOne.put(`/api/VoiceSellers/${voiceSellerId}`, {
+    voiceSellerId,
+    fullname,
+    phone,
+    email,
+    password,
+    birthDay,
+    introduce,
+    address,
+    gender,
+    avatarLink,
+    rateAvg,
+    bankName,
+    bankNumber,
+    bankAccountName,
+    googleId,
+    status,
+  });
+  return response.data;
+};
+
+export const acceptApplications = async (voiceJobId, projectId) => {
+  const response = await axiosOne.put(
+    `/api/Buyers/ApproveDemo/${voiceJobId},${projectId}`
+  );
+  return response.data;
+};
+
+export const getOfficialVoices = async (projectId) => {
+  const response = await axiosOne.get(
+    `/api/VoiceProjects/GetTransactionOfProject/${projectId}`
+  );
+  console.log(response.data);
+  return response.data;
+};
+
+export const sendMainVoice = async (
+  voiceProjectId,
+  voiceSellerId,
+  linkVoice
+) => {
+  const response = await axiosOne.post(
+    `/api/VoiceSellers/SendMainVoiceForProject`,
+    {
+      voiceProjectId,
+      voiceSellerId,
+      linkVoice,
+    }
+  );
+  return response.data;
+};
+
+export const requestEdit = async (transactionId, inputFeedBack) => {
+  const response = await axiosOne.put(
+    `/api/Buyers/RequestEdit/${transactionId}?feedback=${inputFeedBack}`
+  );
+  return response.data;
+};
+
+export const acceptOfficialVoice = async (transactionId) => {
+  const response = await axiosOne.put(
+    `/api/Buyers/AcceptTransaction/${transactionId}`
+  );
   return response.data;
 };

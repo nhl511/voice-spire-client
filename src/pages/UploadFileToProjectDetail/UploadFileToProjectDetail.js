@@ -1,72 +1,139 @@
-import React from 'react'
-import './UploadFileToProjectDetail.css';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import "./UploadFileToProjectDetail.css";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import axios, {
+  getProjectApprovalDetail,
+  sendMainVoice,
+} from "../../api/axios";
+import useAuth from "../../hooks/useAuth";
 
 export default function UploadFileToProjectDetail() {
-    return (
-        <div className='uftpd'>
-            <h2 className='uftpd-title'>Quảng cáo sản phẩm kem dưỡng ẩm Hảo Hảo</h2>
-            <div className='uftpd-container'>
-                <div className='uftpd-card'>
-                    <div className='uftpd-info'>
-                        <div className='uftpd-description'>
-                            <span>Mô tả:</span>
-                        </div>
-                        <div className='uftpd-text-description'>
-                            <span>
-                                Sed ut perspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
-                                Sed ut perspiciatis unde omnis iste natus error sit doloremque laudantium, totam rem
-                            </span>
-                        </div>
+  const uploadVoiceURL = "/api/VoiceSellers/UploadVoice";
 
-                        <div className='uftpd-detail'>
-                            <span>Yêu cầu chi tiết:</span>
-                        </div>
-                        <div className='uftpd-text-detail'>
-                            <span>
-                                Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat,
-                            </span>
-                        </div>
+  const [loading, setLoading] = useState(true);
+  const [post, setPost] = useState();
+  const [uploadFile, setUploadFile] = useState();
+  const [mp3File, setMp3File] = useState();
+  const { id } = useParams();
+  const { auth } = useAuth();
+  const navigate = useNavigate();
 
-                        <div className='uftpd-demo'>
-                            <span>Văn bản demo</span>
-                        </div>
-                        <div className='uftpd-text-demo'>
-                            <Link
-                                to="/mp3/test.docx"
-                                download="Test-Docx-Demo"
-                                target="blank"
-                            >
-                                <button >Download</button>
-                            </Link>
-                        </div>
+  useEffect(() => {
+    getProjectApprovalDetail(id)
+      .then((json) => setPost(json))
+      .then((json) => setLoading(false));
+  }, [id]);
 
-                        <div className='uftpd-price'>
-                            <span>Giá:</span>
-                        </div>
-                        <div className='uftpd-text-price'>
-                            <span>200,000 vnd</span>
-                        </div>
+  const handleUploadVoice = async (event) => {
+    const headers = {
+      accept: "*/*",
+      "Content-Type": "multipart/form-data",
+    };
 
-                        <div className='uftpd-duration'>
-                            <span>Thời lượng yêu cầu:</span>
-                        </div>
-                        <div className='uftpd-text-duration'>
-                            <span>2 phút</span>
-                        </div>
+    const file = {
+      file: event.target.files[0],
+    };
 
-                    </div>
-                    <div className='uftpd-upload-file'>
-                        <input type="file" name="file" id="uftpd-btn" hidden accept="audio/mpeg" />
-                        <label htmlFor="uftpd-btn">
-                            Tải lên file ghi âm
-                        </label>
-                    </div>
-                    <div className='uftpd-send'>
-                        <button>Gửi</button>
-                    </div>
-                </div>
-            </div>
+    try {
+      await axios
+        .post(uploadVoiceURL, file, { headers })
+        .then((response) => {
+          if (response.status === 200) {
+            setMp3File(response.data);
+            setUploadFile(event.target.files[0]);
+            setUploadFile(event.target.files[0]);
+          }
+        })
+        .catch((error) => console.log(error));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    sendMainVoice(post.voiceProjectId, auth.userId, mp3File);
+    navigate(`/pdfs/${post.voiceProjectId}`);
+  };
+
+  return (
+    <div className="uftpd">
+      {loading ? (
+        <div className="loading">
+          <div className="loading-container">
+            <div class="loader"></div>
+          </div>
         </div>
-    )
+      ) : (
+        <>
+          <h2 className="uftpd-title">{post.title} </h2>
+          <div className="uftpd-container">
+            <div className="uftpd-card">
+              <div className="uftpd-info">
+                <div className="uftpd-description">
+                  <span>Mô tả:</span>
+                </div>
+                <div className="uftpd-text-description">
+                  <span>{post.description}</span>
+                </div>
+
+                <div className="uftpd-detail">
+                  <span>Yêu cầu chi tiết:</span>
+                </div>
+                <div className="uftpd-text-detail">
+                  <span>{post.request}</span>
+                </div>
+
+                <div className="uftpd-demo">
+                  <span>Văn bản cần đọc</span>
+                </div>
+                <div className="uftpd-text-demo">
+                  <Link
+                    to={post.linkDocMain}
+                    download="Docx-Main"
+                    target="blank"
+                  >
+                    <button>Download</button>
+                  </Link>
+                </div>
+
+                <div className="uftpd-price">
+                  <span>Giá:</span>
+                </div>
+                <div className="uftpd-text-price">
+                  <span>{post.price} VNĐ/phút</span>
+                </div>
+
+                <div className="uftpd-duration">
+                  <span>Thời lượng yêu cầu:</span>
+                </div>
+                <div className="uftpd-text-duration">
+                  <span>{post.duration} phút</span>
+                </div>
+              </div>
+              <form onSubmit={handleSubmit}>
+                <div className="uftpd-upload-file">
+                  <input
+                    type="file"
+                    name="file"
+                    id="upload-official-voice"
+                    onChange={handleUploadVoice}
+                    hidden
+                    accept="audio/mpeg"
+                  />
+                  <label htmlFor="upload-official-voice">
+                    Tải lên file ghi âm: {uploadFile?.name}
+                  </label>
+                </div>
+                <div className="uftpd-send">
+                  <button>Gửi</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  );
 }

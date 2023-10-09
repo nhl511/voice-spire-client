@@ -48,24 +48,24 @@ const App = () => {
         <Route
           path="/postedprojectsmanagement"
           element={<PostedProjectsManagement />}
-        />{" "}
+        />
         {/* figma 12 & 13 & 25*/}
         <Route
           path="/sentprojectsmanagement"
           element={<SentProjectsManagement />}
-        />{" "}
+        />
         {/* figma 12 & 13 & 25 */}
         <Route
           path="/projectmanagementdetail/:id"
           element={<ProjectApprovalAtDetail />}
-        />{" "}
+        />
         {/* figma 14 */}
         <Route
           path="/projectdescriptionmanagement"
           element={<ProjectDescriptionForManager />}
-        />{" "}
+        />
         {/*figma 30 */}
-        <Route path="/pdfm" element={<ProjectDetailForManager />} />{" "}
+        <Route path="/pdfm" element={<ProjectDetailForManager />} />
         {/* figma 31 */}
 
         {/* Buyer + Seller */}
@@ -86,21 +86,22 @@ const App = () => {
 
         {/* Seller */}
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>
-          <Route path="/profile" element={<VoiceProfile />} /> {/* figma 5 */}
+          <Route path="/your-voice" element={<VoiceProfile />} />{" "}
+          {/* figma 5 */}
           <Route path="/posts" element={<Posts />} /> {/* figma 15 */}
-          <Route path="/pt2" element={<ProjectDescriptionToConfirm />} />{" "}
+          <Route path="/pt2/:id" element={<ProjectDescriptionToConfirm />} />
           {/* figma 17 */}
-          <Route path="/pt1/:id" element={<ProjectDescriptionToApply />} />{" "}
+          <Route path="/pt1/:id" element={<ProjectDescriptionToApply />} />
           {/* figma 18 */}
-          <Route path="/recruitment/:id" element={<Recruitment />} />{" "}
+          <Route path="/recruitment/:id" element={<Recruitment />} />
           {/* figma 19 */}
-          <Route path="/pdfs" element={<ProjectDetailForSeller />} />{" "}
+          <Route path="/pdfs/:id" element={<ProjectDetailForSeller />} />
           {/* figma 21 */}
-          <Route path="/uftpd" element={<UploadFileToProjectDetail />} />{" "}
+          <Route path="/uftpd/:id" element={<UploadFileToProjectDetail />} />
           {/* figma 22 */}
-          <Route path="/profileSeller" element={<SellerProfile />} />{" "}
+          <Route path="/profile" element={<SellerProfile />} />
           {/* figma 24 */}
-          <Route path="/tpfs" element={<TrackingProjectForSeller />} />{" "}
+          <Route path="/tpfs" element={<TrackingProjectForSeller />} />
           {/* figma 26 */}
         </Route>
       </Route>

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./PostedProjectsManagement.css";
 import { getProjects } from "../../api/axios";
 import PostedProjectCard from "../../components/PostedProjectCard/PostedProjectCard";
+import { useNavigate } from "react-router-dom";
 
 const ProjectApproval = () => {
   const [posts, setPosts] = useState([]);
@@ -15,7 +16,6 @@ const ProjectApproval = () => {
   const [Done, setDone] = useState(true);
   const [WaitToAccept, setWaitToAccept] = useState(true);
   const [Denied, setDenied] = useState(true);
-
   useEffect(() => {
     getProjects(
       currentPage,
@@ -32,7 +32,7 @@ const ProjectApproval = () => {
     )
       .then((json) => setPosts(json))
       .then((json) => setLoading(false));
-  }, [currentPage]);
+  });
 
   const handleSubmit = async (e) => {
     setLoading(true);

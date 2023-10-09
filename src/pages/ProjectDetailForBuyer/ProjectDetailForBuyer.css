@@ -1,146 +1,162 @@
-.pdfb{
-    background-image: linear-gradient(#AA9006, #ffffff);
+.pdfb {
+  background-image: linear-gradient(#aa9006, #ffffff);
+  min-height: 100vh;
 }
-.pdfb-titleProject{
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 25px;
-    margin: 0;
-    padding: 20px;
+.pdfb-titleProject {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 0;
+  padding: 20px;
 }
-.pdfb-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.pdfb-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.pdfb-card{
-    background: #FDF8C8;
-    width: 1400px;
-    border-radius: 8px;
+.pdfb-card {
+  background: #fdf8c8;
+  width: 1400px;
+  border-radius: 8px;
 }
-.pdfb-info{
-    display: grid;
-    grid-template-columns: 20% 80%;
+.pdfb-info {
+  display: grid;
+  grid-template-columns: 20% 80%;
 }
-.pdfb-description{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 30px;
+.pdfb-description {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 30px;
 }
-.pdfb-text-description{
-    margin-top: 30px;
-    width: 1050px;
-    font-style: italic;
-    font-family: sans-serif;
+.pdfb-text-description {
+  margin-top: 30px;
+  width: 1050px;
+  font-style: italic;
+  font-family: sans-serif;
 }
-.pdfb-detail{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 20px;
+.pdfb-detail {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
 }
-.pdfb-text-detail{
-    margin-top: 20px;
-    width: 1050px;
-    font-style: italic;
-    font-family: sans-serif;
-    font-weight: 400;
+.pdfb-text-detail {
+  margin-top: 20px;
+  width: 1050px;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: 400;
 }
-.pdfb-demo{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 20px;
+.pdfb-demo {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
 }
-.pdfb-text-demo{
-    width: 1050px;
-    margin-top: 20px;
+.pdfb-text-demo {
+  width: 1050px;
+  margin-top: 20px;
 }
-.pdfb-text-demo button{
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-    background: #43D100;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 3px 20px;
-    margin-left: 5px;
-    cursor: pointer;
+.pdfb-text-demo button {
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background: #43d100;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3px 20px;
+  margin-left: 5px;
+  cursor: pointer;
 }
-.pdfb-main{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 20px;
-}
-
-.pdfb-text-main{
-    width: 1050px;
-    margin-top: 20px; margin-top: 15px;
-}
-.pdfb-text-main button{
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-    background: #43D100;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 3px 20px;
-    margin-left: 5px;
-    cursor: pointer;
-}
-.pdfb-edit{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 20px;
+.pdfb-main {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
 }
 
-.pdfb-text-edit{
-    width: 1050px;
-    margin-top: 22px;
-    font-weight: 600;
+.pdfb-text-main {
+  width: 1050px;
+  margin-top: 20px;
+  margin-top: 15px;
 }
-.pdfb-price{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 20px;
+.pdfb-text-main button {
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background: #43d100;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3px 20px;
+  margin-left: 5px;
+  cursor: pointer;
 }
-.pdfb-text-price{
-    font-weight: 600;
-    margin-top: 20px;
+.pdfb-edit {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
 }
-.pdfb-text-main label{
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-    background: #43D100;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 3px 20px;
-    margin-left: 5px;
-    cursor: pointer;
+
+.pdfb-text-edit {
+  width: 1050px;
+  margin-top: 22px;
+  font-weight: 600;
 }
-.pdfb-duration{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 20px;
+.pdfb-price {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
 }
-.pdfb-text-duration{
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.pdfb-text-price {
+  font-weight: 600;
+  margin-top: 20px;
 }
-.pdfb-title{
-    text-transform: uppercase;
-    text-align: center;
+.pdfb-text-main label {
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background: #43d100;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3px 20px;
+  margin-left: 5px;
+  cursor: pointer;
 }
-.pdfb-listVoice{
-    margin-bottom: 50px;
+.pdfb-duration {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
+}
+.pdfb-text-duration {
+  font-weight: 600;
+  margin-top: 20px;
+}
+.pdfb-totalPrice {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.pdfb-text-totalPrice {
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.pdfb-title {
+  text-transform: uppercase;
+  text-align: center;
+}
+.pdfb-listVoice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
 }

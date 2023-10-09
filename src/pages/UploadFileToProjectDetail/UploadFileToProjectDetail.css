@@ -1,114 +1,116 @@
-.uftpd{
-    background-image: linear-gradient(#AA9006, #ffffff);
+.uftpd {
+  background-image: linear-gradient(#aa9006, #ffffff);
+  min-height: 100vh;
 }
-.uftpd-title{
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 25px;
-    margin: 0;
-    padding: 20px;
+.uftpd-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 0;
+  padding: 20px;
 }
-.uftpd-container{
-    display: flex;
-    justify-content: center;
+.uftpd-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.uftpd-card{
-    background: #FDF8C8;
-    width: 1000px;
-    border-radius: 8px;
-    margin-bottom: 30px;
+.uftpd-card {
+  background: #fdf8c8;
+  width: 1000px;
+  border-radius: 8px;
+  margin-bottom: 30px;
 }
-.uftpd-info{
-    display: grid;
-    grid-template-columns: 25% 75%;
+.uftpd-info {
+  display: grid;
+  grid-template-columns: 25% 75%;
 }
-.uftpd-description{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 50px;
-    margin-top: 30px;
+.uftpd-description {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-top: 30px;
 }
-.uftpd-text-description{
-    font-weight: 600;
-    width: 680px;
-    margin-top: 30px;
+.uftpd-text-description {
+  font-weight: 600;
+  width: 680px;
+  margin-top: 30px;
 }
-.uftpd-detail{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 50px;
-    margin-top: 30px;
+.uftpd-detail {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-top: 30px;
 }
-.uftpd-text-detail{
-    font-style: italic;
-    font-family: sans-serif;
-    font-weight: 400;
-    width: 680px;
-    margin-top: 35px;
+.uftpd-text-detail {
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: 400;
+  width: 680px;
+  margin-top: 35px;
 }
 
-.uftpd-demo{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 50px;
-    margin-top: 20px;
+.uftpd-demo {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-top: 20px;
 }
-.uftpd-text-demo{
-    margin-top: 20px;
+.uftpd-text-demo {
+  margin-top: 20px;
 }
-.uftpd-text-demo button{
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-   background-image: linear-gradient(#43D100, #A0CBAC);
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 3px 20px;
-    cursor: pointer;
+.uftpd-text-demo button {
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background-image: linear-gradient(#43d100, #a0cbac);
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3px 20px;
+  cursor: pointer;
 }
-.uftpd-price{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 50px;
-    margin-top: 30px;
+.uftpd-price {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-top: 30px;
 }
-.uftpd-text-price{
-    font-weight: 600;
-    margin-top: 35px;
+.uftpd-text-price {
+  font-weight: 600;
+  margin-top: 35px;
 }
-.uftpd-duration{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 50px;
-    margin-top: 25px;
+.uftpd-duration {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-top: 25px;
 }
-.uftpd-text-duration{
-    font-weight: 600;
-    margin-top: 26px;
+.uftpd-text-duration {
+  font-weight: 600;
+  margin-top: 26px;
 }
-.uftpd-upload-file{
-    text-align: center;
-    margin-top: 20px;
+.uftpd-upload-file {
+  text-align: center;
+  margin-top: 20px;
 }
-.uftpd-upload-file label{
-   background-image: linear-gradient(#43D100, #A0CBAC);
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    color: #ffffff;
-    padding: 15px 50px;
+.uftpd-upload-file label {
+  background-image: linear-gradient(#43d100, #a0cbac);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 15px 50px;
 }
-.uftpd-send{
-    text-align: center;
-    margin: 30px 0px 30px 0px;
+.uftpd-send {
+  text-align: center;
+  margin: 30px 0px 30px 0px;
 }
-.uftpd-send button{
-    background: #FFD600;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    font-weight: 600;
-    padding: 8px 80px;
-    cursor: pointer;
+.uftpd-send button {
+  background: #ffd600;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 8px 80px;
+  cursor: pointer;
 }

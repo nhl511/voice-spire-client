@@ -7,7 +7,11 @@ export default function TrackingProjectForBuyerCard({ post }) {
   return (
     <div className="tpfbc">
       <div className="tpfbc-thumbnail">
-        {post.linkThumbnail && <img src={post.linkThumbnail} alt="thumbnail" />}
+        {post.linkThumbnail ? (
+          <img src={post.linkThumbnail} alt="thumbnail" />
+        ) : (
+          <img src="/img/logo.png" />
+        )}
       </div>
       <div className="tpfbc-content">
         <div className="tpfbc-title">
@@ -23,13 +27,15 @@ export default function TrackingProjectForBuyerCard({ post }) {
               {moment(post.deadline).format("DD/MM/yyyy")}
             </span>
           </span>
-          {post.price && (
+          {post.price !== 0 && (
             <span>
               <img
                 src="https://cdn-icons-png.flaticon.com/512/156/156764.png"
                 alt=""
               />
-              <span className="tpfbc-text-price">{post.price} vnđ/phút</span>
+              <span className="tpfbc-text-price">
+                {post.toalOutputPrice} VNĐ
+              </span>
             </span>
           )}
         </div>
@@ -46,13 +52,13 @@ export default function TrackingProjectForBuyerCard({ post }) {
           {post.projectStatus === "Processing" && (
             <span className="tpfbc-text-applying">Dự án đã nhận</span>
           )}
-          {post.projectStatus === "Done " && (
+          {post.projectStatus === "Done" && (
             <span className="tpfbc-text-applying">Hoàn thành</span>
           )}
-          {post.projectStatus === "WaitToAccept  " && (
+          {post.projectStatus === "WaitToAccept" && (
             <span className="tpfbc-text-applying">Đã gửi lời mời</span>
           )}
-          {post.projectStatus === "Denied   " && (
+          {post.projectStatus === "Denied" && (
             <span className="tpfbc-text-applying">Không nhận lời mời</span>
           )}
           <span className="tpfbc-text-notPayingYet">Chưa thanh toán</span>
@@ -67,12 +73,12 @@ export default function TrackingProjectForBuyerCard({ post }) {
             </Link>
           )}
           {post.projectStatus === "Processing" && (
-            <Link to="">
+            <Link to={`/officiallist/${post.voiceProjectId}`}>
               <button>Chi tiết</button>
             </Link>
           )}
-          {post.projectStatus === "Done " && (
-            <Link to="">
+          {post.projectStatus === "Done" && (
+            <Link to={`/officiallist/${post.voiceProjectId}`}>
               <button>Chi tiết</button>
             </Link>
           )}

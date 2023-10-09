@@ -32,7 +32,7 @@ const SentProjectsManagement = () => {
     )
       .then((json) => setPosts(json))
       .then((json) => setLoading(false));
-  }, [currentPage]);
+  });
 
   const handleSubmit = async (e) => {
     setLoading(true);

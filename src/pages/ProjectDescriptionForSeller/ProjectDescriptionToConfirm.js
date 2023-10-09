@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./ProjectDescriptionToConfirm.css";
-import { useParams } from "react-router-dom";
-import { getProjectApprovalDetail } from "../../api/axios";
+import { useNavigate, useParams } from "react-router-dom";
+import { denyVoiceProject, getProjectApprovalDetail } from "../../api/axios";
 import moment from "moment";
 
 export default function ProjectDescriptionToConfirm() {
   const [post, setPost] = useState();
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
+  const navigate = useNavigate();
   useEffect(() => {
     getProjectApprovalDetail(id)
       .then((json) => setPost(json))
@@ -71,7 +72,15 @@ export default function ProjectDescriptionToConfirm() {
           </div>
 
           <div className="pdtc-button">
-            <button className="pdtc-deny">Từ chối</button>
+            <button
+              className="pdtc-deny"
+              onClick={() => {
+                denyVoiceProject(id);
+                navigate("/tpfs");
+              }}
+            >
+              Từ chối
+            </button>
             <button className="pdtc-accept">Chấp nhận</button>
           </div>
         </div>

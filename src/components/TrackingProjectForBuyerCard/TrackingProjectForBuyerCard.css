@@ -6,6 +6,8 @@
   width: 1200px;
   border-radius: 10px;
   background: #fdf8c8;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: none;
 }
 .tpfbc-thumbnail {
   width: 400px;
@@ -73,23 +75,58 @@
   align-items: center;
   flex: 3;
 }
-.tpfbc-text-applying {
-  background: #00c2ff;
+.tpfbc-text-waitApprove {
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: black;
+  border: none;
+}
+.tpfbc-text-notApproved {
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: black;
+  border: none;
+}
+.tpfbc-text-denied {
+  background: #e74c3c;
   border-radius: 8px;
   padding: 5px 10px;
   color: white;
+  border: none;
+}
+.tpfbc-text-apply {
+  background: #f39c12;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: white;
+  border: none;
+}
+.tpfbc-text-waitToAccept {
+  background: #f39c12;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: white;
+  border: none;
+}
+.tpfbc-text-processing {
+  background: #e67e22;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: white;
+  border: none;
+}
+.tpfbc-text-done {
+  background: #27ae60;
+  border-radius: 8px;
+  padding: 5px 10px;
+  color: white;
+  border: none;
 }
 .tpfbc-text-notPayingYet {
-  background: #f14d4d;
   border-radius: 8px;
   padding: 5px 10px;
-  color: white;
-}
-.tpfbc-text-waitForResult {
-  background: #ffd600;
-  border-radius: 8px;
-  padding: 5px 10px;
-  color: white;
+  color: black;
+  border: none;
 }
 .tpfbc-text-paid {
   background: #5cc874;
@@ -109,11 +146,18 @@
 }
 .tpfbc-button button {
   border: none;
-  background: #f5851d;
+  background: #ffd600;
   font-size: 16px;
   font-family: sans-serif;
   font-weight: 600;
   padding: 10px 50px;
   cursor: pointer;
   border-radius: 30px;
+  color: black;
+  border: none;
+  transition: opacity 0.3s;
+}
+
+.tpfbc-button button:hover {
+  opacity: 0.5;
 }

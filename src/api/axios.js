@@ -301,3 +301,10 @@ export const acceptOfficialVoice = async (transactionId) => {
   );
   return response.data;
 };
+
+export const denyVoiceProject = async (projectId) => {
+  const response = await axiosOne.put(
+    `/api/VoiceSellers/DeniesProject/${projectId}`
+  );
+  return response.data;
+};

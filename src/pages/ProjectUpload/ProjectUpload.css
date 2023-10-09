@@ -1,12 +1,12 @@
-.projectUpload-container{
-  background-image: linear-gradient(#AA9006, #ffffff);
+.projectUpload-container {
+  background-image: linear-gradient(#aa9006, #ffffff);
 }
 .projectUpload-title {
   font-size: 25px;
   font-weight: bold;
   text-align: center;
 }
-.projectUpload-title p{
+.projectUpload-title p {
   margin: 0;
   padding: 20px;
 }
@@ -21,6 +21,7 @@
   border-radius: 8px;
   width: 900px;
   padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .projectUpload-card-first input {
   border: none;

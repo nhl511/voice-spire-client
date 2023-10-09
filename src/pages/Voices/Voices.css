@@ -1,7 +1,7 @@
 .voices {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(#FEE66A, #ffffff);
+  background-image: linear-gradient(#fee66a, #ffffff);
 }
 
 .voices .voices-container {
@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .voices .voices-container .search {
   font-size: 22px;
@@ -62,7 +62,7 @@
   font-size: 15px;
   align-items: center;
 }
-.voices .voices-container .filter .filter-row .min-max span{
+.voices .voices-container .filter .filter-row .min-max span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;
@@ -82,7 +82,7 @@
   font-size: 15px;
   align-items: center;
 }
-.voices .voices-container .filter .filter-row .type span{
+.voices .voices-container .filter .filter-row .type span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;
@@ -99,7 +99,7 @@
   font-size: 15px;
   align-items: center;
 }
-.voices .voices-container .filter .filter-row .tone span{
+.voices .voices-container .filter .filter-row .tone span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;
@@ -118,7 +118,7 @@
   font-size: 15px;
   align-items: center;
 }
-.voices .voices-container .filter .filter-row .region span{
+.voices .voices-container .filter .filter-row .region span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;
@@ -135,7 +135,7 @@
   font-size: 15px;
   align-items: center;
 }
-.voices .voices-container .filter .filter-row .gender span{
+.voices .voices-container .filter .filter-row .gender span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;
@@ -153,7 +153,7 @@
   font-size: 15px;
   align-items: center;
 }
-.voices .voices-container .filter .filter-row .nature span{
+.voices .voices-container .filter .filter-row .nature span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;
@@ -171,7 +171,7 @@
   font-size: 15px;
   align-items: center;
 }
-.voices .voices-container .filter .filter-row .rating span{
+.voices .voices-container .filter .filter-row .rating span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;

@@ -41,25 +41,25 @@ export default function TrackingProjectForBuyerCard({ post }) {
         </div>
         <div className="tpfbc-status">
           {post.projectStatus === "WaitApprove" && (
-            <span className="tpfbc-text-applying">Chờ duyệt</span>
+            <span className="tpfbc-text-waitApprove">Chờ duyệt</span>
           )}
           {post.projectStatus === "NotApproved" && (
-            <span className="tpfbc-text-applying">Không được duyệt</span>
+            <span className="tpfbc-text-notApproved">Không được duyệt</span>
           )}
           {post.projectStatus === "Apply" && (
-            <span className="tpfbc-text-applying">Đang ứng tuyển</span>
+            <span className="tpfbc-text-apply">Đang ứng tuyển</span>
           )}
           {post.projectStatus === "Processing" && (
-            <span className="tpfbc-text-applying">Dự án đã nhận</span>
+            <span className="tpfbc-text-processing">Dự án đã nhận</span>
           )}
           {post.projectStatus === "Done" && (
-            <span className="tpfbc-text-applying">Hoàn thành</span>
+            <span className="tpfbc-text-done">Hoàn thành</span>
           )}
           {post.projectStatus === "WaitToAccept" && (
-            <span className="tpfbc-text-applying">Đã gửi lời mời</span>
+            <span className="tpfbc-text-waitToAccept">Đã gửi lời mời</span>
           )}
           {post.projectStatus === "Denied" && (
-            <span className="tpfbc-text-applying">Không nhận lời mời</span>
+            <span className="tpfbc-text-denied">Không nhận lời mời</span>
           )}
           <span className="tpfbc-text-notPayingYet">Chưa thanh toán</span>
           {/* <span className='tpfbc-text-waitForResult'>Chờ kết quả</span> */}

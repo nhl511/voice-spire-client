@@ -122,11 +122,11 @@ export default function TrackingProjectForBuyer() {
           {loading ? (
             <div className="loading">
               <div className="loading-container">
-                <div class="loader"></div>
+                <div className="loader"></div>
               </div>
             </div>
           ) : (
-            posts.map((post) => <TrackingProjectForBuyerCard post={post} />)
+            posts?.map((post) => <TrackingProjectForBuyerCard post={post} />)
           )}
         </div>
       </div>

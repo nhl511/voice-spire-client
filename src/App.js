@@ -41,7 +41,6 @@ const App = () => {
         <Route path="/" element={<Login />} /> {/* figma 1 */}
         <Route path="/register" element={<RegisterSeller />} /> {/* figma 2 */}
         <Route path="/register2" element={<RegisterBuyer />} /> {/* figma 3 */}
-        <Route path="/bank" element={<BankAccount />} /> {/* figma 4 */}
         {/* Manager */}
         <Route path="/lv" element={<ListVoice />} /> {/* figma 6 */}
         <Route path="/voicedetail/:id" element={<VoiceDetail />} />{" "}
@@ -68,19 +67,23 @@ const App = () => {
         {/*figma 30 */}
         <Route path="/pdfm" element={<ProjectDetailForManager />} />
         {/* figma 31 */}
+
         {/* Buyer + Seller */}
         <Route element={<RequireAuth allowedRoles={["buyer", "seller"]} />}>
           <Route path="/home" element={<Home />} />
+          <Route path="/bank" element={<BankAccount />} /> {/* figma 4 */}
         </Route>
+
         {/* Buyer */}
         <Route element={<RequireAuth allowedRoles={["buyer"]} />}>
-          <Route path="/voices" element={<Voices />} />
-          <Route path="/upload" element={<ProjectUpload />} />
-          <Route path="/sp/:id" element={<SendProject />} />
-          <Route path="/candidatelist/:id" element={<AcceptApplication />} />
-          <Route path="/officiallist/:id" element={<ProjectDetailForBuyer />} />
-          <Route path="/tpfb" element={<TrackingProjectForBuyer />} />
+        <Route path="/voices" element={<Voices />} /> {/* figma 9 */}
+          <Route path="/upload" element={<ProjectUpload />} /> {/* figma 11 */}
+          <Route path="/sp/:id" element={<SendProject />} /> {/* figma 16 */}
+          <Route path="/candidatelist/:id" element={<AcceptApplication />} /> {/* figma 20 */}
+          <Route path="/pdfb" element={<ProjectDetailForBuyer />} /> {/* figma 23 */}
+          <Route path="/tpfb" element={<TrackingProjectForBuyer />} /> {/* figma 27 */}
         </Route>
+
         {/* Seller */}
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>
           <Route path="/your-voice" element={<VoiceProfile />} />{" "}

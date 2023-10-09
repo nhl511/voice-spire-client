@@ -47,7 +47,12 @@ const RegisterSeller = () => {
     // chưa validation: fullName để trống, email thiếu .com, .vn..., phone length <= 10, phone để trống
     try {
       await axios.post(registerSellerURL, account, { headers })
-      console.log(account);
+        .then((response) => {
+          if (response.status === 200) {
+            console.log(response);
+            navigate('/');
+          }
+        })
     } catch (error) {
       console.log(error.response.data)
     }

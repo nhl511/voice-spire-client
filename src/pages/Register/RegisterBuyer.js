@@ -36,7 +36,12 @@ const RegisterBuyer = () => {
 
     try {
       await axios.post(registerBuyerURL, account, { headers })
-      console.log(account);
+        .then((response) => {
+          if (response.status === 200) {
+            console.log(response);
+            navigate('/');
+          }
+        })
     } catch (error) {
       console.log(error.response.data);
     }

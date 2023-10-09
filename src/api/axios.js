@@ -30,10 +30,16 @@ export const getVoiceList = async (
 export const getAllProjectsForTracking = async (buyerId) => {
   const response = await axiosOne.get(
     `/api/Buyers/GetProjectByBuyerId/${buyerId}`
-  );
-  console.log(response.data);
+  )
+  .then((response) => {
+    if(response.status === 200){
+      console.log('tracking project buyer');
+    }
+  })
+  .catch((error) => console.log(error.response?.data));
+  console.log(response?.data);
 
-  return response.data;
+  return response?.data;
 };
 
 export const getAllJobsForTracking = async (

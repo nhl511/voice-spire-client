@@ -67,23 +67,23 @@ const App = () => {
         {/*figma 30 */}
         <Route path="/pdfm" element={<ProjectDetailForManager />} />
         {/* figma 31 */}
-
         {/* Buyer + Seller */}
         <Route element={<RequireAuth allowedRoles={["buyer", "seller"]} />}>
           <Route path="/home" element={<Home />} />
           <Route path="/bank" element={<BankAccount />} /> {/* figma 4 */}
         </Route>
-
         {/* Buyer */}
         <Route element={<RequireAuth allowedRoles={["buyer"]} />}>
-        <Route path="/voices" element={<Voices />} /> {/* figma 9 */}
+          <Route path="/voices" element={<Voices />} /> {/* figma 9 */}
           <Route path="/upload" element={<ProjectUpload />} /> {/* figma 11 */}
           <Route path="/sp/:id" element={<SendProject />} /> {/* figma 16 */}
-          <Route path="/candidatelist/:id" element={<AcceptApplication />} /> {/* figma 20 */}
-          <Route path="/pdfb" element={<ProjectDetailForBuyer />} /> {/* figma 23 */}
-          <Route path="/tpfb" element={<TrackingProjectForBuyer />} /> {/* figma 27 */}
+          <Route path="/candidatelist/:id" element={<AcceptApplication />} />
+          {/* figma 20 */}
+          <Route path="/officiallist/:id" element={<ProjectDetailForBuyer />} />
+          {/* figma 23 */}
+          <Route path="/tpfb" element={<TrackingProjectForBuyer />} />{" "}
+          {/* figma 27 */}
         </Route>
-
         {/* Seller */}
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>
           <Route path="/your-voice" element={<VoiceProfile />} />{" "}

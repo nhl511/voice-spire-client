@@ -6,11 +6,12 @@
 .pdfbc-card {
   display: grid;
   grid-template-columns: 10% 65% 25%;
-  border: 1px solid black;
   width: 1400px;
   padding: 20px;
   border-radius: 8px;
   background: #fdf8c8;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: none;
 }
 
 .pdfbc-avatar {

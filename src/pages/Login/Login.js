@@ -4,8 +4,8 @@ import axios from "../../api/axios";
 import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 const LOGIN_URL = "/api/VoiceSellers/Login";
-const VoiceSellersURL = '/api/VoiceSellers/';
-const BuyerURL = '/api/Buyers/';
+const VoiceSellersURL = "/api/VoiceSellers/";
+const BuyerURL = "/api/Buyers/";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -22,42 +22,49 @@ const Login = () => {
 
   const checkBankAccount = async (userId, role) => {
     const headers = {
-      'accept': 'text/plain'
-    }
-    if (role[0] === 'seller') {
+      accept: "text/plain",
+    };
+    if (role === "seller") {
       try {
-        await axios.get(VoiceSellersURL + userId, {headers})
+        await axios
+          .get(VoiceSellersURL + userId, { headers })
           .then((response) => {
             if (response.status === 200) {
-              if (!(response.data?.bankName) || !(response.data?.bankNumber) || !(response.data?.bankAccountName)) {
-                navigate('/bank')
+              if (
+                !response.data?.bankName ||
+                !response.data?.bankNumber ||
+                !response.data?.bankAccountName
+              ) {
+                navigate("/bank");
               } else {
-                navigate('/home')
+                navigate("/profile");
               }
             }
-          })
-      } catch (error) {
-        console.log(error.response?.data);
-      }
-    } 
-    if (role[0] === 'buyer') {
-      try {
-        await axios.get(BuyerURL + userId)
-          .then((response) => {
-            if (response.status === 200) {
-              if (!(response.data?.bankName) || !(response.data?.bankNumber) || !(response.data?.bankAccountName)) {
-                navigate('/bank')
-              } else {
-                navigate('/home')
-              }
-            }
-          })
+          });
       } catch (error) {
         console.log(error.response?.data);
       }
     }
-
-  }
+    if (role === "buyer") {
+      try {
+        await axios.get(BuyerURL + userId).then((response) => {
+          if (response.status === 200) {
+            if (
+              !response.data?.bankName ||
+              !response.data?.bankNumber ||
+              !response.data?.bankAccountName
+            ) {
+              navigate("/bank");
+            } else {
+              navigate("/profile");
+            }
+          }
+        });
+      } catch (error) {
+        console.log(error.response?.data);
+      }
+    }
+  };
 
   useEffect(() => {
     emailRef.current.focus();
@@ -91,17 +98,17 @@ const Login = () => {
         userId = response.data.buyer.buyerId;
       }
       const role = roleStr.split(" ");
+      checkBankAccount(userId, roleStr);
       setAuth({ userId, email, password, role, token });
-        setEmail("");
-        setPassword("");
-        // if (roleStr === "buyer") {
-        //   navigate("/voices", { replace: true });
-        // } else if (roleStr === "seller") {
-        //   navigate("/posts", { replace: true });
-        // }
-        navigate("/home", { replace: true });
-        setLoading(false);
-
+      setEmail("");
+      setPassword("");
+      // if (roleStr === "buyer") {
+      //   navigate("/voices", { replace: true });
+      // } else if (roleStr === "seller") {
+      //   navigate("/posts", { replace: true });
+      // }
+      navigate("/home", { replace: true });
+      setLoading(false);
     } catch (err) {
       if (!err?.response) {
         setErrMsg("No Server Response");

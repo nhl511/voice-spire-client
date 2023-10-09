@@ -16,18 +16,23 @@ const Home = () => {
       <Link to="/tpfb">
         <span>Go to tracking project page</span>
       </Link>
+
       <h3>Role Seller</h3>
       <Link to="/posts">
         <span>Go to posts Page</span>
       </Link>
-      <Link to="/profile">
-        <span>Go to profile Page</span>
+      <Link to="/your-voice">
+        <span>Go to Your Voice Page</span>
       </Link>
-
+      <Link to="/profile">
+        <span>Go to profile page</span>
+      </Link>
       <Link to="/pt2">
         <span>Go to project description to confirm page</span>
       </Link>
-
+      <Link to="/tpfs">
+        <span>Go to tracking project page</span>
+      </Link>
       <h3>Role Admin (Tạm thời chưa phân quyền)</h3>
       <Link to="/postedprojectsmanagement">
         <span>Go to posted project management page</span>

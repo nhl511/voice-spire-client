@@ -54,7 +54,7 @@ export default function Recruitment() {
     e.preventDefault();
 
     applyToProject(post.voiceProjectId, auth.userId, mp3File);
-    navigate("/posts");
+    navigate("/tpfs");
   };
 
   return (

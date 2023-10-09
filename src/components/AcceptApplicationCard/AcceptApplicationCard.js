@@ -2,21 +2,33 @@ import React from "react";
 import "./AcceptApplicationCard.css";
 import ReactAudioPlayer from "react-audio-player";
 import moment from "moment";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { acceptApplications } from "../../api/axios";
 
 export default function AcceptApplicationCard({ voice }) {
+  const navigate = useNavigate();
   const myString = voice.voiceDetail.voiceTypes[0].voiceTypeDetail;
   const myString2 = voice.voiceDetail.voiceProperties[0].voicePropertyName;
 
   const myArray = myString.split(", ");
   const myArray2 = myString2.split(", ");
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    acceptApplications(voice.voiceJobId, voice.voiceProjectId);
+    navigate("/tpfb");
+  };
+
   return (
     <div className="aac-display">
       <div className="aac-card">
         <div className="aac-avatar">
           <img
-            src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+            src={
+              voice.voiceSeller.avatarLink
+                ? voice.voiceSeller.avatarLink
+                : "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+            }
             alt="avatar"
           />
         </div>
@@ -64,7 +76,7 @@ export default function AcceptApplicationCard({ voice }) {
           </div>
         </div>
         <div className="aac-button">
-          <button>Chấp nhận ứng tuyển</button>
+          <button onClick={handleSubmit}>Chấp nhận ứng tuyển</button>
         </div>
       </div>
     </div>

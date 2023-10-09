@@ -35,7 +35,12 @@ const PostedProjectCard = ({ post }) => {
     <div className="ppc-margin">
       <div className="ppc-container">
         <div className="ppc-card" onClick={displayDropdown}>
-          <img src={post.linkThumbnail} alt="thumbnail" />
+          {post.linkThumbnail ? (
+            <img src={post.linkThumbnail} />
+          ) : (
+            <img src="/img/logo.png" />
+          )}
+
           <div className="ppc-name">
             <span>{post.title}</span>
             <div className="ppc-bank">
@@ -53,7 +58,7 @@ const PostedProjectCard = ({ post }) => {
             {post.projectStatus === "Apply" && <RecruitmentStatus />}
             {post.projectStatus === "Processing" && <ReceivingStatus />}
             {post.projectStatus === "Done" && <FinishStatus />}
-            {post.projectStatus === "waitToAccept" && <InvitationStatus />}
+            {post.projectStatus === "WaitToAccept" && <InvitationStatus />}
             {post.projectStatus === "Denied" && <DenyStatus />}
           </div>
         </div>

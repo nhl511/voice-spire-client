@@ -17,14 +17,20 @@ export default function AcceptApplication() {
   const { id } = useParams();
 
   useEffect(() => {
-    getProjectApprovalDetail(id).then((json) => setPost(json));
-    getCandidates(id)
-      .then((json) => setVoices(json))
-      .then((json) => setLoading(false))
+    getProjectApprovalDetail(id)
+      .then((json) => {
+        setPost(json);
+        return getCandidates(id);
+      })
+      .then((json) => {
+        setVoices(json);
+        setLoading(false);
+      })
       .catch((error) => {
         if (error.response && error.response.status === 400) {
           setError(true);
         }
+        // Always set loading to false in case of an error
         setLoading(false);
       });
   }, [currentPage]);

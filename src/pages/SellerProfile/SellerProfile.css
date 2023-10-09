@@ -1,126 +1,160 @@
-.sellerProfile-container{
-    display: flex;
-    justify-content: center;
-    background-image: linear-gradient(#FEE66A, #ffffff);
+.sellerProfile-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#fee66a, #ffffff);
 }
-.sellerProfile-card{
-    background: #FFFCE5;
-    width: 1000px;
-    border-radius: 8px;
-    margin-top: 30px;
-    margin-bottom: 300px;
+.sellerProfile-card {
+  background: #fffce5;
+  width: 1000px;
+  border-radius: 8px;
+  padding: 20px;
 }
-.sellerProfile-image{
-    display: flex;
-    justify-content: center;
-    margin: 20px;
+.sellerProfile-image {
+  display: flex;
+  justify-content: center;
 }
-.sellerProfile-image img{
-    width: 105px;
-    height: 105px;
-    border-radius: 50%;
-    object-fit: cover;
+.sellerProfile-image .sellerprofile-avatar img {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
 }
-.sellerProfile-fullName{
-    text-align: center;
-    color: #737373;
-    margin-bottom: 30px;
+.sellerprofile-avatar {
+  position: relative;
 }
-.sellerProfile-fullName span{
-    font-size: 20px;
-    font-weight: 600;
-    margin-right: 20px;
+.update-avatar {
+  position: absolute;
+  bottom: -5px;
+  right: -120px;
+  background: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
 }
-svg{
-    color: #737373;
-    cursor: pointer;
+.sellerProfile-fullName {
+  text-align: center;
+  color: #737373;
+  margin-bottom: 30px;
+}
+.sellerProfile-fullName input {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}
+.sellerProfile-displayGrid input {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}
+.sellerProfile-displayGrid select {
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}
+svg {
+  color: #737373;
+  cursor: pointer;
 }
 
-.sellerProfile-displayGrid{
-    display: grid;
-    grid-template-columns: 25% 60% 25%;
-    margin-top: 20px;
+.sellerProfile-displayGrid {
+  display: grid;
+  grid-template-columns: 25% 60% 25%;
+  margin-top: 20px;
 }
-.sellerProfile-birthDay{
-    color: #494949;
-    font-weight: 600;
-    font-size: 17px;
-    margin-left: 80px;
+.sellerProfile-birthDay {
+  color: #494949;
+  font-weight: 600;
+  font-size: 17px;
+  margin-left: 80px;
 }
-.sellerProfile-text-birthDay{
-    padding-top: 5px;
-    font-family: sans-serif;
+.sellerProfile-text-birthDay {
+  padding-top: 5px;
+  font-family: sans-serif;
 }
-.sellerProfile-phone{
-    color: #494949;
-    font-weight: 600;
-    font-size: 17px;
-    margin-left: 80px;
+.sellerProfile-phone {
+  color: #494949;
+  font-weight: 600;
+  font-size: 17px;
+  margin-left: 80px;
 }
-.sellerProfile-text-phone{
-    padding-top: 5px;
-    font-family: sans-serif;
+.sellerProfile-text-phone {
+  padding-top: 5px;
+  font-family: sans-serif;
 }
-.sellerProfile-gender{
-    color: #494949;
-    font-weight: 600;
-    font-size: 17px;
-    margin-left: 80px;
+.sellerProfile-gender {
+  color: #494949;
+  font-weight: 600;
+  font-size: 17px;
+  margin-left: 80px;
 }
-.sellerProfile-text-gender{
-    padding-top: 5px;
-    font-family: sans-serif;
+.sellerProfile-text-gender {
+  padding-top: 5px;
+  font-family: sans-serif;
 }
-.sellerProfile-bankNumber{
-    color: #494949;
-    font-weight: 600;
-    font-size: 17px;
-    margin-left: 80px;
+.sellerProfile-bankNumber {
+  color: #494949;
+  font-weight: 600;
+  font-size: 17px;
+  margin-left: 80px;
 }
-.sellerProfile-text-bankNumber{
-    padding-top: 5px;
-    font-family: sans-serif;
+.sellerProfile-text-bankNumber {
+  padding-top: 5px;
+  font-family: sans-serif;
 }
-.sellerProfile-bankName{
-    color: #494949;
-    font-weight: 600;
-    font-size: 17px;
-    margin-left: 80px;
+.sellerProfile-bankName {
+  color: #494949;
+  font-weight: 600;
+  font-size: 17px;
+  margin-left: 80px;
 }
-.sellerProfile-text-bankName{
-    padding-top: 5px;
-    font-family: sans-serif;
+.sellerProfile-text-bankName {
+  padding-top: 5px;
+  font-family: sans-serif;
 }
-.sellerProfile-accountName{
-    color: #494949;
-    font-weight: 600;
-    font-size: 17px;
-    margin-left: 80px;
+.sellerProfile-accountName {
+  color: #494949;
+  font-weight: 600;
+  font-size: 17px;
+  margin-left: 80px;
 }
-.sellerProfile-text-accountName{
-    padding-top: 5px;
-    font-family: sans-serif;
+.sellerProfile-text-accountName {
+  padding-top: 5px;
+  font-family: sans-serif;
 }
-.sellerProfile-address{
-    color: #494949;
-    font-weight: 600;
-    font-size: 17px;
-    margin-left: 80px;
+.sellerProfile-address {
+  color: #494949;
+  font-weight: 600;
+  font-size: 17px;
+  margin-left: 80px;
 }
-.sellerProfile-text-address{
-    padding-top: 5px;
-    font-family: sans-serif;
+.sellerProfile-text-address {
+  padding-top: 5px;
+  font-family: sans-serif;
 }
-.sellerProfile-update{
-    text-align: center;
+.sellerProfile-update {
+  text-align: center;
 }
-.sellerProfile-update button{
-    border: none;
-    outline: none;
-    border-radius: 30px;
-    background: #FFD600;
-    font-weight: 600;
-    padding: 10px 80px;
-    margin-top: 50px;
-    margin-bottom: 100px;
+.sellerProfile-update button {
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  background: #ffd600;
+  font-weight: 600;
+  padding: 10px 80px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  cursor: pointer;
 }

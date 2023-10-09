@@ -69,7 +69,8 @@ export default function SendProject() {
       deadline,
       nameFileDemo,
       nameFileMain,
-      nameFileThumbnail
+      nameFileThumbnail,
+      request
     );
     navigate("/tpfb");
   };
@@ -92,7 +93,11 @@ export default function SendProject() {
               <div className="sendProject-card-display">
                 <div className="sendProject-card-left">
                   <img
-                    src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                    src={
+                      voice.voiceSeller.avatarLink
+                        ? voice.voiceSeller.avatarLink
+                        : "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+                    }
                     alt="avatar"
                   />
                 </div>

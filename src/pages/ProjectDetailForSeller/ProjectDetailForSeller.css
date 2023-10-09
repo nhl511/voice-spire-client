@@ -1,166 +1,171 @@
-.pdfs{
-    background-image: linear-gradient(#AA9006, #ffffff);
+.pdfs {
+  background-image: linear-gradient(#aa9006, #ffffff);
+  min-height: 100vh;
+  margin-bottom: 100px;
 }
-.pdfs-titleProject{
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 25px;
-    margin: 0;
-    padding: 20px;
+.pdfs-titleProject {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 0;
+  padding: 20px;
 }
-.pdfs-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.pdfs-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.pdfs-card{
-    background: #FDF8C8;
-    width: 1400px;
-    border-radius: 8px;
+.pdfs-card {
+  background: #fdf8c8;
+  width: 1400px;
+  border-radius: 8px;
 }
-.pdfs-info{
-    display: grid;
-    grid-template-columns: 25% 75%;
+.pdfs-info {
+  display: grid;
+  grid-template-columns: 25% 75%;
 }
-.pdfs-description{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 30px;
+.pdfs-description {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 30px;
 }
-.pdfs-text-description{
-    margin-top: 30px;
-    width: 1050px;
-    font-style: italic;
-    font-family: sans-serif;
+.pdfs-text-description {
+  margin-top: 30px;
+  width: 1050px;
+  font-style: italic;
+  font-family: sans-serif;
 }
-.pdfs-detail{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 20px;
+.pdfs-detail {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
 }
-.pdfs-text-detail{
-    margin-top: 20px;
-    width: 1050px;
-    font-style: italic;
-    font-family: sans-serif;
-    font-weight: 400;
+.pdfs-text-detail {
+  margin-top: 20px;
+  width: 1050px;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: 400;
 }
-.pdfs-demo{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 20px;
+.pdfs-demo {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
 }
-.pdfs-text-demo{
-    width: 1050px;
-    margin-top: 20px;
+.pdfs-text-demo {
+  width: 1050px;
+  margin-top: 20px;
 }
-.pdfs-text-demo button{
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-   background-image: linear-gradient(#43D100, #A0CBAC);
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 3px 20px;
-    margin-left: 5px;
-    cursor: pointer;
+.pdfs-text-demo button {
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background-image: linear-gradient(#43d100, #a0cbac);
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3px 20px;
+  margin-left: 5px;
+  cursor: pointer;
 }
-.pdfs-main{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 20px;
+.pdfs-main {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
 }
-.pdfs-text-main{
-    width: 1050px;
-    margin-top: 20px;
+.pdfs-text-main {
+  width: 1050px;
+  margin-top: 20px;
 }
-.pdfs-text-main button{
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-   background-image: linear-gradient(#43D100, #A0CBAC);
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 3px 20px;
-    margin-left: 5px;
-    cursor: pointer;
+.pdfs-text-main button {
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background-image: linear-gradient(#43d100, #a0cbac);
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3px 20px;
+  margin-left: 5px;
+  cursor: pointer;
 }
-.pdfs-edit{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 20px;
+.pdfs-edit {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
 }
-.pdfs-text-edit{
-    width: 1050px;
-    margin-top: 22px;
-    font-weight: 600;
+.pdfs-text-edit {
+  width: 1050px;
+  margin-top: 22px;
+  font-weight: 600;
 }
-.pdfs-displayGrid{
-    display: grid;
-    grid-template-columns: 80% 20%;
-    width: 1350px;
+.pdfs-displayGrid {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  width: 1350px;
 }
-.pdfs-price{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 20px;
+.pdfs-price {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
 }
-.pdfs-text-price{
-    font-weight: 600;
-    margin-left: 80px;
-    margin-top: 20px;
-    display: grid;
+.pdfs-text-price {
+  font-weight: 600;
+  margin-left: 80px;
+  margin-top: 20px;
+  display: grid;
 }
-.pdfs-text-main label{
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-   background-image: linear-gradient(#43D100, #A0CBAC);
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 3px 20px;
-    margin-left: 5px;
-    cursor: pointer;
+.pdfs-text-main label {
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background-image: linear-gradient(#43d100, #a0cbac);
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3px 20px;
+  margin-left: 5px;
+  cursor: pointer;
 }
-.pdfs-duration{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 80px;
-    margin-top: 20px;
+.pdfs-duration {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
 }
-.pdfs-text-duration{
-    font-weight: 600;
-    margin-left: 80px;
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    margin-bottom: 20px;
+.pdfs-text-duration {
+  font-weight: 600;
+  margin-left: 80px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  margin-bottom: 20px;
 }
-.pdfs-record{
-    margin-top: 20px;
+.pdfs-record {
+  margin-top: 20px;
 }
-.pdfs-button button{
-    background: #FFD600;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-family: sans-serif;
-    padding: 15px 50px;
-    cursor: pointer;
+.pdfs-button button {
+  background: #ffd600;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-family: sans-serif;
+  padding: 15px 50px;
+  cursor: pointer;
 }
-.pdfs-title{
-    text-transform: uppercase;
-    text-align: center;
+.pdfs-title {
+  text-transform: uppercase;
+  text-align: center;
 }
-.pdfs-listVoice{
-    margin-bottom: 50px;
+.pdfs-listVoice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

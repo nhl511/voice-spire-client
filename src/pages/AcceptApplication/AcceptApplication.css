@@ -1,5 +1,6 @@
 .aa {
   background-image: linear-gradient(#fee66a, #ffffff);
+  min-height: 100vh;
 }
 .aa-titleProject {
   text-align: center;
@@ -164,5 +165,6 @@
 .aa-listVoice {
   margin-bottom: 50px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

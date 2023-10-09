@@ -137,7 +137,18 @@
 .pdfb-text-duration {
   font-weight: 600;
   margin-top: 20px;
-  margin-bottom: 20px;
+}
+.pdfb-totalPrice {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 80px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.pdfb-text-totalPrice {
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 .pdfb-title {
   text-transform: uppercase;

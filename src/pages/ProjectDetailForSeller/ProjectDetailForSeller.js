@@ -104,7 +104,7 @@ export default function ProjectDetailForSeller() {
                       <span>Giá:</span>
                     </div>
                     <div className="pdfs-text-price">
-                      <span>{post.toalOutputPrice} vnd</span>
+                      <span>{post.price} VNĐ/phút</span>
                     </div>
 
                     <div className="pdfs-duration">
@@ -112,6 +112,12 @@ export default function ProjectDetailForSeller() {
                     </div>
                     <div className="pdfs-text-duration">
                       <span>{post.duration} phút</span>
+                    </div>
+                    <div className="pdfs-tprice">
+                      <span>Tổng giá:</span>
+                    </div>
+                    <div className="pdfs-text-tprice">
+                      <span>{post.toalOutputPrice} VNĐ</span>
                     </div>
                   </div>
                   <div className="pdfs-record">

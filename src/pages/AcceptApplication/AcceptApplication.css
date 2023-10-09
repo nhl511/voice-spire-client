@@ -126,8 +126,20 @@
   display: grid;
   grid-template-columns: 70% 30%;
   margin-top: 30px;
-  margin-bottom: 20px;
   margin-left: 55px;
+}
+.aa-tprice {
+  font-weight: 600;
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.aa-text-tprice {
+  width: 1050px;
+  font-weight: 600;
+  margin-left: 55px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .aa-suggest {
   margin-top: 10px;

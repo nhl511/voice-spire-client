@@ -86,7 +86,7 @@ const App = () => {
           <Route path="/your-voice" element={<VoiceProfile />} />{" "}
           {/* figma 5 */}
           <Route path="/posts" element={<Posts />} /> {/* figma 15 */}
-          <Route path="/pt2" element={<ProjectDescriptionToConfirm />} />
+          <Route path="/pt2/:id" element={<ProjectDescriptionToConfirm />} />
           {/* figma 17 */}
           <Route path="/pt1/:id" element={<ProjectDescriptionToApply />} />
           {/* figma 18 */}

@@ -33,7 +33,9 @@ export default function TrackingProjectForBuyerCard({ post }) {
                 src="https://cdn-icons-png.flaticon.com/512/156/156764.png"
                 alt=""
               />
-              <span className="tpfbc-text-price">{post.price} vnđ/phút</span>
+              <span className="tpfbc-text-price">
+                {post.toalOutputPrice} VNĐ
+              </span>
             </span>
           )}
         </div>

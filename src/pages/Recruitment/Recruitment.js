@@ -99,18 +99,17 @@ export default function Recruitment() {
                   </Link>
                 </div>
 
-                <div className="recruitment-price">
-                  <span>Giá:</span>
-                </div>
-                <div className="recruitment-text-price">
-                  <span>{post.toalOutputPrice} vnd</span>
-                </div>
-
                 <div className="recruitment-duration">
                   <span>Thời lượng yêu cầu:</span>
                 </div>
                 <div className="recruitment-text-duration">
                   <span>{post.duration} phút</span>
+                </div>
+                <div className="recruitment-price">
+                  <span>Tổng giá:</span>
+                </div>
+                <div className="recruitment-text-price">
+                  <span>{post.toalOutputPrice} VNĐ</span>
                 </div>
               </div>
               <form onSubmit={handleSubmit}>

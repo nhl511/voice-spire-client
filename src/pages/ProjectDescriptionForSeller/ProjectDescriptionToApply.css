@@ -1,228 +1,239 @@
-.pdta-title{
-    text-align: center;
-    color: #737373;
+.pdta-title {
+  text-align: center;
+  color: #737373;
 }
-.pdta-container{
-    display: flex;
-    justify-content: center;
-    background-image: linear-gradient(#FEE66A, #f6f2f2);
+.pdta-container {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(#fee66a, #f6f2f2);
 }
-.pdta-card{
-    background: #FFFCE5;
-    border-radius: 4px;
-    width: 1000px;
-    margin-top: 30px;
-    margin-bottom: 300px;
+.pdta-card {
+  background: #fffce5;
+  border-radius: 4px;
+  width: 1000px;
+  margin-top: 30px;
+  margin-bottom: 300px;
 }
-.pdta-info{
-    display: grid;
-    grid-template-columns: 25% 75%;
-    margin-bottom: 20px;
+.pdta-info {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  margin-bottom: 20px;
 }
-.pdta-description{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
+.pdta-description {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
 }
-.pdta-text-description{
-    width: 650px;
+.pdta-text-description {
+  width: 650px;
 }
-.pdta-text-description span{
-    font-weight: 600;
+.pdta-text-description span {
+  font-weight: 600;
 }
-.pdta-detail{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-detail {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-detail{
-    margin-top: 20px;
+.pdta-text-detail {
+  margin-top: 20px;
 }
-.pdta-text-detail span{
-    font-style: italic;
-    font-family: sans-serif;
-    font-weight: 400;
+.pdta-text-detail span {
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: 400;
 }
-.pdta-gender{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-gender {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-gender{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-gender {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-region{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-region {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-region{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-region {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-tone{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-tone {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-tone{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-tone {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-expressive{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-expressive {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-expressive{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-expressive {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-speed{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-speed {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-speed{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-speed {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-pronounce{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-pronounce {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-pronounce{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-pronounce {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-stress{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-stress {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-stress{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-stress {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-voice{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-voice {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-voice{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-voice {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-nature{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-nature {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-nature{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-nature {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-duration{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-duration {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-duration{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-duration {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-edit{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-edit {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-edit{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-edit {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-deadline{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-deadline {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-deadline{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-deadline {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-price{
-    color: #494949;
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 30px;
-    margin-top: 20px;
+.pdta-price {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-text-price{
-    width: 650px;
-    font-weight: 600;
-    margin-top: 22px;
+.pdta-text-price {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-button{
-    text-align: center;
-    margin-bottom: 30px;
+.pdta-price2 {
+  color: #494949;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 30px;
+  margin-top: 20px;
 }
-.pdta-button .pdta-deny{
-    background-color: #F5851D;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    font-weight: 600;
-    padding: 12px 50px;
-    margin-right: 100px;
-    cursor: pointer;
+.pdta-text-price2 {
+  width: 650px;
+  font-weight: 600;
+  margin-top: 22px;
 }
-.pdta-button .pdta-accept{
-    background-color: #FFD600;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-    font-weight: 600;
-    padding: 12px 50px;
-    cursor: pointer;
-
+.pdta-button {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.pdta-button .pdta-deny {
+  background-color: #f5851d;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 12px 50px;
+  margin-right: 100px;
+  cursor: pointer;
+}
+.pdta-button .pdta-accept {
+  background-color: #ffd600;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-weight: 600;
+  padding: 12px 50px;
+  cursor: pointer;
 }

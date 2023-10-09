@@ -102,7 +102,7 @@ export default function UploadFileToProjectDetail() {
                   <span>Giá:</span>
                 </div>
                 <div className="uftpd-text-price">
-                  <span>{post.toalOutputPrice} vnd</span>
+                  <span>{post.price} VNĐ/phút</span>
                 </div>
 
                 <div className="uftpd-duration">

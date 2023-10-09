@@ -116,15 +116,7 @@ export default function ProjectDescriptionToApply() {
               <span>Tính chất</span>
             </div>
             <div className="pdta-text-nature">
-              <span>
-                <span>{post.voiceProperty}</span>
-              </span>
-            </div>
-            <div className="pdta-duration">
-              <span>Thời lượng yêu cầu</span>
-            </div>
-            <div className="pdta-text-duration">
-              <span>{post.duration} phút</span>
+              <span>{post.voiceProperty}</span>
             </div>
 
             <div className="pdta-edit">
@@ -133,19 +125,29 @@ export default function ProjectDescriptionToApply() {
             <div className="pdta-text-edit">
               <span>{post.numberOfEdit} lần</span>
             </div>
-
-            <div className="pdta-deadline">
-              <span>Thời hạn hoàn tất</span>
+            <div className="pdta-price2">
+              <span>Giá</span>
             </div>
-            <div className="pdta-text-deadline">
-              <span>{moment(post.deadline).format("DD/MM/yyyy")}</span>
+            <div className="pdta-text-price2">
+              <span>{post.price} VNĐ/phút</span>
             </div>
-
+            <div className="pdta-duration">
+              <span>Thời lượng yêu cầu</span>
+            </div>
+            <div className="pdta-text-duration">
+              <span>{post.duration} phút</span>
+            </div>
             <div className="pdta-price">
               <span>Tổng giá</span>
             </div>
             <div className="pdta-text-price">
               <span>{post.toalOutputPrice} VNĐ</span>
+            </div>
+            <div className="pdta-deadline">
+              <span>Thời hạn hoàn tất</span>
+            </div>
+            <div className="pdta-text-deadline">
+              <span>{moment(post.deadline).format("DD/MM/yyyy")}</span>
             </div>
           </div>
           <div className="pdta-button">

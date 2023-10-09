@@ -44,7 +44,7 @@ export default function TrackingProjectForSellerCard({ post }) {
               )}
             </span>
             <span>
-              <span className="tpfsc-length">Độ dài yêu cầu:</span>
+              <span className="tpfsc-length">Thời lượng yêu cầu:</span>
               <span className="tpfsc-text-length">
                 {post.voiceProject.duration} phút
               </span>
@@ -73,7 +73,9 @@ export default function TrackingProjectForSellerCard({ post }) {
               </Link>
             )}
             {post.voiceJobStatus === "waitToAccept" && (
-              <button>Chấp nhận lời mời</button>
+              <Link to={`/pt2/${post.voiceProjectId}`}>
+                <button>Chấp nhận lời mời</button>
+              </Link>
             )}
             {post.voiceJobStatus === "Denied" && (
               <button>Demo không được duyệt</button>

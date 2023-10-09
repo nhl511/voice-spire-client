@@ -10,7 +10,6 @@ export default function SendProject() {
 
   const [voice, setVoice] = useState();
   const [loading, setLoading] = useState(true);
-  const [mainFile, setMainFile] = useState();
   const [buyerId, setBuyerId] = useState();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -18,9 +17,13 @@ export default function SendProject() {
   const [duration, setDuration] = useState();
   const [deadline, setDeadline] = useState();
 
-  const [nameFileDemo, setNameFileDemo] = useState("");
+  const [demoFile, setDemoFile] = useState("");
+  const [mainFile, setMainFile] = useState();
+  const [thumbnail, setThumbnail] = useState("");
+
+  const [nameFileDemo, setNameFileDemo] = useState();
   const [nameFileMain, setNameFileMain] = useState();
-  const [nameFileThumbnail, setNameFileThumbnail] = useState("");
+  const [nameFileThumbnail, setNameFileThumbnail] = useState();
 
   const { id } = useParams();
   const navigate = useNavigate();
@@ -67,9 +70,9 @@ export default function SendProject() {
       description,
       duration,
       deadline,
-      nameFileDemo,
-      nameFileMain,
-      nameFileThumbnail,
+      demoFile,
+      mainFile,
+      thumbnail,
       request
     );
     navigate("/tpfb");

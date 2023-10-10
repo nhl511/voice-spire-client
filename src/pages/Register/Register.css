@@ -55,12 +55,15 @@
   font-size: 20px;
   border: none;
   width: 350px;
+  outline: none;
 }
 .register .register-container .register-card .left .col-item select {
   padding: 10px 20px;
   border-radius: 15px;
   width: max-content;
   font-size: 20px;
+  outline: none;
+  border: none;
 }
 .register .register-container .register-card .left .row-item {
   display: flex;

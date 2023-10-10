@@ -18,6 +18,7 @@ const VoiceProfile = () => {
   const [voice, setVoice] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [loadingFile, setLoadingFile] = useState(false);
 
   const { auth } = useAuth();
 
@@ -33,6 +34,7 @@ const VoiceProfile = () => {
       });
   });
   const handleUploadVoice = async (event) => {
+    setLoadingFile(true);
     const headers = {
       accept: "*/*",
       "Content-Type": "multipart/form-data",
@@ -48,6 +50,7 @@ const VoiceProfile = () => {
         .then((response) => {
           if (response.status === 200) {
             setMp3File(response.data);
+            setLoadingFile(false);
             setUploadFile(event.target.files[0]);
             setUploadFile(event.target.files[0]);
           }
@@ -151,7 +154,11 @@ const VoiceProfile = () => {
                     accept="audio/mpeg"
                   />
                   <label htmlFor="upload-btn" className="btn-upload">
-                    Tải lên file ghi âm: {uploadFile?.name}
+                    {loadingFile ? (
+                      <span>Loading...</span>
+                    ) : (
+                      <span> Tải lên file ghi âm: {uploadFile?.name}</span>
+                    )}
                   </label>
                   <button type="submit" className="btn-finish">
                     Hoàn tất

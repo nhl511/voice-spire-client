@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./Register.css";
-import DatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import axios from "../../api/axios";
 import { useNavigate } from "react-router-dom";
 
 const RegisterSeller = () => {
-  const registerSellerURL = '/api/VoiceSellers/Register';
+  const registerSellerURL = "/api/VoiceSellers/Register";
   const navigate = useNavigate();
 
   const [email, setEmail] = useState();
@@ -16,9 +16,12 @@ const RegisterSeller = () => {
   const [fullName, setFullName] = useState();
   const [address, setAddress] = useState();
   const [birthDay, setBirthDay] = useState();
-  const [gender, setGender] = useState('Nam');
+  const [gender, setGender] = useState("Nam");
+  const [loading, setLoading] = useState(false);
 
   const handleRegister = async (e) => {
+    setLoading(true);
+
     e.preventDefault();
 
     let account = {
@@ -38,25 +41,26 @@ const RegisterSeller = () => {
       bankAccountName: null,
       googleId: null,
       status: true,
-    }
+    };
 
     const headers = {
-      'accept': '*/*'
-    }
+      accept: "*/*",
+    };
     // 400: Email has already been used - Password's length must greater than 8 - Password not match - Data Invalid (birthday),
     // chưa validation: fullName để trống, email thiếu .com, .vn..., phone length <= 10, phone để trống
     try {
-      await axios.post(registerSellerURL, account, { headers })
+      await axios
+        .post(registerSellerURL, account, { headers })
         .then((response) => {
           if (response.status === 200) {
             console.log(response);
-            navigate('/');
+            navigate("/");
           }
-        })
+        });
     } catch (error) {
-      console.log(error.response.data)
+      console.log(error.response.data);
     }
-  }
+  };
 
   return (
     <div className="register">
@@ -70,40 +74,80 @@ const RegisterSeller = () => {
             <form onSubmit={handleRegister}>
               <div className="col-item">
                 <span>Email*</span>
-                <input type="email" placeholder="Nhập Email của bạn" onChange={(e) => setEmail(e.target.value)} required />
+                <input
+                  type="email"
+                  placeholder="Nhập Email của bạn"
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
               </div>
               <div className="col-item">
                 <span>Mật Khẩu*</span>
-                <input type="password" placeholder="Nhập mật khẩu" onChange={(e) => setPassword(e.target.value)} required />
+                <input
+                  type="password"
+                  placeholder="Nhập mật khẩu"
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
               </div>
               <div className="col-item">
                 <span>Nhập lại mật khẩu*</span>
-                <input type="password" placeholder="Nhập lại mật khẩu" onChange={(e) => setPasswordConfirm(e.target.value)} required />
+                <input
+                  type="password"
+                  placeholder="Nhập lại mật khẩu"
+                  onChange={(e) => setPasswordConfirm(e.target.value)}
+                  required
+                />
               </div>
               <div className="col-item">
                 <span>Số điện thoại*</span>
-                <input type="text" placeholder="Nhập số điện thoại" onChange={(e) => setPhone(e.target.value)} required />
+                <input
+                  type="text"
+                  placeholder="Nhập số điện thoại"
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                />
               </div>
               <div className="col-item">
                 <span>Họ và tên*</span>
-                <input type="text" placeholder="Nhập họ và tên" onChange={(e) => setFullName(e.target.value)} required />
+                <input
+                  type="text"
+                  placeholder="Nhập họ và tên"
+                  onChange={(e) => setFullName(e.target.value)}
+                  required
+                />
               </div>
               <div className="col-item">
                 <span>Địa chỉ*</span>
-                <input type="text" placeholder="Nhập địa chỉ" onChange={(e) => setAddress(e.target.value)} required />
+                <input
+                  type="text"
+                  placeholder="Nhập địa chỉ"
+                  onChange={(e) => setAddress(e.target.value)}
+                  required
+                />
               </div>
               <div className="col-item">
                 <span>Ngày sinh*</span>
-                <DatePicker selected={birthDay} onChange={(date) => setBirthDay(date)}
-                  dateFormat='yyyy-MM-dd' showYearDropdown scrollableYearDropdown
-                  yearDropdownItemNumber={50} placeholderText="Chọn ngày tháng năm sinh" required />
+                <DatePicker
+                  selected={birthDay}
+                  onChange={(date) => setBirthDay(date)}
+                  dateFormat="yyyy-MM-dd"
+                  showYearDropdown
+                  scrollableYearDropdown
+                  yearDropdownItemNumber={50}
+                  placeholderText="Chọn ngày tháng năm sinh"
+                  required
+                />
               </div>
               <div className="col-item">
                 <span>Giới tính*</span>
-                <select defaultValue={gender} onChange={(e) => setGender(e.target.value)} >
+                <select
+                  defaultValue={gender}
+                  onChange={(e) => setGender(e.target.value)}
+                >
                   <option value="Nam">Nam</option>
                   <option value="Nữ">Nữ</option>
-                  <option value='Khác'>Khác</option>
+                  <option value="Khác">Khác</option>
                 </select>
               </div>
               <div className="row-item">
@@ -113,7 +157,9 @@ const RegisterSeller = () => {
                 </span>
               </div>
               <div className="button">
-                <button type="submit">Đăng ký</button>
+                <button type="submit">
+                  {loading ? <span>Loading...</span> : <span>Đăng Ký</span>}
+                </button>
               </div>
             </form>
           </div>

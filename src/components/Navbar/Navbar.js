@@ -61,9 +61,7 @@ const Navbar = () => {
                         Thông tin của tổ chức
                       </span>
                       <hr />
-                      <Link to="/" className="link">
-                        <span>Đăng xuất</span>
-                      </Link>
+                      <span>Đăng xuất</span>
                     </div>
                   )}
                 </div>
@@ -101,9 +99,7 @@ const Navbar = () => {
                         </span>
                       </Link>
                       <hr />
-                      <Link to="/" className="link">
-                        <span>Đăng xuất</span>
-                      </Link>
+                      <span>Đăng xuất</span>
                     </div>
                   )}
                 </div>
@@ -137,9 +133,7 @@ const Navbar = () => {
                         Thông tin người quản lí
                       </span>
                       <hr />
-                      <Link to="/" className="link">
-                        <span>Đăng xuất</span>
-                      </Link>
+                      <span>Đăng xuất</span>
                     </div>
                   )}
                 </div>

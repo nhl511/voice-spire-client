@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "../../api/axios";
 
 const RegisterBuyer = () => {
-  const registerBuyerURL = '/api/Buyers/Register';
+  const registerBuyerURL = "/api/Buyers/Register";
   const navigate = useNavigate();
 
   const [email, setEmail] = useState();
@@ -13,8 +13,10 @@ const RegisterBuyer = () => {
   const [phone, setPhone] = useState();
   const [companyName, setCompanyName] = useState();
   const [address, setAddress] = useState();
+  const [loading, setLoading] = useState(false);
 
   const handleRegister = async (e) => {
+    setLoading(true);
     e.preventDefault();
 
     let account = {
@@ -28,24 +30,24 @@ const RegisterBuyer = () => {
       bankNumber: null,
       isPro: true,
       status: true,
-    }
+    };
 
     const headers = {
-      'accept': '*/*',
-    }
+      accept: "*/*",
+    };
 
     try {
-      await axios.post(registerBuyerURL, account, { headers })
+      await axios
+        .post(registerBuyerURL, account, { headers })
         .then((response) => {
           if (response.status === 200) {
-            console.log(response);
-            navigate('/');
+            navigate("/");
           }
-        })
+        });
     } catch (error) {
       console.log(error.response.data);
     }
-  }
+  };
 
   return (
     <div className="register">
@@ -59,27 +61,57 @@ const RegisterBuyer = () => {
             <form onSubmit={handleRegister}>
               <div className="col-item">
                 <span>Email*</span>
-                <input type="email" placeholder="Nhập Email của bạn" onChange={(e) => setEmail(e.target.value)} required />
+                <input
+                  type="email"
+                  placeholder="Nhập Email của bạn"
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
               </div>
               <div className="col-item">
                 <span>Mật Khẩu*</span>
-                <input type="password" placeholder="Nhập mật khẩu" onChange={(e) => setPassword(e.target.value)} required />
+                <input
+                  type="password"
+                  placeholder="Nhập mật khẩu"
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
               </div>
               <div className="col-item">
                 <span>Nhập lại mật khẩu*</span>
-                <input type="password" placeholder="Nhập lại mật khẩu" onChange={(e) => setPasswordConfirm(e.target.value)} required />
+                <input
+                  type="password"
+                  placeholder="Nhập lại mật khẩu"
+                  onChange={(e) => setPasswordConfirm(e.target.value)}
+                  required
+                />
               </div>
               <div className="col-item">
                 <span>Số điện thoại*</span>
-                <input type="text" placeholder="Nhập số điện thoại" onChange={(e) => setPhone(e.target.value)} required />
+                <input
+                  type="text"
+                  placeholder="Nhập số điện thoại"
+                  onChange={(e) => setPhone(e.target.value)}
+                  required
+                />
               </div>
               <div className="col-item">
                 <span>Tên doanh nghiệp*</span>
-                <input type="text" placeholder="Nhập tên doanh nghiệp" onChange={(e) => setCompanyName(e.target.value)} required />
+                <input
+                  type="text"
+                  placeholder="Nhập tên doanh nghiệp"
+                  onChange={(e) => setCompanyName(e.target.value)}
+                  required
+                />
               </div>
               <div className="col-item">
                 <span>Địa chỉ*</span>
-                <input type="text" placeholder="Nhập địa chỉ" onChange={(e) => setAddress(e.target.value)} required />
+                <input
+                  type="text"
+                  placeholder="Nhập địa chỉ"
+                  onChange={(e) => setAddress(e.target.value)}
+                  required
+                />
               </div>
               <div className="row-item">
                 <input type="checkbox" required />
@@ -88,7 +120,9 @@ const RegisterBuyer = () => {
                 </span>
               </div>
               <div className="button">
-                <button type="submit">Đăng ký</button>
+                <button type="submit">
+                  {loading ? <span>Loading...</span> : <span>Đăng Ký</span>}
+                </button>
               </div>
             </form>
           </div>

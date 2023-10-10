@@ -29,7 +29,7 @@
   border: 2px solid white;
   font-size: 20px;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 5px 30px;
   border-radius: 20px;
   transition: background 0.5s, color 0.5s;
   cursor: pointer;
@@ -52,6 +52,7 @@
   background: white;
   font-size: 18px;
   gap: 20px;
+  left: 0;
   top: 45px;
   padding: 10px 20px;
   border-radius: 20px;

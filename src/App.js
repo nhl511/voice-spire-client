@@ -32,6 +32,7 @@ import TrackingProjectForSeller from "./pages/TrackingProjectForSeller/TrackingP
 import TrackingProjectForBuyer from "./pages/TrackingProjectForBuyer/TrackingProjectForBuyer";
 import ProjectDescriptionForManager from "./pages/ProjectDescriptionForManager/ProjectDescriptionForManager";
 import ProjectDetailForManager from "./pages/ProjectDetailForManager/ProjectDetailForManager";
+import Payment from "./pages/Payment/Payment";
 
 const App = () => {
   return (
@@ -85,6 +86,9 @@ const App = () => {
           {/* figma 23 */}
           <Route path="/tpfb" element={<TrackingProjectForBuyer />} />{" "}
           {/* figma 27 */}
+           <Route path="/payment" element={<Payment/>}/> 
+           {/* figma 29 */}
+
         </Route>
         {/* Seller */}
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>

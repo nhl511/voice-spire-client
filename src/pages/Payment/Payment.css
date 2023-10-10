@@ -1,0 +1,181 @@
+.payment-background{
+    background-image: linear-gradient(#FFDD2E, #ffffff);
+}
+.payment-center{
+    display: flex;
+    justify-content: center;
+}
+.payment-card{
+    background: #EFFFFE;
+    width: 1000px;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.payment-card-title{
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.payment-display{
+    display: flex;
+    flex-wrap: wrap;
+}
+.payment-transaction{
+    width: 40%;
+}
+.payment-transaction-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: sans-serif;
+}
+.payment-transaction-detail{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-left: 30px;
+}
+.payment-transaction-price{
+    color: #636363;
+    text-transform: uppercase;
+}
+.payment-transaction-price-text{
+    color: #636363;
+    text-transform: uppercase;
+    text-align: end;
+}
+.payment-transaction-duration{
+    color: #636363;
+    text-transform: uppercase;
+    margin: 0;
+}
+.payment-transaction-duration-text{
+    color: #636363;
+    text-transform: uppercase;
+    text-align: end;
+    margin: 0;
+}
+.payment-transaction-money{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.payment-transaction-money-text{
+    text-transform: uppercase;
+    text-align: end;
+    font-weight: bold;
+}
+.payment-transaction-content{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+}
+.payment-transaction-content-text{
+    text-transform: uppercase;
+    text-align: end;
+    font-weight: bold;
+    margin: 0;
+}
+.payment-transaction-note{
+    margin-top: 40px;
+    margin-left: 30px;
+}
+.payment-transaction-note span{
+    font-style: italic;
+    font-weight: 600;
+}
+.payment-bar{
+    width: 0px;
+    border: 1px solid black;
+    margin: 20px;
+}
+.payment-info{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.payment-info-title-bank{
+    color: #D02828;
+    font-style: italic;
+    text-align: center;
+}
+.payment-info-card{
+    background: #FFFCE5;
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 250px;
+}
+.payment-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.payment-qrcode-bank{
+    background: #ffffff;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+.payment-qrcode-bank svg{
+    padding: 15px;
+}
+.payment-qrcode-bank p{
+    margin: 0;
+    text-align: center;
+    color: #004E97;
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.payment-info-account{
+    font-size: 12px;
+    text-align: center;
+}
+.payment-info-account-name{
+    color: #004E97;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.payment-info-account-bankNumber{
+    color: #004E97;
+    font-weight: 600;
+}
+.payment-info-account-bank{
+    color: #004E97;
+    font-weight: 600;
+}
+.payment-info-account-school{
+    color: #004E97;
+    font-weight: 600;
+}
+.payment-info-title-momo{
+    color: #D02828;
+    font-style: italic;
+    text-align: center;
+    margin-left: 20px;
+}
+.payment-info-card-right{
+    background: #FFE24D;
+    border-radius: 12px;
+    width: 250px;
+    height: 365px;
+    margin-left: 20px;
+}
+.payment-qrcode-momo{
+    background: #ffffff;
+    border-radius: 8px;
+}
+.payment-qrcode-momo svg{
+    padding: 10px;
+}
+.payment-button-back{
+    text-align: center;
+    margin: 30px;
+}
+.payment-button-back button{
+    background: #F5851D;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 15px 50px;
+}

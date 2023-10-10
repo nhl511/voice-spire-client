@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import useAuth from "../../hooks/useAuth";
 import { Link } from "react-router-dom";
+import { getBuyerProfile, getSellerProfile } from "../../api/axios";
 
 const Navbar = () => {
   const { auth } = useAuth();
+  const [user, setUser] = useState();
+  const [menu, setMenu] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (auth.role) {
+      if (auth.role[0] === "buyer") {
+        getBuyerProfile(auth.userId)
+          .then((json) => setUser(json))
+          .then((json) => setLoading(false));
+      } else if (auth.role[0] === "seller") {
+        getSellerProfile(auth.userId)
+          .then((json) => setUser(json))
+          .then((json) => setLoading(false));
+      }
+    }
+  }, [auth.userId]);
+  console.log(user);
   return (
     <div className="navbar">
       <div className="navbar-container">
@@ -15,33 +34,80 @@ const Navbar = () => {
           auth.role[0] === "buyer" ? (
             <>
               <Link to="/upload" className="link">
-                <span>Đăng tải dự án</span>
+                <span className="item">Đăng tải dự án</span>
               </Link>
               <Link to="/voices" className="link">
-                <span>Tìm kiếm giọng đọc</span>
+                <span className="item">Tìm kiếm giọng đọc</span>
               </Link>
 
               <Link to="/tpfb" className="link">
-                <span>Quản lí dự án</span>
+                <span className="item">Quản lí dự án</span>
               </Link>
-              <Link to="" className="link">
-                <span>Thông tin tài khoản</span>
-              </Link>
+              {loading ? (
+                <span>Welcome</span>
+              ) : (
+                <div className="wrapper-user-info-navbar">
+                  <div
+                    className="user-info-navbar"
+                    onClick={() => {
+                      setMenu(!menu);
+                    }}
+                  >
+                    <span>{user.fullname}</span>
+                  </div>
+                  {menu && (
+                    <div className="menu">
+                      <span onClick={() => setMenu(false)}>
+                        Thông tin của tổ chức
+                      </span>
+                      <hr />
+                      <Link to="/" className="link">
+                        <span>Đăng xuất</span>
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              )}
             </>
           ) : auth.role[0] === "seller" ? (
             <>
               <Link to="/your-voice" className="link">
-                <span>Giọng đọc của tôi</span>
+                <span className="item">Giọng đọc của tôi</span>
               </Link>
               <Link to="/posts" className="link">
-                <span>Tìm kiếm dự án</span>
-              </Link>
-              <Link to="/profile" className="link">
-                <span>Thông tin tài khoản</span>
+                <spa className="item">Tìm kiếm dự án</spa>
               </Link>
               <Link to="/tpfs" className="link">
-                <span>Dự án của tôi</span>
+                <span className="item">Dự án của tôi</span>
               </Link>
+              {loading ? (
+                <span>Welcome</span>
+              ) : (
+                <div className="wrapper-user-info-navbar">
+                  <div
+                    className="user-info-navbar"
+                    onClick={() => {
+                      setMenu(!menu);
+                    }}
+                  >
+                    <img src={user.avatarLink} alt="" />
+                    <span>{user.fullname}</span>
+                  </div>
+                  {menu && (
+                    <div className="menu">
+                      <Link to="/profile" className="link">
+                        <span onClick={() => setMenu(false)}>
+                          Thông tin của tôi
+                        </span>
+                      </Link>
+                      <hr />
+                      <Link to="/" className="link">
+                        <span>Đăng xuất</span>
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              )}
             </>
           ) : (
             auth.role[0] === "manager" && (

@@ -14,6 +14,7 @@ export default function Recruitment() {
   const [mp3File, setMp3File] = useState();
   const { id } = useParams();
   const { auth } = useAuth();
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   const uploadVoiceURL = "/api/VoiceSellers/UploadVoice";
@@ -53,8 +54,15 @@ export default function Recruitment() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    applyToProject(post.voiceProjectId, auth.userId, mp3File);
-    navigate("/tpfs");
+    try {
+      await applyToProject(post.voiceProjectId, auth.userId, mp3File);
+      navigate("/tpfs");
+    } catch (error) {
+      if (error.response && error.response.status === 400) {
+        setError(true);
+      }
+      setLoading(false);
+    }
   };
 
   return (
@@ -122,12 +130,29 @@ export default function Recruitment() {
                     hidden
                     accept="audio/mpeg"
                   />
-                  <label htmlFor="recruitment-btn">
-                    Tải lên file ghi âm: {uploadFile?.name}
-                  </label>
+                  {error ? (
+                    <span>
+                      Bạn đã ứng tuyển dự án này rồi. Vui lòng ứng tuyển dự án
+                      khác nhé!
+                    </span>
+                  ) : (
+                    <label htmlFor="recruitment-btn">
+                      Tải lên file ghi âm: {uploadFile?.name}
+                    </label>
+                  )}
                 </div>
                 <div className="recruitment-button">
-                  <button>Ứng tuyển ngay</button>
+                  {error ? (
+                    <button
+                      onClick={() => {
+                        navigate("/posts");
+                      }}
+                    >
+                      Quay lại
+                    </button>
+                  ) : (
+                    <button>Ứng tuyển ngay</button>
+                  )}
                 </div>
               </form>
             </div>

@@ -13,17 +13,72 @@
   justify-content: space-between;
   align-items: center;
 }
-.navbar .navbar-container span {
+.navbar .navbar-container .item {
   font-weight: bold;
   font-size: 18px;
   cursor: pointer;
   transition: color 0.3s;
 }
-.navbar .navbar-container span:hover {
-  color: #c0392b;
+.navbar .navbar-container .item:hover {
+  color: white;
 }
 .navbar .navbar-container .logo img {
   width: 100px;
   height: 75px;
   object-fit: cover;
+}
+
+.wrapper-user-info-navbar {
+  position: relative;
+}
+
+.wrapper-user-info-navbar .user-info-navbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  background: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background: white;
+  color: black;
+  transition: background 0.5s, color 0.5s;
+  cursor: pointer;
+}
+
+.wrapper-user-info-navbar .user-info-navbar:hover {
+  background: black;
+  color: white;
+}
+
+.user-info-navbar img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.wrapper-user-info-navbar .menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  bottom: -78px;
+  right: 0;
+  font-size: 14px;
+  padding: 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.wrapper-user-info-navbar .menu span {
+  padding: 0 20px;
+  cursor: pointer;
+}
+.wrapper-user-info-navbar .menu span:hover {
+  color: red;
+}
+hr {
+  color: lightgray;
+  width: 100%;
 }

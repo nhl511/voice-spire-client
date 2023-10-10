@@ -218,6 +218,11 @@ export const getSellerProfile = async (id) => {
   return response.data;
 };
 
+export const getBuyerProfile = async (id) => {
+  const response = await axiosOne.get(`/api/Buyers/${id}`);
+  return response.data;
+};
+
 export const updateSellerProfile = async (
   voiceSellerId,
   fullname,

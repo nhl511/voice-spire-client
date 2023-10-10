@@ -8,8 +8,10 @@ import axios, {
 } from "../../api/axios";
 import useAuth from "../../hooks/useAuth";
 import moment from "moment";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function SellerProfile() {
+  const navigate = useNavigate();
   const [user, setUser] = useState();
   const [loading, setLoading] = useState(true);
   const [open, setOpen] = useState(false);
@@ -90,6 +92,7 @@ export default function SellerProfile() {
       user.googleId,
       user.status
     );
+    navigate("/posts");
   };
   return (
     <div className="sellerProfile-container">

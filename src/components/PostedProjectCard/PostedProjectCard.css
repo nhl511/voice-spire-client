@@ -6,8 +6,9 @@
   width: 1000px;
   display: flex;
   background: #fffce5;
-  border: black 1px solid;
   border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
   cursor: pointer;
 }
 .ppc-card img {
@@ -67,6 +68,7 @@
   flex-direction: column;
   gap: 20px;
   padding: 10px 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .ppc-dropdown-display {
   display: flex;

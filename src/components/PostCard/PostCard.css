@@ -1,10 +1,11 @@
 .postcard {
   display: flex;
   gap: 20px;
-  border: 1px solid black;
+  border: none;
   height: 120px;
   border-radius: 10px;
   background: #fdf8c8;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .postcard .thumbnail img {
@@ -69,7 +70,7 @@
 
 .postcard .content .button button {
   border: none;
-  background-image: linear-gradient(#00C2FF, #99F3EE);
+  background-image: linear-gradient(#00c2ff, #99f3ee);
   font-size: 16px;
   font-family: sans-serif;
   font-weight: 600;

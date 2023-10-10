@@ -5,8 +5,8 @@ import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 
 const BankAccount = () => {
-  const VoiceSellerURL = '/api/VoiceSellers/UpdateBankInformation';
-  const BuyerURL = '/api/Buyers/UpdateBankInformation'
+  const VoiceSellerURL = "/api/VoiceSellers/UpdateBankInformation";
+  const BuyerURL = "/api/Buyers/UpdateBankInformation";
 
   const navigate = useNavigate();
   const { auth } = useAuth();
@@ -27,44 +27,52 @@ const BankAccount = () => {
     const bankInfoSeller = {
       bankName: bank,
       bankNumber: bankNumber.toString(),
-      bankAccountName: accountName
-    }
+      bankAccountName: accountName,
+    };
     const bankInfoBuyer = {
       buyerId: auth.userId,
       bankNumber: bankNumber.toString(),
       bankName: bank,
       bankAccountName: accountName,
-    }
+    };
     const headers = {
-      'accept': '*/*',
-      'Content-Type': 'application/json-patch+json',
-    }
-    if (auth.role[0] === 'seller') {
+      accept: "*/*",
+      "Content-Type": "application/json-patch+json",
+    };
+    if (auth.role[0] === "seller") {
       try {
-        await axios.put(`${VoiceSellerURL}/${auth.userId},${bankInfoSeller.bankNumber},${bankInfoSeller.bankName},${bankInfoSeller.bankAccountName}`, { headers })
+        await axios
+          .put(
+            `${VoiceSellerURL}/${auth.userId},${bankInfoSeller.bankNumber},${bankInfoSeller.bankName},${bankInfoSeller.bankAccountName}`,
+            { headers }
+          )
           .then((response) => {
             if (response.status === 204) {
-              console.log('update bank account seller success');
-              navigate('/home');
+              console.log("update bank account seller success");
+              navigate("/posts");
             }
-          })
+          });
       } catch (error) {
         console.log(error.response.data);
       }
-    } else if (auth.role[0] === 'buyer') {
+    } else if (auth.role[0] === "buyer") {
       try {
-        await axios.put(`${BuyerURL}/${auth.userId},${bankInfoBuyer.bankNumber},${bankInfoBuyer.bankName},${bankInfoBuyer.bankAccountName}`, { headers })
+        await axios
+          .put(
+            `${BuyerURL}/${auth.userId},${bankInfoBuyer.bankNumber},${bankInfoBuyer.bankName},${bankInfoBuyer.bankAccountName}`,
+            { headers }
+          )
           .then((response) => {
             if (response.status === 204) {
-              console.log('update bank account buyer success');
-              navigate('/home');
+              console.log("update bank account buyer success");
+              navigate("/voices");
             }
-          })
+          });
       } catch (error) {
         console.log(error.response?.data);
       }
     }
-  }
+  };
 
   return (
     <div className="bankAccount">
@@ -88,13 +96,23 @@ const BankAccount = () => {
               </div>
               <div className="right">
                 <div className="col-item">
-                  <input placeholder="Nhập tên ngân hàng" onChange={(e) => setBank(e.target.value)} />
+                  <input
+                    placeholder="Nhập tên ngân hàng"
+                    onChange={(e) => setBank(e.target.value)}
+                  />
                 </div>
                 <div className="col-item">
-                  <input type="number" placeholder="Nhập số tài khoản" onChange={(e) => setBankNumber(e.target.value)} />
+                  <input
+                    type="number"
+                    placeholder="Nhập số tài khoản"
+                    onChange={(e) => setBankNumber(e.target.value)}
+                  />
                 </div>
                 <div className="col-item">
-                  <input placeholder="Nhập tên chủ tài khoản" onChange={(e) => setAccountName(e.target.value)} />
+                  <input
+                    placeholder="Nhập tên chủ tài khoản"
+                    onChange={(e) => setAccountName(e.target.value)}
+                  />
                 </div>
               </div>
               <div className="button">
@@ -104,7 +122,7 @@ const BankAccount = () => {
           </form>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 

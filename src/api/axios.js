@@ -308,3 +308,10 @@ export const denyVoiceProject = async (projectId) => {
   );
   return response.data;
 };
+
+export const acceptVoiceProject = async (projectId) => {
+  const response = await axiosOne.put(
+    `/api/VoiceSellers/AcceptProject/${projectId}`
+  );
+  return response.data;
+};

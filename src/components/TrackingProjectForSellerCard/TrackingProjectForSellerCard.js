@@ -60,26 +60,38 @@ export default function TrackingProjectForSellerCard({ post }) {
           </div>
           <div className="tpfsc-button">
             {post.voiceJobStatus === "Applying" && (
-              <button>Demo đang chờ duyệt</button>
+              <button className="btn">Demo đang chờ duyệt</button>
             )}
-            {post.voiceJobStatus === "Processing" && (
-              <Link to={`/pdfs/${post.voiceProjectId}`}>
-                <button>Demo đã duyệt</button>
-              </Link>
-            )}
+            {post.voiceJobStatus === "Processing" &&
+              post.voiceProject.projectType === "Post" && (
+                <Link to={`/pdfs/${post.voiceProjectId}`}>
+                  <button className="link-btn">Demo được chọn</button>
+                </Link>
+              )}
+            {post.voiceJobStatus === "Processing" &&
+              post.voiceProject.projectType === "send" && (
+                <Link to={`/pdfs/${post.voiceProjectId}`}>
+                  <button className="link-btn">Đã chấp nhận lời mời</button>
+                </Link>
+              )}
             {post.voiceJobStatus === "Done" && (
               <Link to={`/pdfs/${post.voiceProjectId}`}>
-                <button>Hoàn thành</button>
+                <button className="link-btn">Hoàn thành</button>
               </Link>
             )}
             {post.voiceJobStatus === "waitToAccept" && (
               <Link to={`/pt2/${post.voiceProjectId}`}>
-                <button>Chấp nhận lời mời</button>
+                <button className="link-btn">Xem lời mời</button>
               </Link>
             )}
-            {post.voiceJobStatus === "Denied" && (
-              <button>Demo không được duyệt</button>
-            )}
+            {post.voiceJobStatus === "Denied" &&
+              post.voiceProject.projectType === "Post" && (
+                <button className="btn">Demo không được chọn</button>
+              )}
+            {post.voiceJobStatus === "Denied" &&
+              post.voiceProject.projectType === "send" && (
+                <button className="btn">Đã từ chối lời mời</button>
+              )}
           </div>
         </div>
       </div>

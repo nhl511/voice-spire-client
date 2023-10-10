@@ -1,5 +1,5 @@
-.posts-background{
-  background-image: linear-gradient(#FEE66A, #ffffff);
+.posts-background {
+  background-image: linear-gradient(#fee66a, #ffffff);
 }
 .posts {
   display: flex;
@@ -41,7 +41,7 @@
   font-size: 18px;
   align-items: center;
 }
-.posts .posts-container .filter .filter-row .min-max span{
+.posts .posts-container .filter .filter-row .min-max span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;
@@ -61,7 +61,7 @@
   font-size: 18px;
   align-items: center;
 }
-.posts .posts-container .filter .filter-row .long span{
+.posts .posts-container .filter .filter-row .long span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;
@@ -80,7 +80,7 @@
   font-size: 18px;
   align-items: center;
 }
-.posts .posts-container .filter .filter-row .region span{
+.posts .posts-container .filter .filter-row .region span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;
@@ -97,7 +97,7 @@
   font-size: 18px;
   align-items: center;
 }
-.posts .posts-container .filter .filter-row .gender span{
+.posts .posts-container .filter .filter-row .gender span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;
@@ -115,7 +115,7 @@
   font-size: 18px;
   align-items: center;
 }
-.posts .posts-container .filter .filter-row .nature span{
+.posts .posts-container .filter .filter-row .nature span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;
@@ -133,7 +133,7 @@
   font-size: 18px;
   align-items: center;
 }
-.posts .posts-container .filter .filter-row .location span{
+.posts .posts-container .filter .filter-row .location span {
   color: #333333;
   font-weight: 600;
   font-size: 18px;
@@ -159,5 +159,6 @@
 .posts .posts-container .cards {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 }

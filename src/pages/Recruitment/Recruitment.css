@@ -1,136 +1,139 @@
-.recruitment{
-    background-image: linear-gradient(#AA9006, #ffffff);
+.recruitment {
+  background-image: linear-gradient(#fee66a, #ffffff);
+
+  min-height: 100vh;
 }
-.recruitment-title{
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 25px;
-    margin: 0;
-    padding: 20px;
+.recruitment-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 0;
+  padding: 20px;
 }
-.recruitment-container{
-    display: flex;
-    justify-content: center;
+.recruitment-container {
+  display: flex;
+  justify-content: center;
 }
-.recruitment-card{
-    background: #FDF8C8;
-    width: 1000px;
-    margin-bottom: 30px;
+.recruitment-card {
+  background: #fdf8c8;
+  width: 1000px;
+  margin-bottom: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.recruitment-info{
-    display: grid;
-    grid-template-columns: 25% 75%;
+.recruitment-info {
+  display: grid;
+  grid-template-columns: 25% 75%;
 }
-.recruitment-card-left{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 50px;
+.recruitment-card-left {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 50px;
 }
-.recruitment-card-right{
-    width: 700px;
+.recruitment-card-right {
+  width: 700px;
 }
-.recruitment-description{
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 30px;
-    margin-left: 50px;
+.recruitment-description {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-left: 50px;
 }
-.recruitment-text-description{
-    width: 700px;
-    font-weight: 600;
-    margin-top: 30px;
+.recruitment-text-description {
+  width: 700px;
+  font-weight: 600;
+  margin-top: 30px;
 }
-.recruitment-detail{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 50px;
-    margin-top: 30px;
+.recruitment-detail {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-top: 30px;
 }
-.recruitment-text-detail{
-    width: 700px;
-    font-style: italic;
-    font-family: sans-serif;
-    font-weight: 400;
-    margin-top: 30px;
+.recruitment-text-detail {
+  width: 700px;
+  font-style: italic;
+  font-family: sans-serif;
+  font-weight: 400;
+  margin-top: 30px;
 }
-.recruitment-demo{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 50px;
-    margin-top: 30px;
+.recruitment-demo {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-top: 30px;
 }
-.recruitment-text-demo{
-    width: 700px;
-    margin-top: 30px;
+.recruitment-text-demo {
+  width: 700px;
+  margin-top: 30px;
 }
-.recruitment-text-demo button{
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-   background-image: linear-gradient(#43D100, #A0CBAC);
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 3px 20px;
-    margin-left: 5px;
-    cursor: pointer;
+.recruitment-text-demo button {
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background-image: linear-gradient(#43d100, #a0cbac);
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3px 20px;
+  margin-left: 5px;
+  cursor: pointer;
 }
-.recruitment-price{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 50px;
-    margin-top: 30px;
+.recruitment-price {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-top: 30px;
 }
-.recruitment-text-price{
-    width: 700px;
-    font-weight: 600;
-    margin-top: 35px;
+.recruitment-text-price {
+  width: 700px;
+  font-weight: 600;
+  margin-top: 35px;
 }
-.recruitment-text-main label{
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-    background-image: linear-gradient(#43D100, #A0CBAC);
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 3px 20px;
-    margin-left: 5px;
-    cursor: pointer;
+.recruitment-text-main label {
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background-image: linear-gradient(#43d100, #a0cbac);
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3px 20px;
+  margin-left: 5px;
+  cursor: pointer;
 }
-.recruitment-duration{
-    font-weight: 600;
-    font-size: 18px;
-    margin-left: 50px;
-    margin-top: 25px;
+.recruitment-duration {
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 50px;
+  margin-top: 25px;
 }
-.recruitment-text-duration{
-    width: 700px;
-    font-weight: 600;
-    margin-top: 27px;
+.recruitment-text-duration {
+  width: 700px;
+  font-weight: 600;
+  margin-top: 27px;
 }
-.recruitment-upload-file{
-    text-align: center;
-    margin-top: 20px;
+.recruitment-upload-file {
+  text-align: center;
+  margin-top: 20px;
 }
-.recruitment-upload-file label{
-    background-image: linear-gradient(#43D100, #A0CBAC);
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    color: #ffffff;
-    padding: 15px 40px;
+.recruitment-upload-file label {
+  background-image: linear-gradient(#43d100, #a0cbac);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 15px 40px;
 }
-.recruitment-button{
-    text-align: center;
-    margin: 50px 0px 30px 0px;
+.recruitment-button {
+  text-align: center;
+  margin: 50px 0px 30px 0px;
 }
-.recruitment-button button{
-    background: #FFD600;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    font-weight: 600;
-    padding: 8px 50px;
-    cursor: pointer;
+.recruitment-button button {
+  background: #ffd600;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 8px 50px;
+  cursor: pointer;
 }

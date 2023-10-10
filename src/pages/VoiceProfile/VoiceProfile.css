@@ -1,7 +1,7 @@
 .voiceprofile {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(#aa9006, #ffffff);
+  background-image: linear-gradient(#fee66a, #ffffff);
 }
 .voiceprofile .voiceprofile-container {
   display: flex;
@@ -22,6 +22,7 @@
   padding: 50px;
   width: 750px;
   margin: 20px 100px 200px 100px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .voiceprofile .voiceprofile-container .voiceprofile-card .col-item {
@@ -44,7 +45,7 @@
   border: none;
   padding: 10px 20px;
   font-size: 20px;
-  background-image: linear-gradient(#43D100, #A0CBAC);
+  background-image: linear-gradient(#43d100, #a0cbac);
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -54,7 +55,7 @@
   border: none;
   padding: 10px 20px;
   font-size: 20px;
-  background-image: linear-gradient(#43D100, #A0CBAC);
+  background-image: linear-gradient(#43d100, #a0cbac);
   color: white;
   border-radius: 5px;
   cursor: pointer;

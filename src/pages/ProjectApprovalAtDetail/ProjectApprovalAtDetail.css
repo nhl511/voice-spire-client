@@ -1,5 +1,5 @@
-.paad{
-  background-image: linear-gradient(#AA9006, #ffffff);
+.paad {
+  background-image: linear-gradient(#fee66a, #ffffff);
 }
 .paad-title {
   text-align: center;
@@ -19,6 +19,7 @@
   border-radius: 8px;
   width: 1000px;
   margin-bottom: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .paad-displayGrid {
   display: grid;

@@ -1,85 +1,82 @@
-.uvipc-display{
-    display: flex;
-    justify-content: center ;
+.uvipc-display {
+  display: flex;
+  justify-content: center;
 }
 .uvipc-card {
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
-    border: 1px solid black;
-    width: 1400px;
-    padding: 20px;
-    border-radius: 8px;
-    background: #fdf8c8;
-  }
-  
-  .uvipc-avatar {
-    display: flex;
-    flex: 1;
-    align-items: center;
-  }
-  
-  .uvipc-avatar img {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  .uvipc-card .uvipc-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .uvipc-card .uvipc-main .uvipc-info .uvipc-fullName {
-    font-size: 18px;
-    font-weight: 600;
-  }
-  
-  .uvipc-card .uvipc-main .uvipc-info .uvipc-gender {
-    font-size: 18px;
-    font-weight: 600;
-  }
-  .uvipc-createDate{
-    font-size: 14px;
-    color: #737373;
-  }
-  .uvipc-audio audio{
-    width: 1050px;
-  }
-  .uvipc-demo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .uvipc-demo button{
-   background-image: linear-gradient(#43D100, #A0CBAC);
-    color: #ffffff;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    padding: 5px 20px;
-    cursor: pointer;
-  }
-  .uvipc-edit{
-    display: flex;
-    justify-content:center;
-  }
-  .uvipc-content{
-    background: #E7E7E7;
-    border-radius: 4px;
-    width: 1350px;
-    padding: 10px;
-    margin-bottom: 20px;
-  }
-   .uvipc-requestEdit{
-    color: #E15252 ;
-    font-weight: 600;
-  }
- .uvipc-contentEdit{
-    font-weight: 600;
-  }
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  width: 1400px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fdf8c8;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
+.uvipc-avatar {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
 
-  
+.uvipc-avatar img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.uvipc-card .uvipc-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.uvipc-card .uvipc-main .uvipc-info .uvipc-fullName {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.uvipc-card .uvipc-main .uvipc-info .uvipc-gender {
+  font-size: 18px;
+  font-weight: 600;
+}
+.uvipc-createDate {
+  font-size: 14px;
+  color: #737373;
+}
+.uvipc-audio audio {
+  width: 1050px;
+}
+.uvipc-demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.uvipc-demo button {
+  background-image: linear-gradient(#43d100, #a0cbac);
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+.uvipc-edit {
+  display: flex;
+  justify-content: center;
+}
+.uvipc-content {
+  background: #e7e7e7;
+  border-radius: 4px;
+  width: 1350px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.uvipc-requestEdit {
+  color: #e15252;
+  font-weight: 600;
+}
+.uvipc-contentEdit {
+  font-weight: 600;
+}

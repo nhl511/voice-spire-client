@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./ProjectDescriptionToConfirm.css";
 import { useNavigate, useParams } from "react-router-dom";
-import { denyVoiceProject, getProjectApprovalDetail } from "../../api/axios";
+import {
+  acceptVoiceProject,
+  denyVoiceProject,
+  getProjectApprovalDetail,
+} from "../../api/axios";
 import moment from "moment";
 
 export default function ProjectDescriptionToConfirm() {
@@ -81,7 +85,15 @@ export default function ProjectDescriptionToConfirm() {
             >
               Từ chối
             </button>
-            <button className="pdtc-accept">Chấp nhận</button>
+            <button
+              className="pdtc-accept"
+              onClick={() => {
+                acceptVoiceProject(id);
+                navigate("/tpfs");
+              }}
+            >
+              Chấp nhận
+            </button>
           </div>
         </div>
       )}

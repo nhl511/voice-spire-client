@@ -41,25 +41,6 @@ const App = () => {
         <Route path="/" element={<Login />} /> {/* figma 1 */}
         <Route path="/register" element={<RegisterSeller />} /> {/* figma 2 */}
         <Route path="/register2" element={<RegisterBuyer />} /> {/* figma 3 */}
-        {/* Manager */}
-        <Route path="/lv" element={<ListVoice />} /> {/* figma 6 */}
-        <Route path="/voicedetail/:id" element={<VoiceDetail />} />{" "}
-        {/* figma 7 */}
-        <Route
-          path="/postedprojectsmanagement"
-          element={<PostedProjectsManagement />}
-        />
-        {/* figma 12 & 13 & 25*/}
-        <Route
-          path="/sentprojectsmanagement"
-          element={<SentProjectsManagement />}
-        />
-        {/* figma 12 & 13 & 25 */}
-        <Route
-          path="/projectmanagementdetail/:id"
-          element={<ProjectApprovalAtDetail />}
-        />
-        {/* figma 14 */}
         <Route
           path="/projectdescriptionmanagement"
           element={<ProjectDescriptionForManager />}
@@ -71,6 +52,27 @@ const App = () => {
         <Route element={<RequireAuth allowedRoles={["buyer", "seller"]} />}>
           <Route path="/home" element={<Home />} />
           <Route path="/bank" element={<BankAccount />} /> {/* figma 4 */}
+        </Route>
+        {/* Manager */}
+        <Route element={<RequireAuth allowedRoles={["manager"]} />}>
+          <Route path="/lv" element={<ListVoice />} /> {/* figma 6 */}
+          <Route path="/voicedetail/:id" element={<VoiceDetail />} />
+          {/* figma 7 */}
+          <Route
+            path="/postedprojectsmanagement"
+            element={<PostedProjectsManagement />}
+          />
+          {/* figma 12 & 13 & 25*/}
+          <Route
+            path="/sentprojectsmanagement"
+            element={<SentProjectsManagement />}
+          />
+          {/* figma 12 & 13 & 25 */}
+          <Route
+            path="/projectmanagementdetail/:id"
+            element={<ProjectApprovalAtDetail />}
+          />
+          {/* figma 14 */}
         </Route>
         {/* Buyer */}
         <Route element={<RequireAuth allowedRoles={["buyer"]} />}>

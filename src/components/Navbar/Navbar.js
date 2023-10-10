@@ -20,9 +20,7 @@ const Navbar = () => {
               <Link to="/voices" className="link">
                 <span>Tìm kiếm giọng đọc</span>
               </Link>
-              <Link to="" className="link">
-                <span>Giọng đọc tiêu biểu</span>
-              </Link>
+
               <Link to="/tpfb" className="link">
                 <span>Quản lí dự án</span>
               </Link>
@@ -48,9 +46,15 @@ const Navbar = () => {
           ) : (
             auth.role[0] === "manager" && (
               <>
-                <span>Quản lí dự án đăng tải</span>
-                <span>Quản lí dự án gửi</span>
-                <span>Quản lí giọng đọc</span>
+                <Link to="/postedprojectsmanagement" className="link">
+                  <span>Quản lí dự án đăng tải</span>
+                </Link>
+                <Link to="/sentprojectsmanagement" className="link">
+                  <span>Quản lí dự án gửi</span>
+                </Link>
+                <Link to="/lv" className="link">
+                  <span>Quản lí giọng đọc</span>
+                </Link>
               </>
             )
           )

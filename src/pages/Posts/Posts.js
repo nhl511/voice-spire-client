@@ -86,6 +86,8 @@ const Posts = () => {
                   <div class="loader"></div>
                 </div>
               </div>
+            ) : posts.length === 0 ? (
+              <span>Hiện tại chưa có dự án nào</span>
             ) : (
               posts.map((post) => <PostCard post={post} />)
             )}
@@ -93,7 +95,6 @@ const Posts = () => {
         </div>
       </div>
     </div>
-
   );
 };
 

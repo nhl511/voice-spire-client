@@ -1,5 +1,5 @@
 .pdfs {
-  background-image: linear-gradient(#aa9006, #ffffff);
+  background-image: linear-gradient(#fee66a, #ffffff);
   min-height: 100vh;
   margin-bottom: 100px;
 }
@@ -19,6 +19,7 @@
   background: #fdf8c8;
   width: 1400px;
   border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .pdfs-info {
   display: grid;

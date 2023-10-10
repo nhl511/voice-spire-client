@@ -37,7 +37,7 @@ const Login = () => {
               ) {
                 navigate("/bank");
               } else {
-                navigate("/profile");
+                navigate("/posts");
               }
             }
           });
@@ -56,13 +56,16 @@ const Login = () => {
             ) {
               navigate("/bank");
             } else {
-              navigate("/profile");
+              navigate("/voices");
             }
           }
         });
       } catch (error) {
         console.log(error.response?.data);
       }
+    }
+    if (role === "manager") {
+      navigate("/lv");
     }
   };
 
@@ -98,16 +101,12 @@ const Login = () => {
         userId = response.data.buyer.buyerId;
       }
       const role = roleStr.split(" ");
-      checkBankAccount(userId, roleStr);
       setAuth({ userId, email, password, role, token });
+      checkBankAccount(userId, roleStr);
+
       setEmail("");
       setPassword("");
-      // if (roleStr === "buyer") {
-      //   navigate("/voices", { replace: true });
-      // } else if (roleStr === "seller") {
-      //   navigate("/posts", { replace: true });
-      // }
-      navigate("/home", { replace: true });
+
       setLoading(false);
     } catch (err) {
       if (!err?.response) {

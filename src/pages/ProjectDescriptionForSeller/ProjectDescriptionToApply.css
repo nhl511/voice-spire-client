@@ -13,6 +13,7 @@
   width: 1000px;
   margin-top: 30px;
   margin-bottom: 300px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .pdta-info {
   display: grid;

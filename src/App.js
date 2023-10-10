@@ -84,11 +84,10 @@ const App = () => {
           {/* figma 20 */}
           <Route path="/officiallist/:id" element={<ProjectDetailForBuyer />} />
           {/* figma 23 */}
-          <Route path="/tpfb" element={<TrackingProjectForBuyer />} />{" "}
+          <Route path="/tpfb" element={<TrackingProjectForBuyer />} />
           {/* figma 27 */}
-           <Route path="/payment" element={<Payment/>}/> 
-           {/* figma 29 */}
-
+          <Route path="/payment/:id" element={<Payment />} />
+          {/* figma 29 */}
         </Route>
         {/* Seller */}
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>

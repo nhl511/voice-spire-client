@@ -346,3 +346,10 @@ export const checkBankAccountForSeller = async (id) => {
     return true;
   }
 };
+
+export const getPaymentDetail = async (projectId) => {
+  const response = await axiosOne.get(
+    `/api/VoiceProjects/GetPaymentDetail/${projectId}`
+  );
+  return response.data;
+};

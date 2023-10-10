@@ -89,7 +89,7 @@ export default function TrackingProjectForBuyerCard({ post }) {
             </Link>
           )}
           {post.projectStatus === "WaitApprove" && (
-            <Link to={``}>
+            <Link to={`/payment/${post.voiceProjectId}`}>
               <button className="payment">Thanh toán</button>
             </Link>
           )}

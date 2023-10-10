@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Login.css";
 import axios from "../../api/axios";
 import useAuth from "../../hooks/useAuth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const LOGIN_URL = "/api/VoiceSellers/Login";
 const VoiceSellersURL = "/api/VoiceSellers/";
 const BuyerURL = "/api/Buyers/";
@@ -166,9 +166,9 @@ const Login = () => {
                 {errMsg}
               </p>
               <div className="row-item">
-                <input type="checkbox" />
+                {/* <input type="checkbox" />
                 <i>Remember me</i>
-                <span>Quên mật khẩu?</span>
+                <span>Quên mật khẩu?</span> */}
               </div>
               <div className="button">
                 <button className={loading ? "disabled" : ""}>
@@ -184,14 +184,14 @@ const Login = () => {
                 </button>
               </div>
             </form>
-            <div className="google">
-              <button>
-                <img src="/img/google.png" className="google-logo-img" />
-              </button>
-            </div>
+
             <div className="row-item">
               <i>
-                Bạn chưa có tài khoản VoiceMarket?<strong> Đăng ký</strong> ngay
+                Bạn chưa có tài khoản VoiceMarket?
+                <Link to="/register" className="link">
+                  <strong> Đăng ký </strong>
+                </Link>
+                ngay
               </i>
             </div>
           </div>

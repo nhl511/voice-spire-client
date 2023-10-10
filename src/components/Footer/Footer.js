@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -15,13 +16,24 @@ const Footer = () => {
             <span>Email: voicemarketFPTU@gmail.com</span>
             <span>Phone: 0929828326</span>
             <div className="social">
-              <img
-                src="/img/facebook.png"
-                alt=""
-                className="facebook-logo-img"
-              />
-              <img src="/img/tiktok.png" alt="" className="tiktok-logo-img" />
-              <img src="/img/instagram.png" alt="" className="ig-logo-img" />
+              <Link
+                to="https://www.facebook.com/profile.php?id=100063685652503&notif_id=1696852942215316&notif_t=top_fans_fan&ref=notif"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/img/facebook.png"
+                  alt=""
+                  className="facebook-logo-img"
+                />
+              </Link>
+              <Link
+                to="https://www.instagram.com/servicevoicespire/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/img/instagram.png" alt="" className="ig-logo-img" />
+              </Link>
             </div>
           </div>
         </div>

@@ -61,7 +61,13 @@ const Navbar = () => {
                         Thông tin của tổ chức
                       </span>
                       <hr />
-                      <span>Đăng xuất</span>
+                      <span
+                        onClick={() => {
+                          window.location.reload();
+                        }}
+                      >
+                        Đăng xuất
+                      </span>
                     </div>
                   )}
                 </div>
@@ -99,7 +105,13 @@ const Navbar = () => {
                         </span>
                       </Link>
                       <hr />
-                      <span>Đăng xuất</span>
+                      <span
+                        onClick={() => {
+                          window.location.reload();
+                        }}
+                      >
+                        Đăng xuất
+                      </span>
                     </div>
                   )}
                 </div>
@@ -133,7 +145,13 @@ const Navbar = () => {
                         Thông tin người quản lí
                       </span>
                       <hr />
-                      <span>Đăng xuất</span>
+                      <span
+                        onClick={() => {
+                          window.location.reload();
+                        }}
+                      >
+                        Đăng xuất
+                      </span>
                     </div>
                   )}
                 </div>

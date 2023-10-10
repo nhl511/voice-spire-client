@@ -69,6 +69,7 @@
   font-size: 14px;
   padding: 10px 0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: max-content;
 }
 
 .wrapper-user-info-navbar .menu span {

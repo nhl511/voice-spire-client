@@ -320,3 +320,29 @@ export const acceptVoiceProject = async (projectId) => {
   );
   return response.data;
 };
+
+export const checkBankAccountForBuyer = async (id) => {
+  const response = await axiosOne.get(`/api/Buyers/${id}`);
+  if (
+    !response.data?.bankName ||
+    !response.data?.bankNumber ||
+    !response.data?.bankAccountName
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+};
+
+export const checkBankAccountForSeller = async (id) => {
+  const response = await axiosOne.get(`/api/VoiceSellers/${id}`);
+  if (
+    !response.data?.bankName ||
+    !response.data?.bankNumber ||
+    !response.data?.bankAccountName
+  ) {
+    return false;
+  } else {
+    return true;
+  }
+};

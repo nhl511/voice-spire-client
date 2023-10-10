@@ -1,13 +1,25 @@
 import React from "react";
 import "./VoiceCard.css";
 import ReactAudioPlayer from "react-audio-player";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { checkBankAccountForBuyer } from "../../api/axios";
+import useAuth from "../../hooks/useAuth";
+
 const VoiceCard = ({ voice }) => {
+  const navigate = useNavigate();
+  const { auth } = useAuth();
   const myString = voice.voiceTypes[0].voiceTypeDetail;
   const myString2 = voice.voiceProperties[0].voicePropertyName;
 
   const myArray = myString.split(", ");
   const myArray2 = myString2.split(", ");
+
+  const handleCheck = () => {
+    checkBankAccountForBuyer(auth.userId).then(
+      (result) => !result && navigate("/bank")
+    );
+    navigate(`/sp/${voice.voiceSellerId}`);
+  };
 
   return (
     <div className="voicecard">
@@ -59,9 +71,7 @@ const VoiceCard = ({ voice }) => {
         </div>
       </div>
       <div className="button">
-        <Link to={`/sp/${voice.voiceSellerId}`}>
-          <button>Gửi dự án ngay</button>
-        </Link>
+        <button onClick={handleCheck}>Gửi dự án ngay</button>
       </div>
     </div>
   );

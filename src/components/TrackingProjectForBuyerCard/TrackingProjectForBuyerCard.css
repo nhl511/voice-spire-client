@@ -82,37 +82,39 @@
   border: none;
 }
 .tpfbc-text-notApproved {
+  background: #ecf0f1;
+
   border-radius: 8px;
   padding: 5px 10px;
   color: black;
   border: none;
 }
 .tpfbc-text-denied {
-  background: #e74c3c;
+  background: #ecf0f1;
   border-radius: 8px;
   padding: 5px 10px;
-  color: white;
+  color: black;
   border: none;
 }
 .tpfbc-text-apply {
-  background: #f39c12;
+  background: #f1c40f;
   border-radius: 8px;
   padding: 5px 10px;
-  color: white;
+  color: black;
   border: none;
 }
 .tpfbc-text-waitToAccept {
-  background: #f39c12;
+  background: #ecf0f1;
   border-radius: 8px;
   padding: 5px 10px;
-  color: white;
+  color: black;
   border: none;
 }
 .tpfbc-text-processing {
-  background: #e67e22;
+  background: #f1c40f;
   border-radius: 8px;
   padding: 5px 10px;
-  color: white;
+  color: black;
   border: none;
 }
 .tpfbc-text-done {
@@ -125,7 +127,8 @@
 .tpfbc-text-notPayingYet {
   border-radius: 8px;
   padding: 5px 10px;
-  color: black;
+  color: white;
+  background: #e74c3c;
   border: none;
 }
 .tpfbc-text-paid {
@@ -144,9 +147,9 @@
   display: flex;
   justify-content: center;
 }
-.tpfbc-button button {
+.tpfbc-button .follow {
   border: none;
-  background: #ffd600;
+  background: #f1c40f;
   font-size: 16px;
   font-family: sans-serif;
   font-weight: 600;
@@ -157,7 +160,33 @@
   border: none;
   transition: opacity 0.3s;
 }
+.tpfbc-button .view {
+  border: none;
+  background: #27ae60;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding: 10px 50px;
+  cursor: pointer;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  transition: opacity 0.3s;
+}
 
+.tpfbc-button .payment {
+  border: none;
+  background: #e74c3c;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 600;
+  padding: 10px 50px;
+  cursor: pointer;
+  border-radius: 30px;
+  color: white;
+  border: none;
+  transition: opacity 0.3s;
+}
 .tpfbc-button button:hover {
   opacity: 0.5;
 }

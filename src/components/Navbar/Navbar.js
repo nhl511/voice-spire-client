@@ -113,27 +113,49 @@ const Navbar = () => {
             auth.role[0] === "manager" && (
               <>
                 <Link to="/postedprojectsmanagement" className="link">
-                  <span>Quản lí dự án đăng tải</span>
+                  <span className="item">Quản lí dự án đăng tải</span>
                 </Link>
                 <Link to="/sentprojectsmanagement" className="link">
-                  <span>Quản lí dự án gửi</span>
+                  <span className="item">Quản lí dự án gửi</span>
                 </Link>
                 <Link to="/lv" className="link">
-                  <span>Quản lí giọng đọc</span>
+                  <span className="item">Quản lí giọng đọc</span>
                 </Link>
+                <div className="wrapper-user-info-navbar">
+                  <div
+                    className="user-info-navbar"
+                    onClick={() => {
+                      setMenu(!menu);
+                    }}
+                  >
+                    <img src="/img/voicespire.png" alt="" />
+                    <span>Voice Spire Manager</span>
+                  </div>
+                  {menu && (
+                    <div className="menu">
+                      <span onClick={() => setMenu(false)}>
+                        Thông tin người quản lí
+                      </span>
+                      <hr />
+                      <Link to="/" className="link">
+                        <span>Đăng xuất</span>
+                      </Link>
+                    </div>
+                  )}
+                </div>
               </>
             )
           )
         ) : (
           <>
             <Link to="/register" className="link">
-              <span>Tạo tài khoản giọng đọc</span>
+              <span className="item">Tạo tài khoản giọng đọc</span>
             </Link>
             <Link to="/register2" className="link">
-              <span>Tạo tài khoản tuyển dụng</span>
+              <span className="item">Tạo tài khoản tuyển dụng</span>
             </Link>
             <Link to="/" className="link">
-              <span>Đăng nhập</span>
+              <span className="item">Đăng nhập</span>
             </Link>
           </>
         )}

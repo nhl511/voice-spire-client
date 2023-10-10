@@ -40,9 +40,6 @@ export default function TrackingProjectForBuyerCard({ post }) {
           )}
         </div>
         <div className="tpfbc-status">
-          {post.projectStatus === "WaitApprove" && (
-            <span className="tpfbc-text-waitApprove">Chờ duyệt</span>
-          )}
           {post.projectStatus === "NotApproved" && (
             <span className="tpfbc-text-notApproved">Không được duyệt</span>
           )}
@@ -61,7 +58,16 @@ export default function TrackingProjectForBuyerCard({ post }) {
           {post.projectStatus === "Denied" && (
             <span className="tpfbc-text-denied">Không nhận lời mời</span>
           )}
-          <span className="tpfbc-text-notPayingYet">Chưa thanh toán</span>
+
+          {post.projectStatus === "WaitApprove" &&
+            post.paymentStatus === "Pending" && (
+              <span className="tpfbc-text-notPayingYet">Chờ thanh toán</span>
+            )}
+          {post.projectStatus === "WaitApprove" &&
+            post.paymentStatus === "pending" && (
+              <span className="tpfbc-text-notPayingYet">Chờ thanh toán</span>
+            )}
+
           {/* <span className='tpfbc-text-waitForResult'>Chờ kết quả</span> */}
           {/* <span className='tpfbc-text-paid'>Đã thanh toán</span> */}
           {/* <span className='tpfbc-text-result'>Đã có kết quả</span> */}
@@ -69,17 +75,22 @@ export default function TrackingProjectForBuyerCard({ post }) {
         <div className="tpfbc-button">
           {post.projectStatus === "Apply" && (
             <Link to={`/candidatelist/${post.voiceProjectId}`}>
-              <button>Chi tiết</button>
+              <button className="follow">Theo dõi</button>
             </Link>
           )}
           {post.projectStatus === "Processing" && (
             <Link to={`/officiallist/${post.voiceProjectId}`}>
-              <button>Chi tiết</button>
+              <button className="follow">Theo dõi</button>
             </Link>
           )}
           {post.projectStatus === "Done" && (
             <Link to={`/officiallist/${post.voiceProjectId}`}>
-              <button>Chi tiết</button>
+              <button className="view">Xem</button>
+            </Link>
+          )}
+          {post.projectStatus === "WaitApprove" && (
+            <Link to={``}>
+              <button className="payment">Thanh toán</button>
             </Link>
           )}
         </div>

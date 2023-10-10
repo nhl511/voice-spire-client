@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ProjectUpload.css";
 import useAuth from "../../hooks/useAuth";
-import axios, { uploadVoiceProject } from "../../api/axios";
+import axios, {
+  checkBankAccountForBuyer,
+  checkBankAccountForSeller,
+  uploadVoiceProject,
+} from "../../api/axios";
 import { useNavigate } from "react-router-dom";
 const ProjectUpload = () => {
   const uploadFileDocURL = "/api/Buyers/UploadDocFile";
@@ -36,6 +40,11 @@ const ProjectUpload = () => {
   const [nameFileThumbnail, setNameFileThumbnail] = useState();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    checkBankAccountForBuyer(auth.userId).then(
+      (result) => !result && navigate("/bank")
+    );
+  });
   const handleUploadFileDemo = async (e) => {
     const headers = {
       accept: "*/*",

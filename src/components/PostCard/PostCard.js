@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./PostCard.css";
 import moment from "moment";
-import { Link } from "react-router-dom";
-import { getVoice } from "../../api/axios";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  checkBankAccountForBuyer,
+  checkBankAccountForSeller,
+  getVoice,
+} from "../../api/axios";
 import useAuth from "../../hooks/useAuth";
 
 const PostCard = ({ post }) => {
@@ -10,6 +14,7 @@ const PostCard = ({ post }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const { auth } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getVoice(auth.userId)
@@ -22,6 +27,13 @@ const PostCard = ({ post }) => {
         setLoading(false);
       });
   }, [auth.userId]);
+
+  const handleCheck = () => {
+    checkBankAccountForSeller(auth.userId).then(
+      (result) => !result && navigate("/bank")
+    );
+    navigate(`/pt1/${post.voiceProjectId}`);
+  };
   return (
     <div className="postcard">
       {loading ? (
@@ -84,9 +96,7 @@ const PostCard = ({ post }) => {
               {error ? (
                 <span>Chưa thể ứng tuyển</span>
               ) : voice.isApprove ? (
-                <Link to={`/pt1/${post.voiceProjectId}`}>
-                  <button>Ứng tuyển ngay</button>
-                </Link>
+                <button onClick={handleCheck}>Ứng tuyển ngay</button>
               ) : (
                 <span>Chưa thể ứng tuyển</span>
               )}

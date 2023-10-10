@@ -1,9 +1,19 @@
 import React from "react";
 import "./TrackingProjectForSellerCard.css";
 import moment from "moment";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import { checkBankAccountForSeller } from "../../api/axios";
 
 export default function TrackingProjectForSellerCard({ post }) {
+  const navigate = useNavigate();
+  const { auth } = useAuth();
+  const handleCheck = () => {
+    checkBankAccountForSeller(auth.userId).then(
+      (result) => !result && navigate("/bank")
+    );
+    navigate(`/pt2/${post.voiceProjectId}`);
+  };
   return (
     <div className="tpfsc">
       <div className="tpfsc-card">
@@ -80,9 +90,9 @@ export default function TrackingProjectForSellerCard({ post }) {
               </Link>
             )}
             {post.voiceJobStatus === "waitToAccept" && (
-              <Link to={`/pt2/${post.voiceProjectId}`}>
-                <button className="link-btn">Xem lời mời</button>
-              </Link>
+              <button className="link-btn" onClick={handleCheck}>
+                Xem lời mời
+              </button>
             )}
             {post.voiceJobStatus === "Denied" &&
               post.voiceProject.projectType === "Post" && (

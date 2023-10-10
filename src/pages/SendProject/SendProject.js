@@ -7,7 +7,7 @@ import useAuth from "../../hooks/useAuth";
 
 export default function SendProject() {
   const { auth } = useAuth();
-
+  const [loadFile, setLoadFile] = useState(false);
   const [voice, setVoice] = useState();
   const [loading, setLoading] = useState(true);
   const [buyerId, setBuyerId] = useState();
@@ -37,6 +37,7 @@ export default function SendProject() {
   }, [id]);
 
   const handleUploadFileMain = async (e) => {
+    setLoadFile(true);
     const headers = {
       accept: "*/*",
       "Content-Type": "multipart/form-data",
@@ -52,6 +53,7 @@ export default function SendProject() {
           if (response.status === 200) {
             console.log("main = 200");
             setMainFile(response.data);
+            setLoadFile(false);
             setNameFileMain(e.target.files[0]?.name);
           }
         })
@@ -163,7 +165,11 @@ export default function SendProject() {
                       onChange={handleUploadFileMain}
                     />
                     <label htmlFor="btn-upload-doc">
-                      {nameFileMain ? nameFileMain : "Upload"}
+                      {loadFile ? (
+                        <span>Loading...</span>
+                      ) : (
+                        <span> {nameFileMain ? nameFileMain : "Upload"}</span>
+                      )}
                     </label>
                   </div>
                   <div className="sendProject-text-description">

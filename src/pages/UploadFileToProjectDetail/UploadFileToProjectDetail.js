@@ -11,6 +11,7 @@ export default function UploadFileToProjectDetail() {
   const uploadVoiceURL = "/api/VoiceSellers/UploadVoice";
 
   const [loading, setLoading] = useState(true);
+  const [loadFile, setLoadFile] = useState(false);
   const [post, setPost] = useState();
   const [uploadFile, setUploadFile] = useState();
   const [mp3File, setMp3File] = useState();
@@ -25,6 +26,7 @@ export default function UploadFileToProjectDetail() {
   }, [id]);
 
   const handleUploadVoice = async (event) => {
+    setLoadFile(true);
     const headers = {
       accept: "*/*",
       "Content-Type": "multipart/form-data",
@@ -40,6 +42,7 @@ export default function UploadFileToProjectDetail() {
         .then((response) => {
           if (response.status === 200) {
             setMp3File(response.data);
+            setLoadFile(false);
             setUploadFile(event.target.files[0]);
             setUploadFile(event.target.files[0]);
           }
@@ -123,7 +126,11 @@ export default function UploadFileToProjectDetail() {
                     accept="audio/mpeg"
                   />
                   <label htmlFor="upload-official-voice">
-                    Tải lên file ghi âm: {uploadFile?.name}
+                    {loadFile ? (
+                      <span>Loading...</span>
+                    ) : (
+                      <span> Tải lên file ghi âm: {uploadFile?.name}</span>
+                    )}
                   </label>
                 </div>
                 <div className="uftpd-send">

@@ -14,6 +14,9 @@ const ProjectUpload = () => {
     "/api/Buyers/UploadVoiceProject/{BuyerId},{title},{description},{price},{duration},{numberOfEdit},{deadline}";
   const { auth } = useAuth();
 
+  const [loadFile, setLoadFile] = useState(false);
+  const [loadFile2, setLoadFile2] = useState(false);
+  const [loadFile3, setLoadFile3] = useState(false);
   const [title, setTitle] = useState();
   const [description, setDescription] = useState();
   const [price, setPrice] = useState();
@@ -46,6 +49,7 @@ const ProjectUpload = () => {
     );
   });
   const handleUploadFileDemo = async (e) => {
+    setLoadFile(true);
     const headers = {
       accept: "*/*",
       "Content-Type": "multipart/form-data",
@@ -61,6 +65,7 @@ const ProjectUpload = () => {
           if (response.status === 200) {
             console.log("demo = 200");
             setDemoFile(response.data);
+            setLoadFile(false);
             setNameFileDemo(e.target.files[0]?.name);
           }
         })
@@ -70,6 +75,7 @@ const ProjectUpload = () => {
     }
   };
   const handleUploadFileMain = async (e) => {
+    setLoadFile2(true);
     const headers = {
       accept: "*/*",
       "Content-Type": "multipart/form-data",
@@ -85,6 +91,7 @@ const ProjectUpload = () => {
           if (response.status === 200) {
             console.log("main = 200");
             setMainFile(response.data);
+            setLoadFile2(false);
             setNameFileMain(e.target.files[0]?.name);
           }
         })
@@ -94,6 +101,7 @@ const ProjectUpload = () => {
     }
   };
   const handleUploadThumbnail = async (e) => {
+    setLoadFile3(true);
     const headers = {
       accept: "*/*",
       "Content-Type": "multipart/form-data",
@@ -109,6 +117,7 @@ const ProjectUpload = () => {
           if (response.status === 200) {
             console.log("thumbnail = 200");
             setThumbnail(response.data);
+            setLoadFile3(false);
             setNameFileThumbnail(e.target.files[0]?.name);
           }
         })
@@ -186,7 +195,11 @@ const ProjectUpload = () => {
                       onChange={handleUploadFileDemo}
                     />
                     <label htmlFor="btn-upload-voice">
-                      {nameFileDemo ? nameFileDemo : "Upload"}
+                      {loadFile ? (
+                        <span>Loading...</span>
+                      ) : (
+                        <span>{nameFileDemo ? nameFileDemo : "Upload"}</span>
+                      )}
                     </label>
                   </div>
                   <div className="projectUpload-col">
@@ -200,7 +213,11 @@ const ProjectUpload = () => {
                       onChange={handleUploadFileMain}
                     />
                     <label htmlFor="btn-upload-doc">
-                      {nameFileMain ? nameFileMain : "Upload"}
+                      {loadFile2 ? (
+                        <span>Loading...</span>
+                      ) : (
+                        <span>{nameFileMain ? nameFileMain : "Upload"}</span>
+                      )}
                     </label>
                   </div>
                 </div>
@@ -237,7 +254,13 @@ const ProjectUpload = () => {
                       onChange={handleUploadThumbnail}
                     />
                     <label htmlFor="thumbnail">
-                      {nameFileThumbnail ? nameFileThumbnail : "Upload"}
+                      {loadFile3 ? (
+                        <span>Loading...</span>
+                      ) : (
+                        <span>
+                          {nameFileThumbnail ? nameFileThumbnail : "Upload"}
+                        </span>
+                      )}
                     </label>
                   </div>
                   <div className="projectUpload-second-row-col-1">

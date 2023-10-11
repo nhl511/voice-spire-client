@@ -1,6 +1,7 @@
 .pdfb {
   background-image: linear-gradient(#fee66a, #ffffff);
   min-height: 100vh;
+  padding-bottom: 100px;
 }
 .pdfb-titleProject {
   text-align: center;
@@ -160,5 +161,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
 }

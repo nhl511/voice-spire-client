@@ -42,13 +42,6 @@ const App = () => {
         <Route path="/" element={<Login />} /> {/* figma 1 */}
         <Route path="/register" element={<RegisterSeller />} /> {/* figma 2 */}
         <Route path="/register2" element={<RegisterBuyer />} /> {/* figma 3 */}
-        <Route
-          path="/projectdescriptionmanagement"
-          element={<ProjectDescriptionForManager />}
-        />
-        {/*figma 30 */}
-        <Route path="/pdfm" element={<ProjectDetailForManager />} />
-        {/* figma 31 */}
         {/* Buyer + Seller */}
         <Route element={<RequireAuth allowedRoles={["buyer", "seller"]} />}>
           <Route path="/home" element={<Home />} />
@@ -74,6 +67,13 @@ const App = () => {
             element={<ProjectApprovalAtDetail />}
           />
           {/* figma 14 */}
+          <Route
+            path="/projectdescriptionmanagement/:id"
+            element={<ProjectDescriptionForManager />}
+          />
+          {/*figma 30 */}
+          <Route path="/pdfm/:id" element={<ProjectDetailForManager />} />
+          {/* figma 31 */}
         </Route>
         {/* Buyer */}
         <Route element={<RequireAuth allowedRoles={["buyer"]} />}>

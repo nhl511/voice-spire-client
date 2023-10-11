@@ -123,59 +123,71 @@ const PostedProjectCard = ({ post }) => {
       {dropDown2 && (
         <div className="ppc-dropdown">
           <div className="ppc-dropdown-card">
-            <div className="ppc-dropdown-display">
-              <div className="ppc-dropdown-small-card">
-                <div>
-                  <p className="ppc-dropdown-title">
-                    Thông tin thanh toán tổ chức
-                  </p>
-                  <div className="ppc-dropdown-bank">
-                    <strong>Ngân hàng:</strong>
-                    <span>{paymentInfo.bankNameBuyer}</span>
-                  </div>
-                  <div className="ppc-dropdown-bank">
-                    <strong>Số tài khoản:</strong>
-                    <span>{paymentInfo.bankNumberBuyer}</span>
-                  </div>
-                  <div className="ppc-dropdown-bank-fullName">
-                    <strong>Tên tài khoản:</strong>
-                    <span>{paymentInfo.bankAccountNameBuyer}</span>
-                  </div>
+            {loading ? (
+              <div className="loading-dropdown">
+                <div className="loading-dropdown-container">
+                  <div class="loader-dropdown"></div>
                 </div>
               </div>
-              <div className="ppc-dropdown-small-card">
-                <div>
-                  <p className="ppc-dropdown-title">
-                    Thông tin thanh toán bên bán
-                  </p>
-                  <div className="ppc-dropdown-bank">
-                    <strong>Ngân hàng:</strong>
-                    <span>{paymentInfo.bankNameSeller}</span>
+            ) : (
+              <>
+                <div className="ppc-dropdown-display">
+                  <div className="ppc-dropdown-small-card">
+                    <div>
+                      <p className="ppc-dropdown-title">
+                        Thông tin thanh toán tổ chức
+                      </p>
+                      <div className="ppc-dropdown-bank">
+                        <strong>Ngân hàng:</strong>
+                        <span>{paymentInfo.bankNameBuyer}</span>
+                      </div>
+                      <div className="ppc-dropdown-bank">
+                        <strong>Số tài khoản:</strong>
+                        <span>{paymentInfo.bankNumberBuyer}</span>
+                      </div>
+                      <div className="ppc-dropdown-bank-fullName">
+                        <strong>Tên tài khoản:</strong>
+                        <span>{paymentInfo.bankAccountNameBuyer}</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="ppc-dropdown-bank">
-                    <strong>Số tài khoản:</strong>
-                    <span>{paymentInfo.bankNumberSeller}</span>
-                  </div>
-                  <div className="ppc-dropdown-bank-fullName">
-                    <strong>Tên tài khoản:</strong>
-                    <span>{paymentInfo.bankAccountNameSeller}</span>
+                  <div className="ppc-dropdown-small-card">
+                    <div>
+                      <p className="ppc-dropdown-title">
+                        Thông tin thanh toán bên bán
+                      </p>
+                      <div className="ppc-dropdown-bank">
+                        <strong>Ngân hàng:</strong>
+                        <span>{paymentInfo.bankNameSeller}</span>
+                      </div>
+                      <div className="ppc-dropdown-bank">
+                        <strong>Số tài khoản:</strong>
+                        <span>{paymentInfo.bankNumberSeller}</span>
+                      </div>
+                      <div className="ppc-dropdown-bank-fullName">
+                        <strong>Tên tài khoản:</strong>
+                        <span>{paymentInfo.bankAccountNameSeller}</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="button-wrapper">
-              <div className="ppc-dropdown-detail-button">
-                <Link
-                  to={`/projectmanagementdetail/${post.voiceProjectId}`}
-                  className="link"
-                >
-                  <button>Xem chi tiết dự án</button>
-                </Link>
-              </div>
-              <div className="ppc-dropdown-confirm-button">
-                <button>Xem hoạt động dự án</button>
-              </div>
-            </div>
+                <div className="button-wrapper">
+                  <div className="ppc-dropdown-detail-button">
+                    <Link
+                      to={`/projectdescriptionmanagement/${post.voiceProjectId}`}
+                      className="link"
+                    >
+                      <button>Xem chi tiết dự án</button>
+                    </Link>
+                  </div>
+                  <div className="ppc-dropdown-confirm-button">
+                    <Link to={`/pdfm/${post.voiceProjectId}`}>
+                      <button>Xem hoạt động dự án</button>
+                    </Link>
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}

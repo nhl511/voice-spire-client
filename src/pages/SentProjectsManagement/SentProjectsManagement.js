@@ -15,12 +15,14 @@ const SentProjectsManagement = () => {
   const [Done, setDone] = useState(true);
   const [WaitToAccept, setWaitToAccept] = useState(true);
   const [Denied, setDenied] = useState(true);
+  const [inputSearch, setInputSearch] = useState("");
+  const [sort, setSort] = useState("old");
 
   useEffect(() => {
     getProjects(
-      currentPage,
+      1,
       100,
-      "old",
+      sort,
       projectType,
       WaitApprove,
       NotApproved,
@@ -28,141 +30,151 @@ const SentProjectsManagement = () => {
       Processing,
       Done,
       WaitToAccept,
-      Denied
+      Denied,
+      inputSearch
     )
       .then((json) => setPosts(json))
       .then((json) => setLoading(false));
-  });
+  }, [
+    sort,
+    projectType,
+    WaitApprove,
+    NotApproved,
+    Apply,
+    Processing,
+    Done,
+    WaitToAccept,
+    Denied,
+    inputSearch,
+  ]);
 
-  const handleSubmit = async (e) => {
-    setLoading(true);
-    e.preventDefault();
-    getProjects(
-      currentPage,
-      10,
-      "old",
-      projectType,
-      WaitApprove,
-      NotApproved,
-      Apply,
-      Processing,
-      Done,
-      WaitToAccept,
-      Denied
-    )
-      .then((json) => setPosts(json))
-      .then((json) => setLoading(false));
-  };
   return (
     <div className="spm">
       <div className="spm-container">
         <div className="spm-search">
-          <form onSubmit={handleSubmit}>
-            <input type="search" placeholder="Tìm kiếm" />
-            <select>
-              <option>Mới nhất</option>
-              <option>Theo dõi</option>
-            </select>
-            <div className="status-wrapper">
-              <div className="status">
-                <input
-                  type="radio"
-                  value={WaitApprove}
-                  name="status"
-                  onChange={(e) => {
-                    setWaitApprove(true);
-                    setNotApproved(false);
-                    setWaitToAccept(false);
-                    setDenied(false);
-                    setProcessing(false);
-                    setDone(false);
-                  }}
-                />
-                <span>Chưa duyệt</span>
-              </div>
-              <div className="status">
-                <input
-                  type="radio"
-                  value={NotApproved}
-                  name="status"
-                  onChange={(e) => {
-                    setWaitApprove(false);
-                    setNotApproved(true);
-                    setWaitToAccept(false);
-                    setDenied(false);
-                    setProcessing(false);
-                    setDone(false);
-                  }}
-                />
-                <span>Không duyệt</span>
-              </div>
-              <div className="status">
-                <input
-                  type="radio"
-                  value={WaitToAccept}
-                  name="status"
-                  onChange={(e) => {
-                    setWaitApprove(false);
-                    setNotApproved(false);
-                    setWaitToAccept(true);
-                    setDenied(false);
-                    setProcessing(false);
-                    setDone(false);
-                  }}
-                />
-                <span>Đã gửi lời mời</span>
-              </div>
-              <div className="status">
-                <input
-                  type="radio"
-                  value={Denied}
-                  name="status"
-                  onChange={(e) => {
-                    setWaitApprove(false);
-                    setNotApproved(false);
-                    setWaitToAccept(false);
-                    setDenied(true);
-                    setProcessing(false);
-                    setDone(false);
-                  }}
-                />
-                <span>Không nhận lời mời</span>
-              </div>
-              <div className="status">
-                <input
-                  type="radio"
-                  value={Processing}
-                  name="status"
-                  onChange={(e) => {
-                    setWaitApprove(false);
-                    setNotApproved(false);
-                    setWaitToAccept(false);
-                    setDenied(false);
-                    setProcessing(true);
-                    setDone(false);
-                  }}
-                />
-                <span>Đã nhận dự án</span>
-              </div>
-              <div className="status">
-                <input
-                  type="radio"
-                  value={Done}
-                  name="status"
-                  onChange={(e) => {
-                    setWaitApprove(false);
-                    setNotApproved(false);
-                    setWaitToAccept(false);
-                    setDenied(false);
-                    setProcessing(false);
-                    setDone(true);
-                  }}
-                />
-                <span>Hoàn thành</span>
-              </div>
-              <button>Tìm kiếm</button>
+          <input
+            type="search"
+            placeholder="Tìm kiếm"
+            value={inputSearch}
+            onChange={(e) => {
+              setInputSearch(e.target.value);
+              setLoading(true);
+            }}
+          />
+          <select
+            value={sort}
+            onChange={(e) => {
+              setSort(e.target.value);
+              setLoading(true);
+            }}
+          >
+            <option value="old">Cũ nhất</option>
+            <option value="new">Mới nhất</option>
+          </select>
+          <div className="status-wrapper">
+            <div className="status">
+              <input
+                type="radio"
+                value={WaitApprove}
+                name="status"
+                onChange={(e) => {
+                  setWaitApprove(true);
+                  setNotApproved(false);
+                  setWaitToAccept(false);
+                  setDenied(false);
+                  setProcessing(false);
+                  setDone(false);
+                  setLoading(true);
+                }}
+              />
+              <span>Chưa duyệt</span>
             </div>
-          </form>
+            <div className="status">
+              <input
+                type="radio"
+                value={NotApproved}
+                name="status"
+                onChange={(e) => {
+                  setWaitApprove(false);
+                  setNotApproved(true);
+                  setWaitToAccept(false);
+                  setDenied(false);
+                  setProcessing(false);
+                  setDone(false);
+                  setLoading(true);
+                }}
+              />
+              <span>Không duyệt</span>
+            </div>
+            <div className="status">
+              <input
+                type="radio"
+                value={WaitToAccept}
+                name="status"
+                onChange={(e) => {
+                  setWaitApprove(false);
+                  setNotApproved(false);
+                  setWaitToAccept(true);
+                  setDenied(false);
+                  setProcessing(false);
+                  setDone(false);
+                  setLoading(true);
+                }}
+              />
+              <span>Đã gửi lời mời</span>
+            </div>
+            <div className="status">
+              <input
+                type="radio"
+                value={Denied}
+                name="status"
+                onChange={(e) => {
+                  setWaitApprove(false);
+                  setNotApproved(false);
+                  setWaitToAccept(false);
+                  setDenied(true);
+                  setProcessing(false);
+                  setDone(false);
+                  setLoading(true);
+                }}
+              />
+              <span>Không nhận lời mời</span>
+            </div>
+            <div className="status">
+              <input
+                type="radio"
+                value={Processing}
+                name="status"
+                onChange={(e) => {
+                  setWaitApprove(false);
+                  setNotApproved(false);
+                  setWaitToAccept(false);
+                  setDenied(false);
+                  setProcessing(true);
+                  setDone(false);
+                  setLoading(true);
+                }}
+              />
+              <span>Đã nhận dự án</span>
+            </div>
+            <div className="status">
+              <input
+                type="radio"
+                value={Done}
+                name="status"
+                onChange={(e) => {
+                  setWaitApprove(false);
+                  setNotApproved(false);
+                  setWaitToAccept(false);
+                  setDenied(false);
+                  setProcessing(false);
+                  setDone(true);
+                  setLoading(true);
+                }}
+              />
+              <span>Hoàn thành</span>
+            </div>
+          </div>
         </div>
         <div className="posts">
           {loading ? (

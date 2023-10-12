@@ -25,7 +25,9 @@ const ListVoiceCard = ({ voice }) => {
           <ReactAudioPlayer src={voice.mainVoiceLink} controls audio="1" />
         </div>
         <div className="listVoice-time">
-          <span>{moment(voice.createDate).format("DD/MM/yyyy")}</span>
+          <span>
+            Ngày đăng: {moment(voice.createDate).format("DD/MM/yyyy")}
+          </span>
         </div>
       </div>
       <div className="listVoice-icon">

@@ -1,7 +1,7 @@
 .projectapproval {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(#FFDD2E, #ffffff);
+  background-image: linear-gradient(#fee66a, #ffffff);
 }
 .projectapproval .projectApproval-container {
   width: 1400px;
@@ -43,8 +43,8 @@
   flex-direction: column;
   gap: 20px;
 }
-.ppm-search{
-  background: #FFD600;
+.ppm-search {
+  background: #ffd600;
   border: none;
   outline: none;
   border-radius: 20px;

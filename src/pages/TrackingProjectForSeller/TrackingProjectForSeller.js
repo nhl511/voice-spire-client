@@ -25,7 +25,7 @@ export default function TrackingProjectForSeller() {
       ) : (
         <>
           <div className="tpfs">
-            <div className="tpfs-container">
+            {/* <div className="tpfs-container">
               <div className="tpfs-filter">
                 <input
                   placeholder="Tìm kiếm (Ví dụ: Bảo Long, 1977,...)"
@@ -47,7 +47,7 @@ export default function TrackingProjectForSeller() {
                 <input type="number" className="tpfs-length-input" />
               </div>
               <button className="tpfs-search">Tìm kiếm</button>
-            </div>
+            </div> */}
           </div>
           <div className="tpfs-card">
             {posts.length === 0 ? (

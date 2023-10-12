@@ -59,11 +59,34 @@ export const getProjects = async (
   Processing,
   Done,
   WaitToAccept,
-  Denied
+  Denied,
+  inputSearch
 ) => {
   const response = await axiosOne.get(
-    `/api/VoiceProjects/SearchByFilterForManager/${currentPage},${PageSize},${sortType},${projectType},${WaitApprove},${NotApproved},${Apply},${Processing},${Done},${WaitToAccept},${Denied},`
+    `/api/VoiceProjects/SearchByFilterForManager/${currentPage},${PageSize},${sortType},${projectType},${WaitApprove},${NotApproved},${Apply},${Processing},${Done},${WaitToAccept},${Denied},?search=${inputSearch}`
   );
+  const valuesArray = Object.values(response.data.results);
+  return valuesArray;
+};
+
+export const applyingProjectsFilter = async (
+  currentPage,
+  PageSize,
+  inputSearch,
+  sort,
+  minPrice,
+  maxPrice,
+  region,
+  type,
+  gender,
+  property,
+  duration
+) => {
+  const response = await axiosOne.get(
+    `/api/VoiceProjects/SearchByFilter/${currentPage},${PageSize}?search=${inputSearch}&sortType=${sort}&fromPrice=${minPrice}&toPrice=${maxPrice}&region=${region}&type=${type}&gender=${gender}&property=${property}&duration=${duration}`
+  );
+
+  console.log(response.data);
   const valuesArray = Object.values(response.data.results);
   return valuesArray;
 };

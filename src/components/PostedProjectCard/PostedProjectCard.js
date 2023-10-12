@@ -20,7 +20,7 @@ const PostedProjectCard = ({ post }) => {
     getPaymentInfo(post.voiceProjectId)
       .then((json) => setPaymentInfo(json))
       .then((json) => setLoading(false));
-  }, [post.projectId]);
+  });
 
   const [dropDown, setDropDown] = useState(false);
   const [dropDown2, setDropDown2] = useState(false);
@@ -102,18 +102,19 @@ const PostedProjectCard = ({ post }) => {
                       <button>Xem chi tiết dự án</button>
                     </Link>
                   </div>
-                  <div className="ppc-dropdown-confirm-button">
+                  {/* <div className="ppc-dropdown-confirm-button">
                     {post.projectStatus === "WaitApprove" && (
                       <button
                         onClick={() => {
                           approveProject(post.voiceProjectId);
                           navigate("/postedprojectsmanagement");
+                          setDropDown(false);
                         }}
                       >
                         Duyệt
                       </button>
                     )}
-                  </div>
+                  </div> */}
                 </div>
               </>
             )}

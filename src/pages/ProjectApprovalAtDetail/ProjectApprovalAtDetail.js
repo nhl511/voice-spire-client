@@ -12,6 +12,7 @@ export default function ProjectApprovalAtDetail() {
   const [post, setPost] = useState();
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+
   useEffect(() => {
     getProjectApprovalDetail(id)
       .then((json) => setPost(json))
@@ -94,6 +95,7 @@ export default function ProjectApprovalAtDetail() {
                       className="approve-button"
                       onClick={() => {
                         approveProject(post.voiceProjectId);
+
                         post.projectType === "Post"
                           ? navigate("/postedprojectsmanagement")
                           : navigate("/sentprojectsmanagement");

@@ -5,74 +5,66 @@ import { getVoiceList, getVoiceListAndSearch } from "../../api/axios";
 import { Link } from "react-router-dom";
 
 const ListVoice = () => {
-  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [listVoice, setListVoice] = useState([]);
   const [sort, setSort] = useState("old");
   const [inputSearch, setInputSearch] = useState("");
 
   useEffect(() => {
-    getVoiceList(currentPage, 10, sort, false)
+    getVoiceListAndSearch(1, 100, sort, false, inputSearch)
       .then((json) => setListVoice(json))
       .then((json) => setLoading(false));
-  }, [currentPage, sort]);
+  }, [inputSearch, sort]);
 
-  const handleSubmit = async (e) => {
-    setLoading(true);
-    e.preventDefault();
-    getVoiceListAndSearch(currentPage, 10, sort, false, inputSearch)
-      .then((json) => setListVoice(json))
-      .then((json) => setLoading(false));
-  };
   return (
     <div className="listVoice">
-      {loading ? (
-        <div className="loading">
-          <div className="loading-container">
-            <div class="loader"></div>
+      <div className="listVoice-container">
+        <div className="listVoice-help">
+          <div className="listVoice-search">
+            <input
+              type="search"
+              placeholder="Nhập ở đây"
+              value={inputSearch}
+              onChange={(e) => {
+                setInputSearch(e.target.value);
+                setLoading(true);
+              }}
+            />
+          </div>
+          <div className="listVoice-sort">
+            <span>Sắp xếp theo</span>
+            <select
+              value={sort}
+              onChange={(e) => {
+                setSort(e.target.value);
+                setLoading(true);
+              }}
+            >
+              <option value="old">Cũ nhất</option>
+              <option value="new">Mới nhất</option>
+            </select>
           </div>
         </div>
-      ) : (
-        <div className="listVoice-container">
-          <div className="listVoice-help">
-            <div className="listVoice-search">
-              <form onSubmit={handleSubmit}>
-                <input
-                  type="search"
-                  placeholder="Nhập ở đây"
-                  value={inputSearch}
-                  onChange={(e) => setInputSearch(e.target.value)}
-                />
-                <button>Tìm kiếm</button>
-              </form>
-            </div>
-            <div className="listVoice-sort">
-              <span>Sắp xếp theo</span>
-              <select
-                value={sort}
-                onChange={(e) => {
-                  setSort(e.target.value);
-                  setLoading(true);
-                }}
-              >
-                <option value="old">Cũ nhất</option>
-                <option value="new">Mới nhất</option>
-              </select>
-            </div>
-          </div>
 
-          <div className="cards">
-            {listVoice.map((voice) => (
+        <div className="cards">
+          {loading ? (
+            <div className="loading">
+              <div className="loading-container">
+                <div class="loader"></div>
+              </div>
+            </div>
+          ) : (
+            listVoice.map((voice) => (
               <Link
                 to={`/voicedetail/${voice.voiceSeller.voiceSellerId}`}
                 className="link"
               >
                 <ListVoiceCard key={voice.voiceDetailId} voice={voice} />
               </Link>
-            ))}
-          </div>
+            ))
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 };

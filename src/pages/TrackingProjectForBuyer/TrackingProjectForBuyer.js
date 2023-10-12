@@ -30,9 +30,9 @@ export default function TrackingProjectForBuyer() {
       <div className="tpfb-container">
         <div className="tpfb-search">
           <span>Đa dạng lựa chọn với hơn 7749 giọng đọc cho dự án của bạn</span>
-          <button onClick={() => setOpenFilter(!openFilter)}>
+          {/* <button onClick={() => setOpenFilter(!openFilter)}>
             Tìm kiếm ngay
-          </button>
+          </button> */}
         </div>
         {openFilter && (
           <form>

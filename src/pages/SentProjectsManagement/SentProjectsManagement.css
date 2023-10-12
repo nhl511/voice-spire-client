@@ -1,7 +1,7 @@
 .spm {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(#FFDD2E, #ffffff);
+  background-image: linear-gradient(#fee66a, #ffffff);
 }
 .spm .spm-container {
   width: 1400px;
@@ -12,10 +12,7 @@
   margin: 30px;
 }
 
-.spm
-  .spm-container
-  .spm-search
-  .status-wrapper {
+.spm .spm-container .spm-search .status-wrapper {
   display: flex;
   gap: 20px;
   align-items: center;
@@ -35,12 +32,12 @@
   margin-left: 5px;
   background: transparent;
 }
-.status-wrapper button{
+.status-wrapper button {
   border: none;
   outline: none;
   border-radius: 15px;
   padding: 5px 30px;
-  background: #FFD600;
+  background: #ffd600;
   font-size: 18px;
   font-weight: 600;
 }

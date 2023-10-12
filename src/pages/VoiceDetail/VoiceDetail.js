@@ -98,7 +98,7 @@ const VoiceDetail = () => {
       })
       .then((response) => {
         console.log("Response:", response.data);
-        navigate("/listvoice");
+        navigate("/lv");
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -139,7 +139,7 @@ const VoiceDetail = () => {
                 </span>
                 <br />
                 <span style={{ color: "black", fontWeight: 400 }}>
-                  {moment(voice.createDate).format("DD/MM/yyyy")}
+                  Ngày đăng: {moment(voice.createDate).format("DD/MM/yyyy")}
                 </span>
               </div>
               <div className="voicedetail-audio">

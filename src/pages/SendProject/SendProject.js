@@ -124,7 +124,7 @@ export default function SendProject() {
 
                   <div className="sendProject-price">
                     <span>Giá: </span>
-                    <span>{voice.price} /phút</span>
+                    <span>{voice.price} VNĐ/phút</span>
                   </div>
                 </div>
                 <div className="sendProject-card-left-row-2">

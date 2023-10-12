@@ -1,29 +1,49 @@
 import React, { useEffect, useState } from "react";
 import "./Posts.css";
 import PostCard from "../../components/PostCard/PostCard";
-import { getPostedProjects, getProjects } from "../../api/axios";
+import { applyingProjectsFilter } from "../../api/axios";
 const Posts = () => {
   const [posts, setPosts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [inputSearch, setInputSearch] = useState("");
+  const [sort, setSort] = useState("new");
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(500000);
+  const [region, setRegion] = useState("");
+  const [gender, setGender] = useState("");
+  const [property, setProperty] = useState("");
+  const [duration, setDuration] = useState(10);
+  const [type, setType] = useState("");
 
   useEffect(() => {
-    getProjects(
-      currentPage,
+    applyingProjectsFilter(
+      1,
       100,
-      "new",
-      "Post",
-      false,
-      false,
-      true,
-      false,
-      false,
-      false,
-      false
+      inputSearch,
+      sort,
+      minPrice,
+      maxPrice,
+      region,
+      type,
+      gender,
+      property,
+      duration
     )
       .then((json) => setPosts(json))
       .then((json) => setLoading(false));
-  }, [currentPage]);
+  }, [
+    inputSearch,
+    sort,
+    minPrice,
+    maxPrice,
+    region,
+    type,
+    gender,
+    property,
+    duration,
+  ]);
+
+  console.log(posts);
 
   return (
     <div className="posts-background">
@@ -33,50 +53,104 @@ const Posts = () => {
             <div className="filter-row">
               <div className="searchbox">
                 <input
-                  type="text"
-                  placeholder="Tìm kiếm (Ví dụ: Bảo Long, 1977,...)"
+                  type="search"
+                  placeholder="Tìm kiếm"
+                  value={inputSearch}
+                  onChange={(e) => {
+                    setInputSearch(e.target.value);
+                    setLoading(true);
+                  }}
                 />
               </div>
               <div className="min-max">
                 <span>Giá</span>
-                <input type="number" placeholder="Từ" />
+                <input
+                  type="number"
+                  placeholder="Từ"
+                  value={minPrice}
+                  onChange={(e) => {
+                    setMinPrice(e.target.value);
+                    setLoading(true);
+                  }}
+                />
                 <span>-</span>
-                <input type="number" placeholder="Đến" />
+                <input
+                  type="number"
+                  placeholder="Đến"
+                  value={maxPrice}
+                  onChange={(e) => {
+                    setMaxPrice(e.target.value);
+                    setLoading(true);
+                  }}
+                />
               </div>
               <div className="long">
-                <span>Độ dài văn bản</span>
-                <input type="number" />
+                <span>Thời lượng tối đa (phút)</span>
+                <input
+                  type="number"
+                  value={duration}
+                  onChange={(e) => {
+                    setDuration(e.target.value);
+                    setLoading(true);
+                  }}
+                />
               </div>
             </div>
             <div className="filter-row">
               <div className="region">
                 <span>Vùng miền</span>
-                <select name="" id="">
-                  <option value="">Miền Bắc</option>
-                  <option value="">Miền Trung</option>
-                  <option value="">Miền Nam</option>
+                <select
+                  name=""
+                  id=""
+                  value={region}
+                  onChange={(e) => {
+                    setRegion(e.target.value);
+                    setLoading(true);
+                  }}
+                >
+                  <option value="">Vui lòng chọn</option>
+                  <option value="Miền Bắc">Miền Bắc</option>
+                  <option value="Miền Trung">Miền Trung</option>
+                  <option value="Miền Nam">Miền Nam</option>
                 </select>
               </div>
               <div className="gender">
-                <span>Giới tính</span>
-                <select name="" id="">
-                  <option value="">Nữ</option>
-                  <option value="">Nam</option>
+                <span>Giới tính giọng đọc</span>
+                <select
+                  name=""
+                  id=""
+                  value={gender}
+                  onChange={(e) => {
+                    setGender(e.target.value);
+                    setLoading(true);
+                  }}
+                >
+                  <option value="">Vui lòng chọn</option>
+                  <option value="Nữ">Nữ</option>
+                  <option value="Nam">Nam</option>
                 </select>
               </div>
               <div className="nature">
                 <span>Tính chất</span>
-                <select name="" id="">
-                  <option value="">Thời sự</option>
+                <select
+                  name=""
+                  id=""
+                  value={property}
+                  onChange={(e) => {
+                    setProperty(e.target.value);
+                    setLoading(true);
+                  }}
+                >
+                  <option value="">Vui lòng chọn</option>
+                  <option value="Quảng cáo">Quảng cáo</option>
+                  <option value="Kể Chuyện">Kể chuyện</option>
+                  <option value="Thuyết trình">Thuyết trình</option>
+                  <option value="Thuyết minh">Thuyết minh</option>
+                  <option value="Review phim">Review phim</option>
+                  <option value="Thời sự">Thời sự</option>
+                  <option value="Thông báo">Thông báo</option>
                 </select>
               </div>
-              <div className="location">
-                <span>Địa phương</span>
-                <select name="" id="">
-                  <option value="">Hà Nội</option>
-                </select>
-              </div>
-              <button>Tìm kiếm</button>
             </div>
           </div>
           <div className="cards">

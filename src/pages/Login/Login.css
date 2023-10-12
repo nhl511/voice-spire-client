@@ -91,11 +91,13 @@
   height: 50px;
   background: white;
   color: black;
-  transition: background 0.2s, color 0.2s;
+  transition: box-shadow 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 50px;
 }
-.login .login-container .login-card .left .button button:hover {
-  background: black;
-  color: white;
+
+.login .login-container .login-card .left .button button:active {
+  box-shadow: none;
 }
 
 .login .login-container .login-card .left .button .disabled {

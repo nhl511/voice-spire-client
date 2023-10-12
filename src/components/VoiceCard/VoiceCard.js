@@ -67,7 +67,7 @@ const VoiceCard = ({ voice }) => {
           <span>Lượt booking: 102</span>
         </div> */}
         <div className="price">
-          <span>{`Giá: ${voice.price}đ/ 100 từ`}</span>
+          <span>{`Giá: ${voice.price} VNĐ/ phút`}</span>
         </div>
       </div>
       <div className="button">

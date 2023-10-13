@@ -18,6 +18,7 @@ const RegisterSeller = () => {
   const [birthDay, setBirthDay] = useState();
   const [gender, setGender] = useState("Nam");
   const [loading, setLoading] = useState(false);
+  const [errorInput, setErrorInput] = useState('');
 
   const handleRegister = async (e) => {
     setLoading(true);
@@ -59,6 +60,7 @@ const RegisterSeller = () => {
         });
     } catch (error) {
       console.log(error.response.data);
+      setErrorInput(error.response.data);
     }
   };
 
@@ -80,6 +82,9 @@ const RegisterSeller = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
+                <div className="register-error">
+                  {errorInput === "Email has already been used" && errorInput}
+                </div>
               </div>
               <div className="col-item">
                 <span>Mật Khẩu*</span>
@@ -89,6 +94,9 @@ const RegisterSeller = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 />
+                <div className="register-error">
+                  {errorInput === "Password's length must greater than 8" && errorInput}
+                </div>
               </div>
               <div className="col-item">
                 <span>Nhập lại mật khẩu*</span>
@@ -98,6 +106,9 @@ const RegisterSeller = () => {
                   onChange={(e) => setPasswordConfirm(e.target.value)}
                   required
                 />
+                <div className="register-error">
+                  {errorInput === "Password not match" && errorInput}
+                </div>
               </div>
               <div className="col-item">
                 <span>Số điện thoại*</span>

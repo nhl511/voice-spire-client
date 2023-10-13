@@ -93,13 +93,7 @@ const PostCard = ({ post }) => {
               ) : null}
             </div>
             <div className="button">
-              {error ? (
-                <span>Chưa thể ứng tuyển</span>
-              ) : voice.isApprove ? (
-                <button onClick={handleCheck}>Ứng tuyển ngay</button>
-              ) : (
-                <span>Chưa thể ứng tuyển</span>
-              )}
+              <button onClick={handleCheck}>Ứng tuyển ngay</button>
             </div>
           </div>
         </>

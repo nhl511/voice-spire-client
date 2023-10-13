@@ -7,11 +7,16 @@ import { acceptApplications } from "../../api/axios";
 
 export default function AcceptApplicationCard({ voice }) {
   const navigate = useNavigate();
-  const myString = voice.voiceDetail.voiceTypes[0].voiceTypeDetail;
-  const myString2 = voice.voiceDetail.voiceProperties[0].voicePropertyName;
-
-  const myArray = myString.split(", ");
-  const myArray2 = myString2.split(", ");
+  let myArray = "";
+  let myArray2 = "";
+  if (voice.voiceDetail.voiceTypes !== null) {
+    const myString = voice.voiceDetail.voiceTypes[0].voiceTypeDetail;
+    myArray = myString.split(", ");
+  }
+  if (voice.voiceDetail.voiceProperties !== null) {
+    const myString2 = voice.voiceDetail.voiceProperties[0].voicePropertyName;
+    myArray2 = myString2.split(", ");
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,12 +52,10 @@ export default function AcceptApplicationCard({ voice }) {
           </div>
         </div>
         <div className="aac-type">
-          {myArray.map((item) => (
-            <span>{item}</span>
-          ))}
-          {myArray2.map((item2) => (
-            <span>{item2}</span>
-          ))}
+          {myArray.length !== 0 && myArray.map((item) => <span>{item}</span>)}
+
+          {myArray.length !== 0 &&
+            myArray2.map((item2) => <span>{item2}</span>)}
         </div>
         <div className="aac-stats">
           <span>Đánh giá</span>

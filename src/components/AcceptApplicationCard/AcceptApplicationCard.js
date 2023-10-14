@@ -9,11 +9,14 @@ export default function AcceptApplicationCard({ voice }) {
   const navigate = useNavigate();
   let myArray = "";
   let myArray2 = "";
-  if (voice.voiceDetail.voiceTypes !== null) {
+  if (voice.voiceDetail !== null && voice.voiceDetail.voiceTypes !== null) {
     const myString = voice.voiceDetail.voiceTypes[0].voiceTypeDetail;
     myArray = myString.split(", ");
   }
-  if (voice.voiceDetail.voiceProperties !== null) {
+  if (
+    voice.voiceDetail !== null &&
+    voice.voiceDetail.voiceProperties !== null
+  ) {
     const myString2 = voice.voiceDetail.voiceProperties[0].voicePropertyName;
     myArray2 = myString2.split(", ");
   }
@@ -40,15 +43,18 @@ export default function AcceptApplicationCard({ voice }) {
         <div className="aac-main">
           <div className="aac-info">
             <span className="aac-fullName">{voice.voiceSeller.fullname}</span>
-            <span class="aac-gender">{` | Giọng ${voice.voiceDetail.voiceGender}`}</span>
+            {voice.voiceDetail && (
+              <span class="aac-gender">{` | Giọng ${voice.voiceDetail.voiceGender}`}</span>
+            )}
           </div>
           <div className="aac-createDate">
             <span>
-              {moment(voice.voiceDetail.createDate).format("DD/MM/yyyy")}
+              {voice.voiceDetail &&
+                moment(voice.voiceDetail.createDate).format("DD/MM/yyyy")}
             </span>
           </div>
           <div className="play">
-            <ReactAudioPlayer src={voice.voiceDetail.mainVoiceLink} controls />
+            <ReactAudioPlayer src={voice.linkDemo} controls />
           </div>
         </div>
         <div className="aac-type">

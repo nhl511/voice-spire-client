@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import useAuth from "../../hooks/useAuth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getBuyerProfile, getSellerProfile } from "../../api/axios";
 
 const Navbar = () => {
@@ -10,6 +10,7 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const [menuRegister, setMenuRegister] = useState(false);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (auth.role) {
@@ -65,7 +66,10 @@ const Navbar = () => {
                         <hr />
                         <span
                           onClick={() => {
+                            localStorage.removeItem("user");
                             window.location.reload();
+
+                            navigate("/");
                           }}
                         >
                           Đăng xuất
@@ -111,7 +115,10 @@ const Navbar = () => {
                         <hr />
                         <span
                           onClick={() => {
+                            localStorage.removeItem("user");
                             window.location.reload();
+
+                            navigate("/");
                           }}
                         >
                           Đăng xuất
@@ -153,7 +160,10 @@ const Navbar = () => {
                         <hr />
                         <span
                           onClick={() => {
+                            localStorage.removeItem("user");
                             window.location.reload();
+
+                            navigate("/");
                           }}
                         >
                           Đăng xuất

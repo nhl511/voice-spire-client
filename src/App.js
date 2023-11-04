@@ -94,7 +94,7 @@ const App = () => {
         </Route>
         {/* Seller */}
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>
-          <Route path="/your-voice" element={<VoiceProfile />} />{" "}
+          <Route path="/your-voice" element={<VoiceProfile />} />
           {/* figma 5 */}
           <Route path="/posts" element={<Posts />} /> {/* figma 15 */}
           <Route path="/pt2/:id" element={<ProjectDescriptionToConfirm />} />

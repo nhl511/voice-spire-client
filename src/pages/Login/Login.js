@@ -12,7 +12,7 @@ const Login = () => {
   const emailRef = useRef();
   const errRef = useRef();
 
-  const { setAuth } = useAuth();
+  const { auth, setAuth } = useAuth();
   const navigate = useNavigate();
   // const location = useLocation();
   // const from = location.state?.from?.pathname || "/";
@@ -76,6 +76,14 @@ const Login = () => {
   useEffect(() => {
     setErrMsg("");
   }, [email, password]);
+
+  useEffect(() => {
+    if (auth.role) {
+      if (auth.role[0] === "seller") navigate("/posts");
+      else if (auth.role[0] === "buyer") navigate("/voices");
+      else if (auth.role[0] === "manager") navigate("/lv");
+    } else navigate("/");
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

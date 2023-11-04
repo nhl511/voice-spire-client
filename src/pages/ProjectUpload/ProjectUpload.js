@@ -42,7 +42,6 @@ const ProjectUpload = () => {
   const [nameFileMain, setNameFileMain] = useState();
   const [nameFileThumbnail, setNameFileThumbnail] = useState();
   const navigate = useNavigate();
-
   useEffect(() => {
     checkBankAccountForBuyer(auth.userId).then(
       (result) => !result && navigate("/bank")

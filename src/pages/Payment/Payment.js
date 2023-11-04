@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import QRCode from "react-qr-code";
 import "./Payment.css";
 import { useParams } from "react-router";
 import { getPaymentDetail } from "../../api/axios";

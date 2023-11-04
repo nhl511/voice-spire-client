@@ -33,6 +33,7 @@ import TrackingProjectForBuyer from "./pages/TrackingProjectForBuyer/TrackingPro
 import ProjectDescriptionForManager from "./pages/ProjectDescriptionForManager/ProjectDescriptionForManager";
 import ProjectDetailForManager from "./pages/ProjectDetailForManager/ProjectDetailForManager";
 import Payment from "./pages/Payment/Payment";
+import TextAnalysis from "./pages/TextAnalysis.js/TextAnalysis";
 
 const App = () => {
   return (
@@ -88,6 +89,8 @@ const App = () => {
           {/* figma 27 */}
           <Route path="/payment/:id" element={<Payment />} />
           {/* figma 29 */}
+          <Route path="analysis" element={<TextAnalysis/>}/>
+          {/* figma 33 */}
         </Route>
         {/* Seller */}
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>

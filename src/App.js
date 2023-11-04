@@ -34,6 +34,8 @@ import ProjectDescriptionForManager from "./pages/ProjectDescriptionForManager/P
 import ProjectDetailForManager from "./pages/ProjectDetailForManager/ProjectDetailForManager";
 import Payment from "./pages/Payment/Payment";
 import TextAnalysis from "./pages/TextAnalysis.js/TextAnalysis";
+import AnalyzeSellerForBuyer from './pages/AnalyzeSellerForBuyer/AnalyzeSellerForBuyer';
+import AnalyzeSellerForBuyerDetail from "./pages/AnalyzeSellerForBuyerDetail/AnalyzeSellerForBuyerDetail";
 
 const App = () => {
   return (
@@ -91,7 +93,12 @@ const App = () => {
           {/* figma 29 */}
           <Route path="analysis" element={<TextAnalysis/>}/>
           {/* figma 33 */}
+          <Route path="asfb" element={<AnalyzeSellerForBuyer/>} />
+          {/* figma 34 */}
+          <Route path="asfbd" element={<AnalyzeSellerForBuyerDetail />} />
+          {/* figma 35 */}
         </Route>
+        
         {/* Seller */}
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>
           <Route path="/your-voice" element={<VoiceProfile />} />

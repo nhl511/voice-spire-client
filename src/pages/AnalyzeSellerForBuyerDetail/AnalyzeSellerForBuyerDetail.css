@@ -1,0 +1,12 @@
+.asfbd-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.asfbd-button button{
+    background: linear-gradient(#43D100, #A0CBAC);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 100px;
+    margin: 10px 0;
+}

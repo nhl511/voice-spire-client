@@ -34,7 +34,7 @@ import ProjectDescriptionForManager from "./pages/ProjectDescriptionForManager/P
 import ProjectDetailForManager from "./pages/ProjectDetailForManager/ProjectDetailForManager";
 import Payment from "./pages/Payment/Payment";
 import TextAnalysis from "./pages/TextAnalysis.js/TextAnalysis";
-import AnalyzeSellerForBuyer from './pages/AnalyzeSellerForBuyer/AnalyzeSellerForBuyer';
+import AnalyzeSellerForBuyer from "./pages/AnalyzeSellerForBuyer/AnalyzeSellerForBuyer";
 import AnalyzeSellerForBuyerDetail from "./pages/AnalyzeSellerForBuyerDetail/AnalyzeSellerForBuyerDetail";
 
 const App = () => {
@@ -91,14 +91,16 @@ const App = () => {
           {/* figma 27 */}
           <Route path="/payment/:id" element={<Payment />} />
           {/* figma 29 */}
-          <Route path="analysis" element={<TextAnalysis/>}/>
+          <Route path="/analysis" element={<TextAnalysis />} />
           {/* figma 33 */}
-          <Route path="asfb" element={<AnalyzeSellerForBuyer/>} />
+          <Route path="/asfb/:id" element={<AnalyzeSellerForBuyer />} />
           {/* figma 34 */}
-          <Route path="asfbd" element={<AnalyzeSellerForBuyerDetail />} />
+          <Route
+            path="/asfbd/:id/:id2"
+            element={<AnalyzeSellerForBuyerDetail />}
+          />
           {/* figma 35 */}
         </Route>
-        
         {/* Seller */}
         <Route element={<RequireAuth allowedRoles={["seller"]} />}>
           <Route path="/your-voice" element={<VoiceProfile />} />

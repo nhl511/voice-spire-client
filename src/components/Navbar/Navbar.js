@@ -46,6 +46,9 @@ const Navbar = () => {
                 <Link to="/tpfb" className="link">
                   <span className="item">Quản lí dự án</span>
                 </Link>
+                <Link to="/analysis" className="link">
+                  <span className="item">Phân tích văn bản</span>
+                </Link>
                 {loading ? (
                   <span>Welcome</span>
                 ) : (

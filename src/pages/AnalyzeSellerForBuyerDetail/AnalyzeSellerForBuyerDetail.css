@@ -1,12 +1,38 @@
-.asfbd-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.asfbd {
+  background-image: linear-gradient(#fee66a, #ffffff);
+  min-height: 100vh;
 }
-.asfbd-button button{
-    background: linear-gradient(#43D100, #A0CBAC);
-    border: none;
-    border-radius: 4px;
-    padding: 10px 100px;
-    margin: 10px 0;
+.asfbd-titleProject {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 0;
+  padding: 20px;
+}
+
+.asfbd-container {
+  display: flex;
+  justify-content: center;
+}
+.asfbd-card {
+  background: #fdf8c8;
+  width: 1400px;
+  border-radius: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: none;
+}
+.asfbd-col {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 20px;
+}
+.asfbd-row {
+  display: flex;
+}
+.asfbd-title {
+  flex: 1;
+}
+.asfbd-result {
+  flex: 3;
 }

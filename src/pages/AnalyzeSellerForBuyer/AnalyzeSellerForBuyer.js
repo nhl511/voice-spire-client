@@ -1,25 +1,38 @@
-import React, { useState } from 'react'
-import './AnalyzeSellerForBuyer.css';
-import AnalyzeSellerForBuyerCard from '../../components/AnalyzeSellerForBuyerCard/AnalyzeSellerForBuyerCard';
+import React, { useEffect, useState } from "react";
+import "./AnalyzeSellerForBuyer.css";
+import AnalyzeSellerForBuyerCard from "../../components/AnalyzeSellerForBuyerCard/AnalyzeSellerForBuyerCard";
+import { useParams } from "react-router-dom";
+import { suggestVoices } from "../../api/axios";
 
 export default function AnalyzeSellerForBuyer() {
   const [openFilter, setOpenFilter] = useState(false);
-
+  const { id } = useParams();
+  const [voices, setVoices] = useState();
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    suggestVoices(id).then((json) => {
+      setVoices(json);
+      setLoading(false);
+    });
+  }, []);
   return (
     <div className="asfb">
-      <div className='asfb-bigContainer'>
+      <div className="asfb-bigContainer">
         <div className="asfb-container">
           <div className="asfb-search">
-            <div className='asfb-header-left'>
+            <div className="asfb-header-left">
               <span>Đa dạng lựa chọn với hơn 7749 giọng đọc</span>
               <span>cho dự án của bạn</span>
               <div>
-                <button className='asfb-button' onClick={() => setOpenFilter(!openFilter)}>
+                <button
+                  className="asfb-button"
+                  onClick={() => setOpenFilter(!openFilter)}
+                >
                   Tìm kiếm ngay
                 </button>
               </div>
             </div>
-            <div className='asfb-header-right'>
+            <div className="asfb-header-right">
               <p>Gợi ý cho dự án</p>
               <h2>Quảng cáo sản phẩm kem dưỡng ẩm Hảo Hảo</h2>
             </div>
@@ -35,20 +48,13 @@ export default function AnalyzeSellerForBuyer() {
                 </div>
                 <div className="asfb-min-max">
                   <span>Giá</span>
-                  <input
-                    type="number"
-                    placeholder="Từ"
-                  />
+                  <input type="number" placeholder="Từ" />
                   <span>-</span>
-                  <input
-                    type="number"
-                    placeholder="Đến"
-                  />
+                  <input type="number" placeholder="Đến" />
                 </div>
                 <div className="asfb-type">
                   <span>Loại</span>
-                  <select
-                  >
+                  <select>
                     <option value="">Vui lòng chọn</option>
                     <option value="Mạnh mẽ">Mạnh mẽ</option>
                     <option value="Trẻ trung">Trẻ trung</option>
@@ -63,8 +69,7 @@ export default function AnalyzeSellerForBuyer() {
                 </div>
                 <div className="asfb-tone">
                   <span>Tone giọng</span>
-                  <select
-                  >
+                  <select>
                     <option value="0">Vui lòng chọn</option>
                     <option value="1">Rất thấp</option>
                     <option value="2">Thấp</option>
@@ -77,8 +82,7 @@ export default function AnalyzeSellerForBuyer() {
               <div className="asfb-filter-row">
                 <div className="asfb-region">
                   <span>Vùng miền</span>
-                  <select
-                  >
+                  <select>
                     <option value="">Vui lòng chọn</option>
                     <option value="Miền Nam">Miền Nam</option>
                     <option value="Miền Bắc">Miền Bắc</option>
@@ -87,8 +91,7 @@ export default function AnalyzeSellerForBuyer() {
                 </div>
                 <div className="asfb-gender">
                   <span>Giới tính</span>
-                  <select
-                  >
+                  <select>
                     <option value="">Vui lòng chọn</option>
                     <option value="Nam">Nam</option>
                     <option value="Nữ">Nữ</option>
@@ -98,8 +101,7 @@ export default function AnalyzeSellerForBuyer() {
 
                 <div className="asfb-nature">
                   <span>Tính chất</span>
-                  <select
-                  >
+                  <select>
                     <option value="">Vui lòng chọn</option>
                     <option value="Quảng cáo">Quảng cáo</option>
                     <option value="Kể Chuyện">Kể chuyện</option>
@@ -112,8 +114,7 @@ export default function AnalyzeSellerForBuyer() {
                 </div>
                 <div className="asfb-rating">
                   <span>Đánh giá</span>
-                  <select
-                  >
+                  <select>
                     <option value="">Vui lòng chọn</option>
                     <option value="5">5 sao</option>
                     <option value="4">4 sao</option>
@@ -129,12 +130,18 @@ export default function AnalyzeSellerForBuyer() {
       </div>
 
       <div>
-        <AnalyzeSellerForBuyerCard />
-        <AnalyzeSellerForBuyerCard />
-        <AnalyzeSellerForBuyerCard />
-        <AnalyzeSellerForBuyerCard />
-
+        {loading ? (
+          <div className="loading">
+            <div className="loading-container">
+              <div class="loader"></div>
+            </div>
+          </div>
+        ) : voices.length === 0 ? (
+          <span>Hiện tại chưa có giọng phù hợp</span>
+        ) : (
+          voices.map((voice) => <AnalyzeSellerForBuyerCard voice={voice} />)
+        )}
       </div>
     </div>
-  )
+  );
 }

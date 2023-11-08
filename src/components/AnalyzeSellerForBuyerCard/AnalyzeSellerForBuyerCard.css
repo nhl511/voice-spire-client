@@ -1,98 +1,121 @@
 .asfbc-display {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .asfbc-card {
-    display: flex;
-    gap: 20px;
-    width: 1400px;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 8px;
-    background: #fdf8c8;
-    justify-content: space-between;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  gap: 20px;
+  width: 1400px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background: #fdf8c8;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .asfbc-avatar {
-    display: flex;
-    flex: 1;
-    align-items: center;
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
 
 .asfbc-avatar img {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .asfbc-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    margin-left: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-left: 30px;
 }
 
 .asfbc-fullName {
-    font-size: 18px;
-    font-weight: 600;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .asfbc-gender {
-    font-size: 18px;
-    font-weight: 600;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .asfbc-type {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    flex: 5;
-    flex-wrap: wrap;
-    margin-left: 30px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex: 5;
+  flex-wrap: wrap;
+  margin-left: 30px;
 }
 
 .asfbc-type span {
-    border: 1px solid black;
-    padding: 5px;
-    border-radius: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .asfbc-percent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
 }
-.asfbc-stats span{
-    background-color: #00E016;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 20px 15px;
+
+.asfbc-good-percent {
+  background: #27ae60;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.asfbc-medium-percent {
+  background: #f39c12;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.asfbc-bad-percent {
+  background: #e74c3c;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.asfbc-stats span {
+  background-color: #00e016;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 20px 15px;
 }
 
 .asfbc-button {
-    display: flex;
-    align-items: center;
-    flex: 2;
+  display: flex;
+  align-items: center;
+  flex: 2;
 }
 
 .asfbc-button button {
-    border: none;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 25px;
-    cursor: pointer;
-    background: white;
-    padding: 15px 30px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
-    box-shadow: 0 4px 2px -2px gray;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  background: white;
+  padding: 15px 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  box-shadow: 0 4px 2px -2px gray;
 }

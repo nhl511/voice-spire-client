@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "https://voicespireapi20231102005734.azurewebsites.net";
+const BASE_URL = "https://voicespireapi20231107.azurewebsites.net";
 
 export default axios.create({
   baseURL: BASE_URL,
@@ -373,6 +373,20 @@ export const checkBankAccountForSeller = async (id) => {
 export const getPaymentDetail = async (projectId) => {
   const response = await axiosOne.get(
     `/api/VoiceProjects/GetPaymentDetail/${projectId}`
+  );
+  return response.data;
+};
+
+export const suggestVoices = async (projectId) => {
+  const response = await axiosOne.post(
+    `/api/VoiceProjects/ProjectSuggestions/${projectId}`
+  );
+  return response.data;
+};
+
+export const suggestVoice = async (projectId, sellerId) => {
+  const response = await axiosOne.post(
+    `/api/VoiceProjects/ProjectSuggestions/${projectId}/${sellerId}`
   );
   return response.data;
 };

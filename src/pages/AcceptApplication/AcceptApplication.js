@@ -111,11 +111,13 @@ export default function AcceptApplication() {
                       <span>{post.toalOutputPrice} VNĐ</span>
                     </div>
                   </div>
-                  {/* <div className="aa-suggest">
+                </div>
+                <div className="aa-button-container">
+                  <Link to={`/asfb/${id}`}>
                     <div className="aa-button">
                       <button>Xem gợi ý</button>
                     </div>
-                  </div> */}
+                  </Link>
                 </div>
               </div>
             </div>

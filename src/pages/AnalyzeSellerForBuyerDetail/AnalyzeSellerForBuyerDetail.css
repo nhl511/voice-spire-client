@@ -13,26 +13,54 @@
 .asfbd-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .asfbd-card {
-  background: #fdf8c8;
   width: 1400px;
+  margin-top: 40px;
+  background: #fdf8c8;
   border-radius: 15px;
+  padding: 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 .asfbd-col {
+  width: 500px;
   display: flex;
   flex-direction: column;
+
   padding: 30px;
   gap: 20px;
+  border: 1px solid black;
 }
 .asfbd-row {
   display: flex;
+}
+.asfbd-row-title {
+  display: flex;
+  justify-content: center;
 }
 .asfbd-title {
   flex: 1;
 }
 .asfbd-result {
-  flex: 3;
+  flex: 1;
+}
+
+.asfbd-button-wrapper {
+  margin-top: 40px;
+}
+
+.asfbd-button {
+  background: #ffd600;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
 }

@@ -25,10 +25,12 @@ export default function AnalyzeSellerForBuyerDetail() {
         </div>
       ) : (
         <>
-          <h2 className="asfbd-titleProject">{result.projectInAna.title}</h2>
           <div className="asfbd-container">
             <div className="asfbd-card">
               <div className="asfbd-col">
+                <div className="asfbd-row-title">
+                  <span>{result.projectInAna.title}</span>
+                </div>
                 <div className="asfbd-row">
                   <span className="asfbd-title">Giới tính giọng đọc</span>
                   <span className="asfbd-result">
@@ -173,6 +175,139 @@ export default function AnalyzeSellerForBuyerDetail() {
                   </span>
                 </div>
               </div>
+              <div className="asfbd-col">
+                <div className="asfbd-row-title">
+                  <span>{result.sellerInAna.voiceSeller.fullname}</span>
+                </div>
+                <div className="asfbd-row">
+                  <span className="asfbd-title">Giới tính giọng đọc</span>
+                  <span className="asfbd-result">
+                    {result.sellerInAna.voiceGender}
+                  </span>
+                </div>
+                <div className="asfbd-row">
+                  <span className="asfbd-title">Tính chát</span>
+                  <span className="asfbd-result">
+                    {result.sellerInAna.voiceProperty}
+                  </span>
+                </div>
+                <div className="asfbd-row">
+                  <span className="asfbd-title">Giọng</span>
+                  <span className="asfbd-result">
+                    {result.sellerInAna.voiceRegion}
+                  </span>
+                </div>
+                <div className="asfbd-row">
+                  <span className="asfbd-title">Giọng địa phương</span>
+                  <span className="asfbd-result">
+                    {result.sellerInAna.voiceLocal}
+                  </span>
+                </div>
+                <div className="asfbd-row">
+                  <span className="asfbd-title">Tone giọng</span>
+                  <span className="asfbd-result">
+                    {result.sellerInAna.voiceTone === 5 && <span>Rất cao</span>}
+                    {result.sellerInAna.voiceTone === 4 && <span>Cao</span>}
+                    {result.sellerInAna.voiceTone === 3 && <span>Vừa</span>}
+                    {result.sellerInAna.voiceTone === 2 && <span>Thấp</span>}
+                    {result.sellerInAna.voiceTone === 1 && (
+                      <span>Rất thấp</span>
+                    )}
+                    {result.sellerInAna.voiceTone === 0 && (
+                      <span>Không có</span>
+                    )}
+                  </span>
+                </div>
+                <div className="asfbd-row">
+                  <span className="asfbd-title">Độ truyền cảm</span>
+                  <span className="asfbd-result">
+                    {result.sellerInAna.voiceInspirational === 5 && (
+                      <span>Rất cao</span>
+                    )}
+                    {result.sellerInAna.voiceInspirational === 4 && (
+                      <span>Cao</span>
+                    )}
+                    {result.sellerInAna.voiceInspirational === 3 && (
+                      <span>Vừa</span>
+                    )}
+                    {result.sellerInAna.voiceInspirational === 2 && (
+                      <span>Thấp</span>
+                    )}
+                    {result.sellerInAna.voiceInspirational === 1 && (
+                      <span>Rất thấp</span>
+                    )}
+                    {result.sellerInAna.voiceInspirational === 0 && (
+                      <span>Không có</span>
+                    )}
+                  </span>
+                </div>
+                <div className="asfbd-row">
+                  <span className="asfbd-title">Tốc độ đọc</span>
+                  <span className="asfbd-result">
+                    {result.sellerInAna.voiceSpeed === 5 && (
+                      <span>Rất cao</span>
+                    )}
+                    {result.sellerInAna.voiceSpeed === 4 && <span>Cao</span>}
+                    {result.sellerInAna.voiceSpeed === 3 && <span>Vừa</span>}
+                    {result.sellerInAna.voiceSpeed === 2 && <span>Thấp</span>}
+                    {result.sellerInAna.voiceSpeed === 1 && (
+                      <span>Rất thấp</span>
+                    )}
+                    {result.sellerInAna.voiceSpeed === 0 && (
+                      <span>Không có</span>
+                    )}
+                  </span>
+                </div>
+                <div className="asfbd-row">
+                  <span className="asfbd-title">
+                    Khả năng phát âm chính xác
+                  </span>
+                  <span className="asfbd-result">
+                    {result.sellerInAna.voicePronouce === 5 && (
+                      <span>Rất cao</span>
+                    )}
+                    {result.sellerInAna.voicePronouce === 4 && <span>Cao</span>}
+                    {result.sellerInAna.voicePronouce === 3 && <span>Vừa</span>}
+                    {result.sellerInAna.voicePronouce === 2 && (
+                      <span>Thấp</span>
+                    )}
+                    {result.sellerInAna.voicePronouce === 1 && (
+                      <span>Rất thấp</span>
+                    )}
+                    {result.sellerInAna.voicePronouce === 0 && (
+                      <span>Không có</span>
+                    )}
+                  </span>
+                </div>
+                <div className="asfbd-row">
+                  <span className="asfbd-title">
+                    Khả năng thể hiện trọng âm
+                  </span>
+                  <span className="asfbd-result">
+                    {result.sellerInAna.voiceStress === 5 && (
+                      <span>Rất cao</span>
+                    )}
+                    {result.sellerInAna.voiceStress === 4 && <span>Cao</span>}
+                    {result.sellerInAna.voiceStress === 3 && <span>Vừa</span>}
+                    {result.sellerInAna.voiceStress === 2 && <span>Thấp</span>}
+                    {result.sellerInAna.voiceStress === 1 && (
+                      <span>Rất thấp</span>
+                    )}
+                    {result.sellerInAna.voiceStress === 0 && (
+                      <span>Không có</span>
+                    )}
+                  </span>
+                </div>
+                <div className="asfbd-row">
+                  <span className="asfbd-title">Giá</span>
+                  <span className="asfbd-result">
+                    {result.sellerInAna.price} VNĐ / phút
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="asfbd-button-wrapper">
+              <div className="asfbd-button">Gửi dự án ngay</div>
             </div>
           </div>
         </>

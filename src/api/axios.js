@@ -390,3 +390,9 @@ export const suggestVoice = async (projectId, sellerId) => {
   );
   return response.data;
 };
+export const textAnalysis = async (linkDoc) => {
+  const response = await axiosOne.post(`/api/VoiceProjects/AIAnalysis`, {
+    linkDoc,
+  });
+  return response.data;
+};

@@ -209,13 +209,14 @@ const Login = () => {
             </div>
             <div className="col-item">
               <span>
-                Hơn 7749 giọng đọc, đa dạng về lựa chọn để bạn có được kết quả
-                ưng ý nhât
+                Bạn muốn tìm nguồn cung cấp một kho tàng giọng đọc: tài năng, đa
+                dạng, thổi vào sản phẩm của bạn một làn gió tươi trẻ, tràn đầy
+                sức sống tươi mới, mà chi phí lại rẻ, tiện lợi, bạn có thể chủ
+                động hơn, tiết kiệm thời gian hơn? Bạn có thấy những yêu cầu ấy
+                quá khắt khe không? Bạn nghĩ có nơi nào có thể đáp ứng nổi những
+                yêu cầu của bạn không? Có đấy! Bạn hãy thử đến với Voice Spire
+                xem!
               </span>
-              <span>
-                Hệ thống phân tích, đưa ra lựa chọn tối ưu theo yêu cầu của bạn
-              </span>
-              <span>Kiểu giới thiệu về app của mình ở đây.......</span>
             </div>
           </div>
         </div>

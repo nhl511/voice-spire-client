@@ -140,10 +140,6 @@
   flex-direction: column;
   gap: 20px;
 }
-.login .login-container .login-card .right .col-item span {
-  font-weight: 500;
-  margin-top: 50px;
-}
 
 .errmsg {
   color: red;
